@@ -20,6 +20,8 @@
     <script type="text/javascript" src="<?php echo base_url('plugins/supersized/theme/supersized.shutter.min.js') ?>"></script>
 
     <script type="text/javascript" src="<?php echo base_url('public/website/js/common.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('public/website/js/jscroll.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('public/website/js/product.js') ?>"></script>
 
 </head>
 <body>

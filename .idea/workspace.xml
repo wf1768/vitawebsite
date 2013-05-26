@@ -2,95 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/account_info_lib.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/auth_lib.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/barcode_lib.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/config_lib.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/excel_lib.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/aboutus_history.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/aboutus_marking.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/products_01.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/products_02.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/stores.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/css/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/css/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/css/supersized.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/big_pic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/big_pic1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/big_pic1_05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/big_pic2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/black_bot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/black_mid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/black_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/bot_ri1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/bot_ri2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/bot_ri3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/cataBg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left_menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left_menu2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left_menutop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left_midmenu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/line.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/logo-en.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/main_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/small_pic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/small_pic1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/small_pic3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/small_pic4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/sq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/title.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu2hover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/js/common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/js/jquery.easing.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/js/supersized.3.2.7.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/js/supersized.3.2.7.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/index/p17q4knr331aha1pn72glofm11hk3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/index/p17q4kuhvb16pttkf1h8210plnfs3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/index/p17q8qgcar8a117a8f68gc61tvi3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/index/p17q93findq2t2gpea51bde167f3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/6.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/website/index.php" afterPath="$PROJECT_DIR$/application/views/website/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/website/common/header.php" afterPath="$PROJECT_DIR$/application/views/website/common/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/website/home.php" afterPath="$PROJECT_DIR$/application/controllers/website/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/website/main.php" afterPath="$PROJECT_DIR$/application/views/website/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/website/site.php" afterPath="$PROJECT_DIR$/application/controllers/website/site.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vitawebsite.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369539301997" ignored="false" />
+    <file path="/Dummy.txt" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369555087006" ignored="false" />
     <file path="/MY_Controller.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368169506700" ignored="false" />
     <file path="/login.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368082261143" ignored="false" />
     <file path="/header.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1367400807051" ignored="false" />
@@ -146,19 +63,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="website_lib.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/libraries/website_lib.php">
+      <file leaf-file-name="products_01.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/website/products_01.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="120" selection-start="1651" selection-end="1651" vertical-scroll-proportion="-12.0">
+            <state line="19" column="4" selection-start="985" selection-end="1045" vertical-scroll-proportion="-10.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/website/main.php">
+      <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/website/common/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="19" selection-start="591" selection-end="591" vertical-scroll-proportion="0.19064748">
+            <state line="22" column="94" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.6077348">
               <folding />
             </state>
           </provider>
@@ -167,7 +84,16 @@
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/website/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="88" selection-start="476" selection-end="476" vertical-scroll-proportion="-6.875">
+            <state line="20" column="30" selection-start="677" selection-end="677" vertical-scroll-proportion="-12.291667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/website/js/product.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="71" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,10 +129,10 @@
         <option value="$PROJECT_DIR$/application/controllers/website/home.php" />
         <option value="$PROJECT_DIR$/application/views/website/home.php" />
         <option value="$PROJECT_DIR$/application/views/website/common/footer.php" />
-        <option value="$PROJECT_DIR$/application/views/website/common/header.php" />
         <option value="$PROJECT_DIR$/application/views/website/main.php" />
         <option value="$PROJECT_DIR$/application/views/website/common/top.php" />
         <option value="$PROJECT_DIR$/application/libraries/website_lib.php" />
+        <option value="$PROJECT_DIR$/application/views/website/common/header.php" />
       </list>
     </option>
   </component>
@@ -283,6 +209,56 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="website" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -298,7 +274,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -306,21 +286,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vitawebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vitawebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,8 +301,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xamppfiles/htdocs/vitastock" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -386,10 +352,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21312805" sideWeight="0.5986842" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21636952" sideWeight="0.5986842" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40131578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -398,6 +363,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -466,28 +432,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/upload/product/product_type/left_menutop.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/index/index.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/website/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="31" selection-start="732" selection-end="741" vertical-scroll-proportion="1.0">
-          <folding />
-        </state>
+        <state line="40" column="31" selection-start="732" selection-end="741" vertical-scroll-proportion="1.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/common/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="343" selection-end="343" vertical-scroll-proportion="0.24280575">
-          <folding />
-        </state>
+        <state line="9" column="9" selection-start="343" selection-end="343" vertical-scroll-proportion="0.24280575" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/upload/main/no_pic.jpg">
@@ -495,60 +447,29 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/website/common/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="77" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="893" selection-end="893" vertical-scroll-proportion="0.5248619">
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="19" column="29" selection-start="893" selection-end="893" vertical-scroll-proportion="0.5248619" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/core/Loader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="835" column="0" selection-start="19789" selection-end="19789" vertical-scroll-proportion="0.33110368">
-          <folding />
-        </state>
+        <state line="835" column="0" selection-start="19789" selection-end="19789" vertical-scroll-proportion="0.33110368" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/website/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="81" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.52910054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/website_lib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="120" selection-start="1651" selection-end="1651" vertical-scroll-proportion="-12.0">
-          <folding />
-        </state>
+        <state line="22" column="81" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.52910054" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/common/top.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="60" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.55801105">
-          <folding />
-        </state>
+        <state line="22" column="60" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.55801105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/aboutus_history.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/website/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="88" selection-start="476" selection-end="476" vertical-scroll-proportion="-6.875">
           <folding />
         </state>
       </provider>
@@ -565,7 +486,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/website/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="591" selection-end="591" vertical-scroll-proportion="0.19064748">
+        <state line="40" column="52" selection-start="757" selection-end="757" vertical-scroll-proportion="0.44784173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/website_lib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="120" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.027624309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/website/js/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="71" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/products_01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="4" selection-start="985" selection-end="1045" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="30" selection-start="677" selection-end="677" vertical-scroll-proportion="-12.291667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/common/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="94" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.6077348">
           <folding />
         </state>
       </provider>
