@@ -1,13 +1,13 @@
 
     //分类品牌产品内容
 	function catagroyContent(){
-           $("#catagroyContent").html('<p class="cha">在床的设计制造领域中，Flou公司一直占据了翘楚地位。Flou 在意大利已经有五十多年的历史，自1978年开始，工厂聘请了著名的设计师VicoMagistretti设计了Flou的第一款床Nathalie，藉此Flou渐渐成为了一家专著于床具的公司，并且不断推陈出新，成为闻名欧洲乃至世界的经典顶级床具公司。它追求自然环保、讲究完美质量和使用寿命，其中Nathalie系列更是被称为床具中的经典。</p>'+
-                '<p class="eng">Luxuriant The price oLuxuriant The price of Reda is from 3338.00 RMB to 4348.00 RMB. Hardware and Exceed fees are not included.Hardware and Exceed fees are not included.Luxuriant The price of Reda is from 3338.00 RMB to 4348.00 RMB.Hardware and Exceed fees are not included.Luxuriant The price of Reda is from 3338.00 RMB to 4348.00 RMB. </p>');
+//           $("#catagroyContent").html('<p class="cha">在床的设计制造领域中，Flou公司一直占据了翘楚地位。Flou 在意大利已经有五十多年的历史，自1978年开始，工厂聘请了著名的设计师VicoMagistretti设计了Flou的第一款床Nathalie，藉此Flou渐渐成为了一家专著于床具的公司，并且不断推陈出新，成为闻名欧洲乃至世界的经典顶级床具公司。它追求自然环保、讲究完美质量和使用寿命，其中Nathalie系列更是被称为床具中的经典。</p>'+
+//                '<p class="eng">Luxuriant The price oLuxuriant The price of Reda is from 3338.00 RMB to 4348.00 RMB. Hardware and Exceed fees are not included.Hardware and Exceed fees are not included.Luxuriant The price of Reda is from 3338.00 RMB to 4348.00 RMB.Hardware and Exceed fees are not included.Luxuriant The price of Reda is from 3338.00 RMB to 4348.00 RMB. </p>');
 
 		$("#catagroyContent").css({height: $(window).innerHeight()/5});
 		$("#catagroyContent").jscroll({
 			   W:"15px"
-			  ,BgUrl:"url(images/src01.png)"
+			  ,BgUrl:"url(/vitawebsite/public/website/images/src01.png)"    //TODO 这里上线时要修改地址。服务器上的目录不一样
 			  ,Bg:"right -30px repeat-y"
 			  ,Bar:{Pos:"up"
 					,Bd:{Out:"-30px 0 repeat-y",Hover:"-30px 0 repeat-y"}

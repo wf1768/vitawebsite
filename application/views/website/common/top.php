@@ -7,7 +7,7 @@
         <?php if ($product_brand_furniture) : ?>
             <?php foreach ($product_brand_furniture as $furn) : ?>
                 <li>
-                    <a href="#">
+                    <a href="<?php echo site_url('w/product/product1').'?brandid='.$furn->id.'&type=brand' ?>">
                         <img class="n1" src="<?php echo base_url($furn->imagepath) ?>" /><!-- 默认 -->
                         <img class="n2" src="<?php echo base_url($furn->imagepathchange) ?>"/><!-- 选中 -->
                     </a>
@@ -18,7 +18,7 @@
 </div>
 <?php if ($product_brand_housewares) : ?>
 <div class="mid_top">
-    <p id="housewares"><img class="n1" src="<?php echo base_url('public/website/images/left_midmenuhoverleft_midmenu.png') ?>" width="76" height="33"/><img class="n2" src="<?php echo base_url('public/website/images/left_midmenu.png') ?>" width="76" height="33"/></p>
+    <p id="housewares"><img class="n1" src="<?php echo base_url('public/website/images/left_midmenuhover.png') ?>" width="76" height="33"/><img class="n2" src="<?php echo base_url('public/website/images/left_midmenu.png') ?>" width="76" height="33"/></p>
     <ul id="housewares_menu">
     <?php foreach ($product_brand_housewares as $house) : ?>
             <li>

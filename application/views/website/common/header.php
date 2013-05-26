@@ -16,7 +16,7 @@
     <script type="text/javascript" src="<?php echo base_url('public/js/jquery-1.7.2.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('plugins/supersized/js/jquery.easing.min.js') ?>"></script>
 
-    <script type="text/javascript" src="<?php echo base_url('plugins/supersized/js/supersized.3.2.7.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('plugins/supersized/js/supersized.3.2.7.js') ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('plugins/supersized/theme/supersized.shutter.min.js') ?>"></script>
 
     <script type="text/javascript" src="<?php echo base_url('public/website/js/common.js') ?>"></script>

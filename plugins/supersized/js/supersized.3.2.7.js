@@ -47,21 +47,21 @@
 		----------------------------*/
         base._build = function(){
         	// Add in slide markers
-        	var thisSlide = 0,
+        	var thisSlide = 1,
         		slideSet = '',
 				markers = '',
 				markerContent,
 				thumbMarkers = '',
 				thumbImage;
 				
-			while(thisSlide <= base.options.slides.length-1){
+			while(thisSlide <= base.options.slides.length){
 				//Determine slide link content
 				switch(base.options.slide_links){
 					case 'num':
 						markerContent = thisSlide;
 						break;
 					case 'name':
-						markerContent = base.options.slides[thisSlide].title;
+						markerContent = base.options.slides[thisSlide-1].title;
 						break;
 					case 'blank':
 						markerContent = '';
@@ -75,7 +75,7 @@
 					if (base.options.slide_links)markers = markers+'<li class="slide-link-'+thisSlide+' current-slide"><a>'+markerContent+'</a></li>';
 					// Slide Thumbnail Links
 					if (base.options.thumb_links){
-						base.options.slides[thisSlide].thumb ? thumbImage = base.options.slides[thisSlide].thumb : thumbImage = base.options.slides[thisSlide].image;
+						base.options.slides[thisSlide-1].thumb ? thumbImage = base.options.slides[thisSlide-1].thumb : thumbImage = base.options.slides[thisSlide-1].image;
 						thumbMarkers = thumbMarkers+'<li class="thumb'+thisSlide+' current-thumb"><img src="'+thumbImage+'"/></li>';
 					};
 				}else{
@@ -83,7 +83,7 @@
 					if (base.options.slide_links) markers = markers+'<li class="slide-link-'+thisSlide+'" ><a>'+markerContent+'</a></li>';
 					// Slide Thumbnail Links
 					if (base.options.thumb_links){
-						base.options.slides[thisSlide].thumb ? thumbImage = base.options.slides[thisSlide].thumb : thumbImage = base.options.slides[thisSlide].image;
+						base.options.slides[thisSlide-1].thumb ? thumbImage = base.options.slides[thisSlide-1].thumb : thumbImage = base.options.slides[thisSlide-1].image;
 						thumbMarkers = thumbMarkers+'<li class="thumb'+thisSlide+'"><img src="'+thumbImage+'"/></li>';
 					};
 				}
