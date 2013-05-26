@@ -1,0 +1,15 @@
+
+
+.smallImg {
+    width:30px;
+    height:30px;
+}
+
+
+/** 重写主css 样式 。原 size：11px太小
+*/
+.btn-small {
+    font-size: 12px;
+    line-height: 16px;
+}
+

@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <META name="Description" content=" 成立于1998年的北京丰意德家具有限责任公司是目前国内代理国外顶级家居品牌最多、国际家居流行趋势更新最快,展厅规模最大的一家进口家具代理销售机构。 丰意德代理经营诸多...">
+    <META name=Keywords content="丰意德,意大利,进口家具,家具">
+    <title>北京丰意德家具有限责任公司--我们的历史</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="css/base.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+    <script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jscroll.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+            var slidersArr = new Array();
+            slidersArr[0] = {'image':'slides/product/4.jpg'};
+            slidersArr[1] = {'image':'slides/product/5.jpg'};
+            params.slides = slidersArr;
+            $.supersized(params);
+
+            //菜单状态切换
+              initFurniture();
+              initHousewares();
+              
+            var content = '<ul>'+
+            '<li><a href="#" class="cur">1998</a></li>'+
+            '<li><a href="#">1999</a></li>'+
+            '<li><a href="#">2000</a></li>'+
+            '<li><a href="#">2001</a></li>'+
+            '<li><a href="#">2002</a></li>'+
+            '<li><a href="#">2003</a></li>'+
+        	'</ul>';
+			$("#content").html(content);
+			$("#content").css({height: $(window).innerHeight()/5});
+			$("#content").jscroll({
+				   W:"15px"
+				  ,BgUrl:"url(images/src01.png)"
+				  ,Bg:"right -30px repeat-y"
+				  ,Bar:{Pos:"up"
+						,Bd:{Out:"-30px 0 repeat-y",Hover:"-30px 0 repeat-y"}
+						,Bg:{Out:"-15px 0 repeat-y",Hover:"-15px 0 repeat-y",Focus:"-15px 0 repeat-y"}}
+						,Btn:{btn:true
+							  ,uBg:{Out:"0 0",Hover:"0 0",Focus:"0 0"}
+							  ,dBg:{Out:"0 -15px",Hover:"0px -16px",Focus:"0 -15px"}}
+				  ,Fn:function(){}
+			});
+			
+			$('#content ul li a').click(function(){
+				$.each($("#content ul li a"),function(index,liItem){
+					$(liItem).attr("class","");
+				});
+				$(this).attr("class","cur");
+				//改
+				setHistoryContent($(this).html()+'中文历史内容',$(this).html()+'英文历史内容');
+			});
+
+			//空白处
+			//var margin_height = $(window).height();
+			//margin_height = margin_height-(42+33+200);
+			//$("#margin").css({"height":margin_height});
+			
+			//历史鼠标事件-
+			
+			$("#margin").hover(function(){
+				$('.time_main').animate({height: '0px'},function(){
+					$('.time_main').css({"display":"none"});
+					$('.time_mainone').animate({height: '40px'});
+					$('.time_mainone').css({"display":"block"});
+				});
+				
+			});
+			
+			$(".time_mainone").hover(function(){
+				$('.time_mainone').animate({height: '0px'},function(){
+					$('.time_mainone').css({"display":"none"});
+					$('.time_main').animate({height: '150px'});
+					$('.time_main').css({"display":"block"});
+				});
+			});
+			
+        });
+		//历史内容
+		function setHistoryContent(cha,eng){
+			$('#history_cha').html(cha);
+			$('#history_eng').html(eng);
+		}
+    </script>
+
+</head>
+
+<body>
+<div id="container">
+    <div class="top"><a href="main.html"><img src="images/logo.png" width="98" height="42"></a></div>
+    <div class="menu_top">
+        <p id="furniture"><img class="n1" src="images/left_topmenu.png" width="55" height="33"/><img class="n2" src="images/left_topmenu.png" width="55" height="33"/></p>
+        <ul id="furniture_menu">
+            <li id="1"><a href="products_01.html">
+            	<img class="n1" src="images/top_menu.png" /><!-- 默认 -->
+            	<img class="n2" src="images/top_menu_hover.png"/><!-- 选中 -->
+            </a></li>
+            <li id="2"><a href="#">
+            	<img class="n1" src="images/top_menu1.png" />
+            	<img class="n2" src="images/top_menu1_hover.png" />
+            </a></li>
+            <li id="3"><a href="#">
+            	<img class="n1" src="images/top_menu2.png" />
+            	<img class="n2" src="images/top_menu2_hover.png" />
+            </a></li>
+            <li id="4"><a href="#">
+            	<img class="n1" src="images/top_menu3.png" />
+            	<img class="n2" src="images/top_menu3_hover.png" />
+            </a></li>
+            <li id="5"><a href="#">
+            	<img class="n1" src="images/top_menu4.png" />
+            	<img class="n2" src="images/top_menu4_hover.png" />
+            </a></li>
+            <li id="6"><a href="#">
+            	<img class="n1" src="images/top_menu5.png" />
+            	<img class="n2" src="images/top_menu5_hover.png" />
+            </a></li>
+            <li id="7"><a href="#">
+            	<img class="n1" src="images/top_menu6.png" />
+            	<img class="n2" src="images/top_menu6_hover.png" />
+            </a></li>
+            <li id="8"><a href="#">
+            	<img class="n1" src="images/top_menu7.png" />
+            	<img class="n2" src="images/top_menu7_hover.png" />
+            </a></li>
+            <li id="9"><a href="#">
+            	<img class="n1" src="images/top_menu8.png" />
+            	<img class="n2" src="images/top_menu8_hover.png" />
+            </a></li>
+            <li id="10"><a href="#">
+            	<img class="n1" src="images/top_menu9.png" />
+            	<img class="n2" src="images/top_menu9_hover.png" />
+            </a></li>
+        </ul>
+    </div>
+    <div class="mid_top">
+        <p id="housewares"><img class="n1" src="images/left_midmenuhover.png" width="76" height="33"/><img class="n2" src="images/left_midmenu.png" width="76" height="33"/></p>
+        <ul id="housewares_menu">
+            <li id="01"><a href="#">
+            	<img class="n1" src="images/mid_menu.png"/>
+            	<img class="n2" src="images/mid_menu_hover.png"/>
+            </a></li>
+            <li id="02"><a href="#">
+            	<img class="n1" src="images/mid_menu1.png"/>
+            	<img class="n2" src="images/mid_menu1_hover.png"/>
+            </a></li>
+            <li id="03"><a href="#">
+            	<img class="n1" src="images/mid_menu2.png"/>
+           		<img class="n2" src="images/mid_menu2_hover.png"/>
+            </a></li>
+            <li id="04"><a href="#">
+            	<img class="n1" src="images/mid_menu3.png"/>
+            	<img class="n2" src="images/mid_menu3_hover.png"/>
+            </a></li>
+            <li id="05"><a href="#">
+            	<img class="n1" src="images/mid_menu4.png"/>
+            	<img class="n2" src="images/mid_menu4_hover.png"/>
+            </a></li>
+            <li id="06"><a href="#">
+            	<img class="n1" src="images/mid_menu5.png"/>
+            	<img class="n2" src="images/mid_menu5_hover.png"/>
+            </a></li>
+        </ul>
+    </div>	
+    
+    <div id="margin" style="width: 100%;height:80px;background-image:url('images/transparent.png'); position:absolute;bottom: 230px;">&nbsp;</div>
+    
+    <div class="time_main">
+        <div class="time_mainle">
+           <div id="mainBox" class="time_char">
+                <div id="content" class="time_charle" style="top:0px; position:relative;">
+                    
+                </div>
+                <div class="scroll_line" style="top:0px; right:0px; position:absolute; overflow:hidden;">
+    			</div>
+            </div>
+        </div>
+        
+        <div class="time_mainri">
+            <p id="history_cha" class="cha">
+                1998年文字测试
+            </p>
+            <p id="history_eng" class="eng"></p>
+        </div>
+    </div>
+    <!-- 收缩 start -->
+    <div class="time_mainone">
+        <div class="time_mainle">
+           <div class="time_char">
+                <div class="time_charle" style="top:0px; position:relative;">  
+                </div>
+                <div class="scroll_line" style="top:0px; right:0px; position:absolute; overflow:hidden;">
+    			</div>
+            </div>
+        </div>        
+        <div class="time_mainri">
+            <p class="cha">
+                1998年文字测试
+            </p>
+            <p class="eng"></p>
+        </div>
+    </div>
+    <!-- 收缩 end -->
+    
+    <div class="main_bot">
+        <ul>
+            <li><a href="aboutus_history.html" style="color: #EC934A">History</a></li>
+            <li><a href="aboutus_marking.html">Marking</a></li>
+        </ul>
+    </div>
+    <div class="main_footer">
+        <ul>
+            <li><a href="aboutus_history.html" style="color: #EC934A">About us</a></li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="aboutus_pic.html">Press</a></li>
+            <li><a href="aboutus_marking.html">Furniture Blog </a></li>
+            <li><a href="#">Hoursewares Blog</a></li>
+        </ul>
+        <ol>
+            <li><img src="images/bot_ri1.png" width="29" height="28" /></li>
+            <li><img src="images/bot_ri2.png" width="30" height="27" /></li>
+            <li><img src="images/bot_ri3.png" width="30" height="28"/></li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
+

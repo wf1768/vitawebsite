@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/account_info_lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/auth_lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/barcode_lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/config_lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/excel_lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/aboutus_history.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/aboutus_marking.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/products_01.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/products_02.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/stores.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/css/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/css/supersized.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/big_pic.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/big_pic1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/big_pic1_05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/big_pic2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/black_bot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/black_mid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/black_top.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/bot_ri1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/bot_ri2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/bot_ri3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/cataBg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left_menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left_menu2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left_menutop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/left_midmenu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/line.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/logo-en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/main_white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/mid_menu5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/small_pic.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/small_pic1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/small_pic3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/small_pic4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/sq.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/title.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu2hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/top_menu_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/images/white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/js/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/js/jquery.easing.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/js/supersized.3.2.7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/website/js/supersized.3.2.7.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/index/p17q4knr331aha1pn72glofm11hk3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/index/p17q4kuhvb16pttkf1h8210plnfs3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/index/p17q8qgcar8a117a8f68gc61tvi3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/index/p17q93findq2t2gpea51bde167f3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/main/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/slides/product/6.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/website/index.php" afterPath="$PROJECT_DIR$/application/views/website/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/website/common/header.php" afterPath="$PROJECT_DIR$/application/views/website/common/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/website/home.php" afterPath="$PROJECT_DIR$/application/controllers/website/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/website/main.php" afterPath="$PROJECT_DIR$/application/views/website/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/website/site.php" afterPath="$PROJECT_DIR$/application/controllers/website/site.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="vitawebsite.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369539301997" ignored="false" />
+    <file path="/MY_Controller.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368169506700" ignored="false" />
+    <file path="/login.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368082261143" ignored="false" />
+    <file path="/header.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1367400807051" ignored="false" />
+    <file path="/home.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369543308427" ignored="false" />
+    <file path="/aaa.html" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1367395099967" ignored="false" />
+    <file path="/a.dummy" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369541460591" ignored="false" />
+    <file path="/index.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368096565793" ignored="false" />
+    <file path="/main.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369545883410" ignored="false" />
+    <file path="/leftmenu.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369209290363" ignored="false" />
+    <file path="/index_model.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368086266325" ignored="false" />
+    <file path="/us.stock.js" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368101468862" ignored="false" />
+    <file path="/main_model.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368105230393" ignored="false" />
+    <file path="/product_type.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369370020317" ignored="false" />
+    <file path="/producttype.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368186489559" ignored="false" />
+    <file path="/product_type_model.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368186585116" ignored="false" />
+    <file path="/product_brand_model.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368190047579" ignored="false" />
+    <file path="/product_brand.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369201423829" ignored="false" />
+    <file path="/product_brand_edit.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369137672579" ignored="false" />
+    <file path="/product_image_model.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368783183869" ignored="false" />
+    <file path="/product_cate_model.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368783779912" ignored="false" />
+    <file path="/product_cate.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369208628355" ignored="false" />
+    <file path="/product_image.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369204404944" ignored="false" />
+    <file path="/product_cate_edit.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369208709646" ignored="false" />
+    <file path="/config.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369215594134" ignored="false" />
+    <file path="/config_model.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369209711389" ignored="false" />
+    <file path="/site.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369462265407" ignored="false" />
+    <file path="/Site_Controller.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369463675135" ignored="false" />
+    <file path="/website_lib.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369541075948" ignored="false" />
+    <file path="/autoload.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369541253825" ignored="false" />
+    <file path="/footer.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369544332821" ignored="false" />
+    <file path="/top.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369549432295" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="vitawebsite" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="website_lib.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/libraries/website_lib.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="120" selection-start="1651" selection-end="1651" vertical-scroll-proportion="-12.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/website/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="19" selection-start="591" selection-end="591" vertical-scroll-proportion="0.19064748">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/website/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="88" selection-start="476" selection-end="476" vertical-scroll-proportion="-6.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/application/core/Site_Controller.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Site_Controller.php" />
+        <option value="$PROJECT_DIR$/application/controllers/website/site.php" />
+        <option value="$PROJECT_DIR$/application/libraries/auth_lib.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Controller_site.php" />
+        <option value="$PROJECT_DIR$/application/config/autoload.php" />
+        <option value="$PROJECT_DIR$/application/controllers/website/main.php" />
+        <option value="$PROJECT_DIR$/application/views/website/index.php" />
+        <option value="$PROJECT_DIR$/application/controllers/website/home.php" />
+        <option value="$PROJECT_DIR$/application/views/website/home.php" />
+        <option value="$PROJECT_DIR$/application/views/website/common/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/website/common/header.php" />
+        <option value="$PROJECT_DIR$/application/views/website/main.php" />
+        <option value="$PROJECT_DIR$/application/views/website/common/top.php" />
+        <option value="$PROJECT_DIR$/application/libraries/website_lib.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <option name="servers">
+      <server host="localhost" name="localhost" use_path_mappings="true">
+        <path_mappings>
+          <path_mapping local_path="$PROJECT_DIR$" remote_path="$PROJECT_DIR$/../../xamppfiles/htdocs/vitawebsite" />
+        </path_mappings>
+      </server>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="726" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vitawebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="web-ide.project.structure" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xamppfiles/htdocs/vitastock" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/website/images" />
+      <recent name="$PROJECT_DIR$/application/views/website" />
+      <recent name="$PROJECT_DIR$/public/website/js" />
+      <recent name="$PROJECT_DIR$/public/website/css" />
+      <recent name="$PROJECT_DIR$/plugins/supersized" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/libraries" />
+      <recent name="$PROJECT_DIR$/upload/product" />
+      <recent name="$PROJECT_DIR$/upload/index" />
+      <recent name="$PROJECT_DIR$/upload" />
+      <recent name="$PROJECT_DIR$/../../xamppfiles/htdocs/vitawebsite/public/js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" name="Default" comment="" />
+      <created>1367385006690</created>
+      <updated>1367385006690</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="726" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21312805" sideWeight="0.5986842" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40131578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="52" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/upload/product/product_type/left_menutop.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/index/index.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/website/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="31" selection-start="732" selection-end="741" vertical-scroll-proportion="1.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/common/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="9" selection-start="343" selection-end="343" vertical-scroll-proportion="0.24280575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/main/no_pic.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/common/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="77" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="29" selection-start="893" selection-end="893" vertical-scroll-proportion="0.5248619">
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/Loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="835" column="0" selection-start="19789" selection-end="19789" vertical-scroll-proportion="0.33110368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/website/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="81" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.52910054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/website_lib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="120" selection-start="1651" selection-end="1651" vertical-scroll-proportion="-12.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/common/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="60" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.55801105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/aboutus_history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="88" selection-start="476" selection-end="476" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/website/images/src01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/website/images/src01_b.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/website/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="19" selection-start="591" selection-end="591" vertical-scroll-proportion="0.19064748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

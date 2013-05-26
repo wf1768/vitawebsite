@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <META name="Description" content=" 成立于1998年的北京丰意德家具有限责任公司是目前国内代理国外顶级家居品牌最多、国际家居流行趋势更新最快,展厅规模最大的一家进口家具代理销售机构。 丰意德代理经营诸多...">
+    <META name=Keywords content="丰意德,意大利,进口家具,家具">
+    <title>北京丰意德家具有限责任公司--首页</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="css/base.css" type="text/css" rel="stylesheet"/>
+     
+    <link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+    <script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+
+    <script type="text/javascript" src="js/common.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+            var slidersArr = new Array();
+            slidersArr[0] = {'image':'slides/main/1.jpg'};
+            slidersArr[1] = {'image':'slides/main/2.jpg'};
+
+            params.slides = slidersArr;
+            $.supersized(params);
+            
+         	// Accordion
+          	//先隐藏所有Item
+			$(".item").hide();
+			//显示第一个Item
+			$(".item:first").show();
+			$("#accordion h2").click(function () {
+				//如果当前Item是隐藏
+				if ($(this).next().is(":hidden")) {
+					//先slideUp所有Item
+					$(".item").slideUp(1000);
+					//slideDown当前Item
+					$(this).next().slideDown(1000);
+				}
+			});
+			
+        });
+
+    </script>
+
+</head>
+
+<body>
+<!--主内容start-->
+<div id="container">
+    <div class="top"><a href="main.html"><img src="images/logo.png" width="138" height="61"></a></div>
+    <div class="menu_top">
+        <p><img src="images/left_topmenu.png" width="84" height="51"/></p>
+        <ul>
+            <li><img src="images/top_menu.png" width="45" height="51"/></li>
+            <li><img src="images/top_menu1.png" width="70" height="51"/></li>
+            <li><img src="images/top_menu2.png" width="77" height="51"/></li>
+            <li><img src="images/top_menu3.png" width="70" height="51"/></li>
+            <li><img src="images/top_menu4.png" width="56" height="51"/></li>
+            <li><img src="images/top_menu5.png" width="46" height="51"/></li>
+            <li><img src="images/top_menu6.png" width="46" height="51"/></li>
+            <li><img src="images/top_menu7.png" width="35" height="51"/></li>
+            <li><img src="images/top_menu8.png" width="98" height="51"/></li>
+            <li><img src="images/top_menu9.png" width="70" height="51"/></li>
+        </ul>
+    </div>
+    <div class="mid_top">
+        <p><img src="images/left_midmenu.png" width="112" height="51"/></p>
+        <ul>
+            <li><img src="images/mid_menu.png" width="47" height="50"/></li>
+            <li><img src="images/mid_menu1.png" width="47" height="51"/></li>
+            <li><img src="images/mid_menu2.png" width="44" height="51"/></li>
+            <li><img src="images/mid_menu3.png" width="44" height="51"/></li>
+            <li><img src="images/mid_menu4.png" width="63" height="51"/></li>
+            <li><img src="images/mid_menu5.png" width="63" height="51"/></li>
+        </ul>
+    </div>
+    <div class="leftmain">
+        <div style="bottom: 0px;position: absolute;">
+        	<div id="accordion">
+        		<div class="">
+		         	<h2><a href="#">丰意德旗舰店-1</a></h2>
+		         	<dl class="item" style="display: block;">
+		                <dd>北京市朝阳区 双桥东路<span>18</span>号院</dd>
+		                <dd><span>NO.416</span></dd>
+		                <dd><span>Tel:+8618812323232</span></dd>
+		                <dd><span>Fax:+8618834555232</span></dd>
+					</dl>
+		       	</div>
+			    <div class="">
+		         	<h2><a href="#">丰意德旗舰店-2</a></h2>
+		         	<dl class="item" style="display: block;">
+		                <dd>北京市朝阳区 双桥东路<span>18</span>号院</dd>
+		                <dd><span>NO.416</span></dd>
+		                <dd><span>Tel:+8618812323232</span></dd>
+		                <dd><span>Fax:+8618834555232</span></dd>
+					</dl>
+		       	</div>
+		       	<div class="">
+		         	<h2><a href="#">丰意德旗舰店-3</a></h2>
+		         	<dl class="item" style="display: block;">
+		                <dd>北京市朝阳区 双桥东路<span>18</span>号院</dd>
+		                <dd><span>NO.416</span></dd>
+		                <dd><span>Tel:+8618812323232</span></dd>
+		                <dd><span>Fax:+8618834555232</span></dd>
+					</dl>
+		       	</div>
+			</div>
+        </div>
+    </div>
+    
+    <div class="main_bot">
+        <ul>
+            <li><a href="stores.html" class="cur">Furniture Stores</a></li>
+            <li><a href="#">Housewares Stores</a></li>
+        </ul>
+    </div>
+    <div class="main_footer">
+        <ul>
+            <li><a href="aboutus_history.html">About us</a></li>
+            <li><a href="stores.html" style="color: #EC934A">Stores</a></li>
+            <li><a href="aboutus_pic.html">Press</a></li>
+            <li><a href="aboutus_marking.html">Furniture Blog </a></li>
+            <li><a href="#">Hoursewares Blog</a></li>
+        </ul>
+        <ol>
+            <li><img src="images/bot_ri1.png" width="29" height="28" /></li>
+            <li><img src="images/bot_ri2.png" width="30" height="27" /></li>
+            <li><img src="images/bot_ri3.png" width="30" height="28"/></li>
+        </ol>
+    </div>
+</div>
+</body>
+</html>
+

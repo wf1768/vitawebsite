@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <META name="Description" content=" 成立于1998年的北京丰意德家具有限责任公司是目前国内代理国外顶级家居品牌最多、国际家居流行趋势更新最快,展厅规模最大的一家进口家具代理销售机构。 丰意德代理经营诸多...">
+    <META name=Keywords content="丰意德,意大利,进口家具,家具">
+    <title>北京丰意德家具有限责任公司--产品展示</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="css/base.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+    <script type="text/javascript" src="js/supersized.3.2.7.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    
+    <script type="text/javascript" src="js/jscroll.js"></script>
+    <script type="text/javascript" src="js/product.js"></script>
+    <style type="text/css">
+    	.p1{color: #050505;}
+    	.p2{color: #050505;}
+    	.p3{color: #E69A42;}
+    	.p4{color: #E69A42;}
+    </style>
+    
+    
+<script type="text/javascript"><!--
+        $(function(){
+            var slidersArr = new Array();
+            slidersArr[0] = {'image':'slides/product/1.jpg'};
+            slidersArr[1] = {'image':'slides/product/2.jpg'};
+            slidersArr[2] = {'image':'slides/product/3.jpg'};
+            slidersArr[3] = {'image':'slides/product/4.jpg'};
+            slidersArr[4] = {'image':'slides/product/5.jpg'};
+            
+            params.slides = slidersArr;
+            $.supersized(params);
+            
+            initFormCSS();
+            
+            //菜单状态切换
+            initFurniture();
+            initHousewares();
+            catagroyContent();
+	
+            productsInfo();
+            
+        });
+        
+		
+        function initFormCSS()
+        {
+            var winHeight = $(window).innerHeight();
+//            winHeight = winHeight<minHeight?minHeight:winHeight;
+//            alert(winHeight);
+
+            var bottomHeight = $('.main_footer').innerHeight();
+            var topHeight = $('.top').innerHeight();
+            var menu_topHeight = $('.menu_top').innerHeight();
+            var mid_topHeight = $('.mid_top').innerHeight();
+//            var bottomHeight = $('.main_footer').position().top + 40;
+//            alert(bottomHeight);
+            $('.left_menu').css({
+                "height": winHeight - bottomHeight - topHeight - menu_topHeight - mid_topHeight,
+                "top": 0
+            });
+        }
+        $(window).resize(function(){
+            initFormCSS();
+        });
+        
+        
+    --></script>
+</head>
+<body>
+<!--主内容start-->
+<div id="container">
+    <div class="top"><a href="main.html"><img src="images/logo.png" width="98" height="42"></a></div>
+    <div class="menu_top">
+        <p id="furniture"><img class="n1" src="images/left_topmenuhover.png" width="55" height="33"/><img class="n2" src="images/left_topmenu.png" width="55" height="33"/></p>
+        <ul id="furniture_menu">
+            <li id="1"><a href="#">
+            	<img class="n1" src="images/top_menu.png" /><!-- 默认 -->
+            	<img class="n2" src="images/top_menu_hover.png"/><!-- 选中 -->
+            </a></li>
+            <li id="2"><a href="#">
+            	<img class="n1" src="images/top_menu1.png" />
+            	<img class="n2" src="images/top_menu1_hover.png" />
+            </a></li>
+            <li id="3"><a href="#">
+            	<img class="n1" src="images/top_menu2.png" />
+            	<img class="n2" src="images/top_menu2_hover.png" />
+            </a></li>
+            <li id="4"><a href="#">
+            	<img class="n1" src="images/top_menu3.png" />
+            	<img class="n2" src="images/top_menu3_hover.png" />
+            </a></li>
+            <li id="5"><a href="#">
+            	<img class="n1" src="images/top_menu4.png" />
+            	<img class="n2" src="images/top_menu4_hover.png" />
+            </a></li>
+            <li id="6"><a href="#">
+            	<img class="n1" src="images/top_menu5.png" />
+            	<img class="n2" src="images/top_menu5_hover.png" />
+            </a></li>
+            <li id="7"><a href="#">
+            	<img class="n1" src="images/top_menu6.png" />
+            	<img class="n2" src="images/top_menu6_hover.png" />
+            </a></li>
+            <li id="8"><a href="#">
+            	<img class="n1" src="images/top_menu7.png" />
+            	<img class="n2" src="images/top_menu7_hover.png" />
+            </a></li>
+            <li id="9"><a href="#">
+            	<img class="n1" src="images/top_menu8.png" />
+            	<img class="n2" src="images/top_menu8_hover.png" />
+            </a></li>
+            <li id="10"><a href="#">
+            	<img class="n1" src="images/top_menu9.png" />
+            	<img class="n2" src="images/top_menu9_hover.png" />
+            </a></li>
+        </ul>
+    </div>
+    <div class="mid_top">
+        <p id="housewares"><img class="n1" src="images/left_midmenuhover.png" width="76" height="33"/><img class="n2" src="images/left_midmenu.png" width="76" height="33"/></p>
+        <ul id="housewares_menu">
+            <li id="01"><a href="#">
+            	<img class="n1" src="images/mid_menu.png"/>
+            	<img class="n2" src="images/mid_menu_hover.png"/>
+            </a></li>
+            <li id="02"><a href="#">
+            	<img class="n1" src="images/mid_menu1.png"/>
+            	<img class="n2" src="images/mid_menu1_hover.png"/>
+            </a></li>
+            <li id="03"><a href="#">
+            	<img class="n1" src="images/mid_menu2.png"/>
+           		<img class="n2" src="images/mid_menu2_hover.png"/>
+            </a></li>
+            <li id="04"><a href="#">
+            	<img class="n1" src="images/mid_menu3.png"/>
+            	<img class="n2" src="images/mid_menu3_hover.png"/>
+            </a></li>
+            <li id="05"><a href="#">
+            	<img class="n1" src="images/mid_menu4.png"/>
+            	<img class="n2" src="images/mid_menu4_hover.png"/>
+            </a></li>
+            <li id="06"><a href="#">
+            	<img class="n1" src="images/mid_menu5.png"/>
+            	<img class="n2" src="images/mid_menu5_hover.png"/>
+            </a></li>
+        </ul>
+    </div>	
+    <div class="main">
+        <div class="left_menu">
+            <dl>
+                <dt><img id="currentBrand" src="images/top_menu.png" /></dt><!-- 当前品牌图片 -->
+                <dd id="identity" class="yellow">IDENTITY</dd>
+                <dd id="product">PRODUCTS</dd>
+                <dd>
+                    <ul id="products">
+                        <li id="a">
+							<p class="p1">product1</p>
+							<p class="p2">产品1</p>
+							<p class="p3">product1</p>
+							<p class="p4">产品1</p>
+						</li>
+                        <li id="b">
+                        	<p class="p1">product2</p>
+							<p class="p2">产品2</p>
+							<p class="p3">product2</p>
+							<p class="p4">产品2</p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <p class="left_bottom">www.molteni.it</p>
+        </div>
+        <!-- 展开 -->
+        <div class="content">
+            <div class="con_char">
+                <div class="con_charle" style="top:0px; position:relative;">
+                	<div id="catagroyContent">
+                		<!-- 内容 -->
+ 			 		</div>
+                </div>
+            </div>
+            <div class="zooms"><img src="images/sq.png" width="20" height="14" /></div>
+        </div>
+        
+        <!-- 收缩 -->
+        <div class="content_none"> 	
+            <div class="con_none">Hoursewares</div> 
+            <div class="zooms1"><img src="images/zk.png" width="20" height="14" /></div> 
+        </div>
+        <div class="content_default">
+            <div class="con_default">Hoursewares</div> 
+        </div>
+        <!--Page Control Bar-->
+		<div id="controls-wrapper" class="load-item">
+			<!--Navigation-->
+			<ul id="slide-list"></ul>
+		</div>
+		
+    </div>
+    
+    <div class="main_footer">
+        <ul>
+            <li><a href="aboutus_history.html">About us</a></li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="aboutus_pic.html">Press</a></li>
+            <li><a href="aboutus_marking.html">Furniture Blog </a></li>
+            <li><a href="#">Hoursewares Blog</a></li>
+        </ul>
+        <ol>
+            <li><img src="images/bot_ri1.png" width="29" height="28" /></li>
+            <li><img src="images/bot_ri2.png" width="30" height="27" /></li>
+            <li><img src="images/bot_ri3.png" width="30" height="28"/></li>
+        </ol>
+    </div>
+    
+</div>
+
+</body>
+</html>
+
