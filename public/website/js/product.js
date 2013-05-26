@@ -23,14 +23,20 @@
 			$('.content').animate({height: 'toggle'},function(){
 			  $('.content').css({"display":"none"});
 		  	});
-		  	$('.content_none').css({"display":"block"});
+			$('.content_none').animate({height: 'toggle'},function(){
+				$('.content_none').css({"display":"block"});
+		  	});
+		  	
 		});
 		
 		$('.content_none').click(function(){
 			$('.content').animate({height: 'toggle'},function(){
 			  $('.content').css({"display":"block"});
 		  	});
-		  	$('.content_none').css({"display":"none"});
+			$('.content_none').animate({height: 'toggle'},function(){
+				$('.content_none').css({"display":"none"});
+		  	});
+		  	
 		});
 	}
 	
