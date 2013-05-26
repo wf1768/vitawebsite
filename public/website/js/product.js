@@ -26,7 +26,6 @@
 			$('.content_none').animate({height: 'toggle'},function(){
 				$('.content_none').css({"display":"block"});
 		  	});
-		  	
 		});
 		
 		$('.content_none').click(function(){
@@ -36,7 +35,6 @@
 			$('.content_none').animate({height: 'toggle'},function(){
 				$('.content_none').css({"display":"none"});
 		  	});
-		  	
 		});
 	}
 	
