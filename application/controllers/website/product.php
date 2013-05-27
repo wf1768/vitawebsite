@@ -107,22 +107,27 @@ class product extends CI_Controller {
         $this->_data = array_merge($this->_data,$data);
         $this->_data['type'] = $type;
 
+        $product_cate = false;
         if ($type == 'brand') {
             //获取当前附属的图片
             $product_image = $this->product_image($brandid);
             $this->_data['product_image'] = $product_image;
             $this->_data['type'] = 'brand';
-
         }
+
         else if ($type == 'cate') {
             //获取当前附属的图片
             $product_image = $this->product_image($cateid);
             $this->_data['product_image'] = $product_image;
+            //获取当前cate
+            $product_cate = $this->product_cate_model->getOne($cateid);
         }
 
-        //获取当前品牌下系列
-        $product_cate = $this->product_cate('',$brandid);
         $this->_data['product_cate'] = $product_cate;
+
+        //获取当前品牌下系列
+        $product_cates = $this->product_cate('',$brandid);
+        $this->_data['product_cates'] = $product_cates;
 
 
         $this->load->view('website/product',$this->_data);

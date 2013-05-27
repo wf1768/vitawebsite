@@ -78,7 +78,7 @@
                             <div class="controls">
                                 <input type="text" id="url" name="url" class="input-xlarge" value="<?php echo $brand->url ?>">
                                 <p class="help-block">
-                                    商品品牌的网址超链接，例如： http://www.baidu.com 。
+                                    商品品牌的网址超链接，例如： www.baidu.com 。
                                 </p>
                             </div>
                         </div>

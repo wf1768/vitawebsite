@@ -135,8 +135,8 @@
 		$("#furniture").find(".n1").css("display","block");
 		$("#furniture").find(".n2").css("display","none");
 		
-		$("#housewares").find(".n1").css("display","none");
-		$("#housewares").find(".n2").css("display","block");
+		$("#housewares").find(".n1").css("display","block");
+		$("#housewares").find(".n2").css("display","none");
 		
 		$.each($("#housewares_menu li a"),function(index,liItem){
 			$(liItem).find(".n1").css("display","block");
@@ -154,8 +154,8 @@
 	
 	function initHousewares(){
 		//类别
-		$("#housewares").find(".n1").css("display","none");
-		$("#housewares").find(".n2").css("display","block");
+		$("#housewares").find(".n1").css("display","block");
+		$("#housewares").find(".n2").css("display","none");
 		
 		$.each($("#housewares_menu li"),function(index,liItem){
 			$(liItem).find(".n1").css("display","block");
