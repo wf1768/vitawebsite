@@ -6,8 +6,8 @@
     <ul id="furniture_menu">
         <?php if ($product_brand_furniture) : ?>
             <?php foreach ($product_brand_furniture as $furn) : ?>
-                <li>
-                    <a href="<?php echo site_url('w/product/product1').'?brandid='.$furn->id.'&type=brand' ?>">
+                <li id="<?php echo $furn->id ?>">
+                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$furn->id.'&type=brand' ?>">
                         <img class="n1" src="<?php echo base_url($furn->imagepath) ?>" /><!-- 默认 -->
                         <img class="n2" src="<?php echo base_url($furn->imagepathchange) ?>"/><!-- 选中 -->
                     </a>
@@ -21,7 +21,7 @@
     <p id="housewares"><img class="n1" src="<?php echo base_url('public/website/images/left_midmenuhover.png') ?>" width="76" height="33"/><img class="n2" src="<?php echo base_url('public/website/images/left_midmenu.png') ?>" width="76" height="33"/></p>
     <ul id="housewares_menu">
     <?php foreach ($product_brand_housewares as $house) : ?>
-            <li>
+            <li id="<?php echo $house->id ?>">
                 <a href="#">
                     <img class="n1" src="<?php echo base_url($house->imagepath) ?>" /><!-- 默认 -->
                     <img class="n2" src="<?php echo base_url($house->imagepathchange) ?>"/><!-- 选中 -->

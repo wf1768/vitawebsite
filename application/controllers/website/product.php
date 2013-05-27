@@ -89,7 +89,7 @@ class product extends CI_Controller {
     /**
      * 根据品牌id，打开商品展示页
      */
-    public function product1() {
+    public function product_get() {
         $brandid = $this->input->get('brandid') ? $this->input->get('brandid') : '';
         $cateid = $this->input->get('cateid') ? $this->input->get('cateid') : '';
         $type = $this->input->get('type') ? $this->input->get('type') : '';
@@ -105,11 +105,13 @@ class product extends CI_Controller {
         //获取所有品牌信息
         $data = $this->website_lib->product_info();
         $this->_data = array_merge($this->_data,$data);
+        $this->_data['type'] = $type;
 
         if ($type == 'brand') {
             //获取当前附属的图片
             $product_image = $this->product_image($brandid);
             $this->_data['product_image'] = $product_image;
+            $this->_data['type'] = 'brand';
 
         }
         else if ($type == 'cate') {

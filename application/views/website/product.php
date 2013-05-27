@@ -47,7 +47,29 @@
             catagroyContent();
 
             productsInfo();
+            set_brand();
+
         });
+        //将当前品牌logo改变样式
+        function set_brand() {
+            //将当前品牌logo改变样式
+            var selid = '<?php echo $product_brand->id ?>';
+            $('#' + selid).find(".n1").css({"display":"none"});
+            $('#' + selid).find(".n2").css({"display":"block"});
+
+            var type = '<?php echo $type ?>';
+            if (type == 'brand') {
+                $("#furniture").find(".n1").css("display","none");
+                $("#furniture").find(".n2").css("display","block");
+            }
+            else if (type=='cate') {
+                $("#housewares").find(".n1").css("display","none");
+                $("#housewares").find(".n2").css("display","block");
+            }
+            else {
+
+            }
+        }
 
     </script>
 
