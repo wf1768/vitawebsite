@@ -68,25 +68,25 @@
 		});
 		var isClick = 0; //标识是否已经点击过
 		$("#products li").click(function(e) {
-			$("#identity").css({"color":"#000000"});
-			$("#product").css({"color":"#F08D39"});
-			pid = $(this).attr('id');
-			selProduct(pid);
+//			$("#identity").css({"color":"#000000"});
+//			$("#product").css({"color":"#F08D39"});
+//			pid = $(this).attr('id');
+//			selProduct(pid);
 			//
-			if(isClick==0){
-				var status = $('.content_none').css("display");
-				if(status=="none"){
-					$('.content').animate({height: 'toggle'},function(){
-						  $('.content').css({"display":"none"});
-				  	});
-				}else{
-					$('.content_none').animate({height: 'toggle'},function(){
-						  $('.content_none').css({"display":"none"});
-				  	});
-				}
-				$('.content_default').css({"display":"block"});//这里还需传值
-				isClick = 1;
-			}
+//			if(isClick==0){
+//				var status = $('.content_none').css("display");
+//				if(status=="none"){
+//					$('.content').animate({height: 'toggle'},function(){
+//						  $('.content').css({"display":"none"});
+//				  	});
+//				}else{
+//					$('.content_none').animate({height: 'toggle'},function(){
+//						  $('.content_none').css({"display":"none"});
+//				  	});
+//				}
+//				$('.content_default').css({"display":"block"});//这里还需传值
+//				isClick = 1;
+//			}
 			
 			
 			

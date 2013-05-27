@@ -112,7 +112,7 @@ class product extends CI_Controller {
             //获取当前附属的图片
             $product_image = $this->product_image($brandid);
             $this->_data['product_image'] = $product_image;
-            $this->_data['type'] = 'brand';
+//            $this->_data['type'] = 'brand';
         }
 
         else if ($type == 'cate') {

@@ -27,6 +27,10 @@
     });
 
     $(function(){
+
+        $('.content').css({"display":"none"});
+        $('.content_default').css({"display":"none"});
+
         var slidersArr = new Array();
         <!-- 注意，这种将php数组转为javascript数组，可能有中文问题。-->
         var tmp = <?php echo json_encode($product_image);?>;
@@ -36,7 +40,6 @@
         }
 
         params.slides = slidersArr;
-//            params.slide_links = 'num';
         $.supersized(params);
 
         initFormCSS();
@@ -70,18 +73,26 @@
 
         }
 
-<!--        var type = '--><?php //echo $type ?><!--';-->
-<!--        if (type == 'brand') {-->
-<!--            $("#furniture").find(".n1").css("display","none");-->
-<!--            $("#furniture").find(".n2").css("display","block");-->
-<!--        }-->
-<!--        else if (type=='cate') {-->
-<!--            $("#housewares").find(".n1").css("display","none");-->
-<!--            $("#housewares").find(".n2").css("display","block");-->
-<!--        }-->
-<!--        else {-->
-<!---->
-<!--        }-->
+        var type = '<?php echo $type ?>';
+        if (type == 'brand') {
+            $('.content').css({"display":"block"});
+        }
+        else if (type=='cate') {
+            $("#identity").css({"color":"#000000"});
+            $("#product").css({"color":"#F08D39"});
+            var cateid = '<?php
+                if ($product_cate) {
+                    echo $product_cate->id;
+                }
+                ?>';
+            selProduct(cateid);
+            //隐藏品牌说明。打开系列说明
+//            $('.content').css({"display":"none"});
+            $('.content_default').css({"display":"block"});
+        }
+        else {
+
+        }
     }
 
 </script>
@@ -99,20 +110,20 @@
                     <ul id="products">
                         <?php if ($product_cates) : ?>
                             <?php foreach ($product_cates as $cate) : ?>
-                                <li>
-                                    <p class="p1">-<?php echo $cate->catecode ?></p>
-                                    <p class="p2">-<?php echo $cate->catecodecn ?></p>
-                                    <p class="p3">-<?php echo $cate->catecode ?></p>
-                                    <p class="p4">-<?php echo $cate->catecodecn ?></p>
+                                <li id="<?php echo $cate->id ?>">
+                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p1">-<?php echo $cate->catecode ?></p></a>
+                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p2">-<?php echo $cate->catecodecn ?></p></a>
+                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p3">-<?php echo $cate->catecode ?></p></a>
+                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p4">-<?php echo $cate->catecodecn ?></p></a>
                                 </li>
                             <?php endforeach ?>
                         <?php endif ?>
                     </ul>
                 </dd>
             </dl>
-            <p class="left_bottom"><?php echo $product_brand->url ?></p>
+            <a href="http://<?php echo $product_brand->url ?>" target="_blank"><p class="left_bottom p2" style="z-index: 6"><?php echo $product_brand->url ?></p></a>
         </div>
-        <!-- 展开 -->
+        <!-- 展开 z-index: 4;-->
         <div class="content">
             <div class="con_char">
                 <div class="con_charle" style="top:0px; position:relative;">
