@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/website/products_01.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/website/js/common.js" afterPath="$PROJECT_DIR$/public/website/js/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/website/js/product.js" afterPath="$PROJECT_DIR$/public/website/js/product.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/website/product.php" afterPath="$PROJECT_DIR$/application/controllers/website/product.php" />
@@ -72,7 +73,7 @@
       <file leaf-file-name="product.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/website/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="8" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.25414366">
+            <state line="80" column="52" selection-start="2370" selection-end="2370" vertical-scroll-proportion="0.47513813">
               <folding>
                 <element signature="n#style#0;n#p#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -85,15 +86,6 @@
         <entry file="file://$PROJECT_DIR$/application/controllers/website/product.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="115" column="9" selection-start="3252" selection-end="3252" vertical-scroll-proportion="-13.166667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products_01.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/website/products_01.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="31" selection-start="8043" selection-end="8043" vertical-scroll-proportion="-6.25">
               <folding />
             </state>
           </provider>
@@ -316,7 +308,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="726" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="726" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -485,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/website/products_01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="31" selection-start="8043" selection-end="8043" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/website/product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="115" column="9" selection-start="3252" selection-end="3252" vertical-scroll-proportion="-13.166667">
@@ -508,7 +493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="8" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.25414366">
+        <state line="80" column="52" selection-start="2370" selection-end="2370" vertical-scroll-proportion="0.47513813">
           <folding>
             <element signature="n#style#0;n#p#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
