@@ -28,9 +28,6 @@
 
     $(function(){
 
-        $('.content').css({"display":"none"});
-        $('.content_default').css({"display":"none"});
-
         var slidersArr = new Array();
         <!-- 注意，这种将php数组转为javascript数组，可能有中文问题。-->
         var tmp = <?php echo json_encode($product_image);?>;
@@ -72,6 +69,9 @@
         else {
 
         }
+
+        $('.content').css({"display":"none"});
+        $('.content_default').css({"display":"none"});
 
         var type = '<?php echo $type ?>';
         if (type == 'brand') {
