@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/website/main.php" afterPath="$PROJECT_DIR$/application/controllers/website/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/website/product.php" afterPath="$PROJECT_DIR$/application/views/website/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/website_lib.php" afterPath="$PROJECT_DIR$/application/libraries/website_lib.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/website/main_video.php" afterPath="$PROJECT_DIR$/application/views/website/main_video.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vitawebsite.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369798766516" ignored="false" />
+    <file path="/Dummy.txt" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369818209206" ignored="false" />
     <file path="/MY_Controller.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368169506700" ignored="false" />
     <file path="/login.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368082261143" ignored="false" />
     <file path="/header.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1367400807051" ignored="false" />
@@ -17,7 +16,7 @@
     <file path="/aaa.html" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1367395099967" ignored="false" />
     <file path="/a.dummy" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369804564303" ignored="false" />
     <file path="/index.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368096565793" ignored="false" />
-    <file path="/main.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369803751182" ignored="false" />
+    <file path="/main.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369818635632" ignored="false" />
     <file path="/leftmenu.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1369209290363" ignored="false" />
     <file path="/index_model.php" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368086266325" ignored="false" />
     <file path="/us.stock.js" changelist="0b1fbbd4-49ae-47cf-bfab-62c45ee2fc24" time="1368101468862" ignored="false" />
@@ -71,9 +70,9 @@
       <file leaf-file-name="main_video.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/website/main_video.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="35" selection-start="1739" selection-end="1739" vertical-scroll-proportion="-5.0">
+            <state line="23" column="82" selection-start="1579" selection-end="1579" vertical-scroll-proportion="-0.625">
               <folding>
-                <marker date="1369800958000" expanded="true" signature="1738:1762" placeholder="..." />
+                <marker date="1369806053000" expanded="true" signature="1738:1762" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -88,37 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/website/js/product.js">
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/website/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="34" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/website/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="67" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/website/common/top.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="1218" selection-end="1218" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/website/product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="60" selection-start="946" selection-end="946" vertical-scroll-proportion="0.58563536">
+            <state line="48" column="0" selection-start="837" selection-end="837" vertical-scroll-proportion="0.35897437">
               <folding />
             </state>
           </provider>
@@ -153,11 +125,11 @@
         <option value="$PROJECT_DIR$/public/website/js/product.js" />
         <option value="$PROJECT_DIR$/plugins/bigvideo/css/style.css" />
         <option value="$PROJECT_DIR$/plugins/bigvideo/css/bigvideo.css" />
-        <option value="$PROJECT_DIR$/application/views/website/main_video.php" />
         <option value="$PROJECT_DIR$/application/libraries/website_lib.php" />
-        <option value="$PROJECT_DIR$/application/controllers/website/main.php" />
         <option value="$PROJECT_DIR$/application/views/website/common/top.php" />
         <option value="$PROJECT_DIR$/application/views/website/product.php" />
+        <option value="$PROJECT_DIR$/application/views/website/main_video.php" />
+        <option value="$PROJECT_DIR$/application/controllers/website/main.php" />
       </list>
     </option>
   </component>
@@ -172,7 +144,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="726" />
@@ -250,7 +221,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -268,37 +239,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vitawebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vitawebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,8 +258,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xamppfiles/htdocs/vitastock" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -359,16 +304,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="22" width="1280" height="726" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20178282" sideWeight="0.67105263" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40131578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20502432" sideWeight="0.5986842" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40131578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -376,6 +320,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -440,15 +385,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="59" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/website/main.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="61" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/program/jquery/插件/全屏插件/全屏视频/dfcb-BigVideo.js-ad97a85/example-simple副本.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="12" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.55801105" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/common/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="1666" vertical-scroll-proportion="-0.0" />
@@ -461,16 +408,12 @@
     </entry>
     <entry file="file://$USER_HOME$/program/jquery/插件/全屏插件/全屏视频/dfcb-BigVideo.js-ad97a85/example-ambient-loop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.35911602">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.35911602" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/program/jquery/插件/全屏插件/全屏视频/dfcb-BigVideo.js-ad97a85/example-simple-loop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="79" selection-start="1308" selection-end="1319" vertical-scroll-proportion="0.7237569">
-          <folding />
-        </state>
+        <state line="29" column="79" selection-start="1308" selection-end="1319" vertical-scroll-proportion="0.7237569" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/bigvideo/css/bigvideo.png">
@@ -480,38 +423,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/bigvideo/js/bigvideo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="32" selection-start="6519" selection-end="6519" vertical-scroll-proportion="0.15343915">
-          <folding />
-        </state>
+        <state line="228" column="32" selection-start="6519" selection-end="6519" vertical-scroll-proportion="0.15343915" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/website/main.php">
+    <entry file="file://$PROJECT_DIR$/application/views/website/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="29" selection-start="807" selection-end="807" vertical-scroll-proportion="0.29856116">
-          <folding />
-        </state>
+        <state line="23" column="56" selection-start="768" selection-end="768" vertical-scroll-proportion="0.4198895" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/website/common/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.5524862" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/website/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="67" selection-start="419" selection-end="419" vertical-scroll-proportion="-0.6084656" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/website/js/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="34" selection-start="79" selection-end="79" vertical-scroll-proportion="0.07936508" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/website_lib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="46" selection-start="2782" selection-end="2782" vertical-scroll-proportion="1.801105">
+        <state line="112" column="46" selection-start="2782" selection-end="2782" vertical-scroll-proportion="0.519337">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/website/product.php">
+    <entry file="file://$PROJECT_DIR$/system/core/CodeIgniter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="34" selection-start="2858" selection-end="2876" vertical-scroll-proportion="0.53038675">
+        <state line="363" column="0" selection-start="10351" selection-end="10351" vertical-scroll-proportion="-4.4583335">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/main_video.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="35" selection-start="1739" selection-end="1739" vertical-scroll-proportion="-5.0">
+        <state line="23" column="82" selection-start="1579" selection-end="1579" vertical-scroll-proportion="-0.625">
           <folding>
-            <marker date="1369800958000" expanded="true" signature="1738:1762" placeholder="..." />
+            <marker date="1369806053000" expanded="true" signature="1738:1762" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/website/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="34" selection-start="2858" selection-end="2876" vertical-scroll-proportion="0.7558528">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -522,30 +483,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/website/js/product.js">
+    <entry file="file://$PROJECT_DIR$/application/controllers/website/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="34" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/website/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="67" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/website/common/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="1218" selection-end="1218" vertical-scroll-proportion="-12.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/website/product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="60" selection-start="946" selection-end="946" vertical-scroll-proportion="0.58563536">
+        <state line="48" column="0" selection-start="837" selection-end="837" vertical-scroll-proportion="0.35897437">
           <folding />
         </state>
       </provider>
