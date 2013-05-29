@@ -48,6 +48,8 @@ class website_lib {
         $this->_CI = & get_instance();
         $this->_CI->load->model('config_model');
         $this->_CI->load->model('product_brand_model');
+        $this->_CI->load->model('product_type_model');
+
 
         log_message('debug', "website library Class Initialized");
     }
@@ -58,6 +60,11 @@ class website_lib {
     public function config($key) {
         $config = $this->_CI->config_model->getOneByWhere(array('key'=>$key));
         return $config;
+    }
+
+    public function product_type($id) {
+        $product_type = $this->_CI->product_type_model->getOne($id);
+        return $product_type;
     }
 
     /**
@@ -84,18 +91,38 @@ class website_lib {
      */
     public function product_info() {
         $data = array();
+        //获取商品分类的状态。
+        $product_type_furn = $this->product_type('1');
         //获取家具一级品牌菜单
-        $product_brand_furniture = $this->product_brand('','1');
+        if ($product_type_furn->status == 1) {
+            $product_brand_furniture = $this->product_brand('','1');
+        }
+        else {
+            $product_brand_furniture = false;
+        }
+
         $data['product_brand_furniture'] = $product_brand_furniture;
 
         //获取配置，是否有饰品的一级菜单开启
-        $config = $this->config('type_housewares');
+        $product_type_house = $this->product_type('2');
         //如果开启了饰品一级菜单,获取饰品一级品牌列表
-        $product_brand_housewares = false;
-        if ($config->value == '1') {
+        if ($product_type_house->status == 1) {
             $product_brand_housewares = $this->product_brand('','2');
         }
+        else {
+            $product_brand_housewares = false;
+        }
+
         $data['product_brand_housewares'] = $product_brand_housewares;
+
+//        //获取配置，是否有饰品的一级菜单开启
+//        $config = $this->config('type_housewares');
+//        //如果开启了饰品一级菜单,获取饰品一级品牌列表
+//        $product_brand_housewares = false;
+//        if ($config->value == '1') {
+//            $product_brand_housewares = $this->product_brand('','2');
+//        }
+//        $data['product_brand_housewares'] = $product_brand_housewares;
 
         return $data;
     }

@@ -44,13 +44,25 @@ class main extends CI_Controller {
 	 * 转到引导页
 	 */
 	public function index() {
-        //获取品牌logo列表,加入到_data中
-        $data = $this->website_lib->product_info();
-        $this->_data = array_merge($this->_data,$data);
-        //获取首页轮播图片列表。
-        $main = $this->main_model->getAllByWhere(array(),array(),array('sort'=>'asc'));
-        $this->_data['main'] = $main;
-        $this->load->view('website/main',$this->_data);
+
+        //获取配置，首页采用图片或者视频模式
+        $config = $this->website_lib->config('main_video');
+        if ($config->value == '0') {
+            //获取品牌logo列表,加入到_data中
+            $data = $this->website_lib->product_info();
+            $this->_data = array_merge($this->_data,$data);
+            //获取首页轮播图片列表。
+            $main = $this->main_model->getAllByWhere(array(),array(),array('sort'=>'asc'));
+            $this->_data['main'] = $main;
+            $this->load->view('website/main',$this->_data);
+        }
+        else {
+            //获取品牌logo列表,加入到_data中
+            $data = $this->website_lib->product_info();
+            $this->_data = array_merge($this->_data,$data);
+            $this->load->view('website/main_video',$this->_data);
+        }
+
 	}
 
 }

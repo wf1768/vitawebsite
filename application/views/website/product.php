@@ -17,10 +17,18 @@
         var topHeight = $('.top').innerHeight();
         var menu_topHeight = $('.menu_top').innerHeight();
         var mid_topHeight = $('.mid_top').innerHeight();
+        if (mid_topHeight == null) {
+            mid_topHeight = 0;
+        }
         $('.left_menu').css({
             "height": winHeight - bottomHeight - topHeight - menu_topHeight - mid_topHeight,
             "top": 0
         });
+
+        //调整.main的top
+        $('.main').css({
+            'top':topHeight + menu_topHeight + mid_topHeight
+        })
     }
     $(window).resize(function(){
         initFormCSS();
