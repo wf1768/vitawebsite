@@ -17,7 +17,7 @@
 /**
  * website MY_Controller Class
  *
- * 新闻
+ * 用户管理
  * @package		website
  * @subpackage	Controller
  * @category	Controller

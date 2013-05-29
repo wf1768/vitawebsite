@@ -90,7 +90,7 @@ function single_remove(id) {
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th class="span3"><input type="checkbox">新闻图册</th>
+                                    <th class="span3"><input type="checkbox"></th>
                                     <th class="span3" >新闻封面</th>
                                     <th class="span1"><span class="line"></span>新闻标题</th>
                                     <th class="span3"><span class="line"></span></th>
@@ -102,7 +102,6 @@ function single_remove(id) {
                                     <tr>
                                         <td>
                                             <input type="checkbox" name="checkbox" value="<?php echo $row->id ?>"/>
-                                            <a href="<?php echo site_url("a/press/pressPicList?pressid=".$row->id)?>">查看</a>
                                         </td>
                                         <td >
                                         
@@ -119,8 +118,9 @@ function single_remove(id) {
                                         <td title="<?php echo $row->content?>"><?php echo mb_substr($row->title, 0,20,"utf-8")	 ?></td>
                                         <td>
                                             <ul class="actions">
-                                                <li><a href="<?php echo site_url("a/press/updpress?id=".$row->id)?>" title="编辑" ><i class="table-edit"></i></a></li>
-                                                <li class="last"><a href="javascript:;" title="删除" onclick="single_remove('<?php echo $row->id ?>')"><i class="table-delete"></i></a></li>
+                                            <li> <a title="新闻图册" href="<?php echo site_url("a/press/pressPicList?pressid=".$row->id)?>"><i class="icon-picture"></i></a></li>
+                                                <li><a href="<?php echo site_url("a/press/updpress?id=".$row->id)?>" title="编辑" ><i class="icon-edit"></i></a></li>
+                                                <li class="last"><a href="javascript:;" title="删除" onclick="single_remove('<?php echo $row->id ?>')"><i class="icon-trash"></i></a></li>
                                             </ul>
                                         </td>
                                     </tr>
