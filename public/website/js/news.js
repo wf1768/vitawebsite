@@ -9,29 +9,41 @@
 $(function(){
 	//初始新闻大图片的高度
 	var news_height = $(window).height();
-	news_height = news_height-(62+51+51+110+90+40);
+	var news_width = $(window).width();
+	news_height = news_height-(42+33+33+110+90+40);
+	news_width = (news_width-515)/2+1;
 	$('.bigpic').css({"height":news_height});
+	$('#foucs').css({"height":news_height});
 	$('.navi').css({"height":news_height});//左右切换
+	$('.navi').css({"width":news_width});//左右切换
+	
+	$('#press_video').css({"height":news_height});
+	$('#press_video').css({"width":$(window).width()});
+	$('#press_flash').css({"height":news_height});
+	$('#press_flash').css({"width":$(window).width()});
 	
 	//动态-缩放
     $(window).resize(function(){
     	var news_height = $(window).height();
-    	news_height = news_height-(62+51+51+110+90+40);
+    	var news_width = $(window).width();
+    	news_height = news_height-(42+33+33+110+90+40);
+    	news_width = (news_width-515)/2+1;
     	$('.bigpic').css({"height":news_height});
-    	$('.navi').css({"height":news_height});
+    	$('#foucs').css({"height":news_height});
+    	$('.navi').css({"height":news_height});//左右切换
+    	$('.navi').css({"width":news_width});//左右切换
+    	
+    	$('.video-js-box').css({"width":$(window).width()});//左右切换
+    	$('#press_video').css({"height":news_height});
+    	$('#press_video').css({"width":$(window).width()});
+    	$('#press_flash').css({"height":news_height});
+    	$('#press_flash').css({"width":$(window).width()});
 	});
-    
-    
-});
-
-//新闻内容
-function newsContent(news_title,news_cont){
-	$("#news_title").html(news_title);//新闻标题
-	$("#news_cont").html(news_cont); //新闻内容
-	$("#news_cont").css({height: $(window).innerHeight()/7});
+    //固定高度
+    $("#news_cont").css({height: '90'});//$(window).innerHeight()/7
 	$("#news_cont").jscroll({
 		   W:"15px"
-		  ,BgUrl:"url(images/src01.png)"
+		  ,BgUrl:"url(../../../public/website/images/src01.png)"
 		  ,Bg:"right -30px repeat-y"
 		  ,Bar:{Pos:"up"
 				,Bd:{Out:"-30px 0 repeat-y",Hover:"-30px 0 repeat-y"}
@@ -41,18 +53,20 @@ function newsContent(news_title,news_cont){
 					  ,dBg:{Out:"0 -15px",Hover:"0px -16px",Focus:"0 -15px"}}
 		  ,Fn:function(){}
 	});
-}
+    
+});
+
 
 /*
 	新闻缩略图
 */
 (function($){
-
+	
 	/* Place Supersized Elements
 	----------------------------*/
-	$(document).ready(function() {
-		$('body').append('<div id="supersized-loader"></div><ul id="supersized"></ul>');
-	});
+//	$(document).ready(function() {
+//		$('body').append('<div id="supersized-loader"></div><ul id="supersized"></ul>');
+//	});
     
     
     $.supersized = function(options){
@@ -114,13 +128,18 @@ function newsContent(news_title,news_cont){
 						base.options.slides[thisSlide-1].thumb ? thumbImage = base.options.slides[thisSlide-1].thumb : thumbImage = base.options.slides[thisSlide-1].image;
 						thumbMarkers = thumbMarkers+'<li class="thumb'+thisSlide+' current-thumb"><img src="'+thumbImage+'"/></li>';
 					};
+					alert('==的时候');
 				}else{
 					// Slide links
 					if (base.options.slide_links) markers = markers+'<li class="slide-link-'+thisSlide+'" ><a>'+markerContent+'</a></li>';
 					// Slide Thumbnail Links
 					if (base.options.thumb_links){
+						pressid = base.options.slides[thisSlide-1].pressid;
+						thumb_url = base.options.slides[thisSlide-1].thumb_url;
+						title = base.options.slides[thisSlide-1].title;
+						
 						base.options.slides[thisSlide-1].thumb ? thumbImage = base.options.slides[thisSlide-1].thumb : thumbImage = base.options.slides[thisSlide-1].image;
-						thumbMarkers = thumbMarkers+'<li class="thumb'+thisSlide+'"><img src="'+thumbImage+'"/><p class="news_opactity"></p></li>';
+						thumbMarkers = thumbMarkers+'<li class="thumb'+thisSlide+'"><img src="'+thumbImage+'"/><a href="'+thumb_url+'"><p id="'+pressid+'" class="news_opactity"></p><div class="news_black">'+title+'</div></a></li>';
 					};
 				}
 				thisSlide++;
@@ -303,31 +322,21 @@ function newsContent(news_title,news_cont){
 			}
 			
 			// Thumb marker clicked 新闻缩略图点击事件
-			if (base.options.thumb_links){
-				$(vars.thumb_list+'> li').click(function(){
-				
-					index = $(vars.thumb_list+'> li').index(this);
-					targetSlide = index + 1;
-					
-					api.goTo(targetSlide);
-					
-					var news_id = $('#slidecaption').html();
-					alert(news_id);
-					newsContent(); 
-					return false;
-					
-				});
-			}
-			if (base.options.thumb_links){
-				$(vars.thumb_list+'> li').hover(function(){
-				
-					var news_id = $('#slidecaption').html();
-					
-					//alert(news_id);
-					return false;
-					
-				});
-			}
+//			if (base.options.thumb_links){
+//				$(vars.thumb_list+'> li').click(function(){
+//				
+//					index = $(vars.thumb_list+'> li').index(this);
+//					targetSlide = index + 1;
+//					
+//					api.goTo(targetSlide);
+//					
+//					var news_id = $('#slidecaption').html();
+//					alert(news_id);
+//					newsContent(); 
+//					return false;
+//					
+//				});
+//			}
 			
 			// Start slideshow if enabled
 			if (base.options.slideshow && base.options.slides.length > 1){
@@ -1059,13 +1068,13 @@ function funcfoucs(){
 		_maxpage = $("#foucs").find(".pict").length;
 		
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(501*(i-_currentpage)+$(window).width()/2-258);
-			var _opa = 0.5;
+			var _pos = Math.round(515*(i-_currentpage)+$(window).width()/2-258);
+			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
 			if(_pos > $(window).width()){
-				_pos -= _maxpage*501
-			}else if(_pos < -501){
-				_pos += _maxpage*501
+				_pos -= _maxpage*515
+			}else if(_pos < -515){
+				_pos += _maxpage*515
 			}
 			$("#foucs").find(".pict").eq(i).css({
 				left:_pos,
@@ -1084,11 +1093,11 @@ function funcfoucs(){
 		
 		window.onresize = function(){
 			for(var i = 0 ; i < _maxpage ; i++){
-				var _pos = Math.round(501*(i-_currentpage)+$(window).width()/2-258);
-				var _opa = 0.5;
+				var _pos = Math.round(515*(i-_currentpage)+$(window).width()/2-258);
+				var _opa = 1;
 				if(i == _currentpage)_opa = 1;
 				if(_pos > $(window).width()){
-					_pos -= _maxpage*501
+					_pos -= _maxpage*515
 				}
 				$("#foucs").stop().find(".pict").eq(i).css({
 					left:_pos,
@@ -1108,18 +1117,18 @@ function funcfoucs(){
 		$("#foucs").stop().find(".pict").eq(_currentpage).addClass("main").css({"position":"absolute"});;
 		_pict = $("#foucs").find(".pict");
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(501*(i-_currentpage)+$(window).width()/2-258);
-			var _opa = 0.5;
+			var _pos = Math.round(515*(i-_currentpage)+$(window).width()/2-258);
+			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
 			if(_pos > $(window).width()){
-				_pos -= _maxpage*501
-			}else if(_pos < -501*2){
-				_pos += _maxpage*501
+				_pos -= _maxpage*515
+			}else if(_pos < -515*2){
+				_pos += _maxpage*515
 			}
 			_pict.eq(i)
 			.stop()
 			.css({
-				left:_pos+501
+				left:_pos+515
 			})
 			.animate({
 				left:_pos,
@@ -1137,18 +1146,18 @@ function funcfoucs(){
 		$("#foucs").stop().find(".main").removeClass("main");
 		$("#foucs").stop().find(".pict").eq(_currentpage).addClass("main").css({"position":"absolute"});;
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(501*(i-_currentpage)+$(window).width()/2-258);
-			var _opa = 0.5;
+			var _pos = Math.round(515*(i-_currentpage)+$(window).width()/2-258);
+			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
-			if(_pos < -501){
-				_pos += _maxpage*501
-			}else if(_pos > $(window).width()+501){
-				_pos -= _maxpage*501
+			if(_pos < -515){
+				_pos += _maxpage*515
+			}else if(_pos > $(window).width()+515){
+				_pos -= _maxpage*515
 			}
 			$("#foucs").find(".pict").eq(i)
 			.stop()
 			.css({
-				left:_pos-501
+				left:_pos-515
 			})
 			.animate({
 				left:_pos,
