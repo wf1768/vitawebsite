@@ -44,8 +44,10 @@
             slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath};
         }
 
-        params.slides = slidersArr;
-        $.supersized(params);
+        if (slidersArr.length > 0) {
+            params.slides = slidersArr;
+            $.supersized(params);
+        }
 
         initFormCSS();
 
