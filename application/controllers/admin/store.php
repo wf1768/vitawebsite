@@ -17,7 +17,7 @@
 /**
  * website MY_Controller Class
  *
- * 关于我们
+ * 分店
  * @package		website
  * @subpackage	Controller
  * @category	Controller

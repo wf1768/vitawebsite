@@ -24,7 +24,7 @@
     })
 
     function single_remove(id) {
-        bootbox.confirm("确定要删除选择的首页轮播图片吗？<br> <font color='red'>" +
+        bootbox.confirm("确定要删除选择的照片墙图片吗？<br> <font color='red'>" +
             "注意：删除图片操作不可恢复，请谨慎操作。</font> ", function(result) {
             if(result){
                 $.ajax({
@@ -60,7 +60,7 @@
         }
         str = str.substring(0,str.length-1);
 
-        bootbox.confirm("确定要删除选择的首页轮播图片吗？<br> <font color='red'>" +
+        bootbox.confirm("确定要删除选择的照片墙图片吗？<br> <font color='red'>" +
             "注意：删除图片操作不可恢复，请谨慎操作。</font> ", function(result) {
             if(result){
                 $.ajax({
@@ -163,6 +163,7 @@
 添加图片</a> 
 
 <a class="btn-flat new-product" onclick="multi_remove()">- 删除图片</a>
+<a class="btn-flat new-product" href="<?php echo site_url("a/about")?>"><-返回</a>
 </div>
 </div>
 <div class="row-fluid">
@@ -192,10 +193,10 @@
 			<ul class="actions">
 				<li><a href="javascript:;" title="修改排序"
 					onclick="edit('<?php echo $row->id ?>',<?php echo $row->sort ?>,'<?php echo $row->content?>')"><i
-					class="table-edit"></i></a></li>
+					class="icon-edit"></i></a></li>
 				<li class="last"><a href="javascript:;" title="删除"
 					onclick="single_remove('<?php echo $row->id ?>')"><i
-					class="table-delete"></i></a></li>
+					class="icon-trash"></i></a></li>
 			</ul>
 			</td>
 		</tr>

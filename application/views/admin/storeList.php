@@ -114,7 +114,7 @@ function single_remove(id) {
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th class="span3"><input type="checkbox">图片</th>
+                                    <th class="span3"><input type="checkbox"></th>
                                     <th class="span3">分类</th>
                                     <th class="span3">标题</th>
                                     <th class="span3">内容</th>
@@ -127,15 +127,16 @@ function single_remove(id) {
                                     <tr>
                                         <td>
                                             <input type="checkbox" name="checkbox" value="<?php echo $row->id ?>"/>
-                                            <a href="<?php echo site_url("a/store/storePicList?storesid=".$row->id)?>">查看</a>
+                                            
                                         </td>
                                         <td><?php echo store::getType($row->typeid) ?></td>
                                         <td ><?php echo strip_tags(mb_substr($row->title, 0,20,"utf-8"))	 ?></td>
                                         <td ><?php echo strip_tags(mb_substr($row->content, 0,20,"utf-8"))	 ?></td>
                                         <td>
                                             <ul class="actions">
-                                                <li><a href="<?php echo site_url("a/store/updstore?id=".$row->id)?>" title="编辑" ><i class="table-edit"></i></a></li>
-                                                <li class="last"><a href="javascript:;" title="删除" onclick="single_remove('<?php echo $row->id ?>')"><i class="table-delete"></i></a></li>
+                                            <li> <a title="图片" href="<?php echo site_url("a/store/storePicList?storesid=".$row->id)?>"><i class="icon-picture"></i></a></li>
+                                                <li><a href="<?php echo site_url("a/store/updstore?id=".$row->id)?>" title="编辑" ><i class="icon-edit"></i></a></li>
+                                                <li class="last"><a href="javascript:;" title="删除" onclick="single_remove('<?php echo $row->id ?>')"><i class="icon-trash"></i></a></li>
                                             </ul>
                                         </td>
                                     </tr>

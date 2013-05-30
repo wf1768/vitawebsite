@@ -2,7 +2,7 @@
 
 <div class="main_footer">
     <ul>
-        <li><a href="#">About us</a></li>
+        <li><a href="<?php echo site_url("w/history")?>">About us</a></li>
         <li><a href="#">Stores</a></li>
         <li><a href="#">Press</a></li>
         <li><a href="#">Furniture Blog </a></li>

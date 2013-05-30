@@ -38,8 +38,8 @@
                                    <div class="ui-select">
                                 <select name="year" >
                                  <?php for($i=date("Y"); $i>1880;$i--):?>
-                                 <?php if(in_array($i." 年", $years)) continue;?>
-                                    <option><?php echo $i ?> 年</option>
+                                 <?php if(in_array($i, $years)) continue;?>
+                                    <option><?php echo $i ?></option>
                                  <?php endfor;?>
                                 </select>
                             </div>
