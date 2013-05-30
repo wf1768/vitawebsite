@@ -1,9 +1,11 @@
 <?php $this->load->view("website/common/header"); ?>
-    <script type="text/javascript">
+<script type="text/javascript">
         $(function(){
             var slidersArr = new Array();
-            slidersArr[0] = {'image':'slides/product/4.jpg'};
-            slidersArr[1] = {'image':'slides/product/5.jpg'};
+            var tmp = <?php echo $indeximg;?>;
+            for (var i=0;i<tmp.length;i++) {
+                slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath};
+            }
             params.slides = slidersArr;
             $.supersized(params);
 
@@ -12,18 +14,19 @@
               initHousewares();
               
             var content = '<ul>'+
-            '<li><a href="#" class="cur">1998</a></li>'+
-            '<li><a href="#">1999</a></li>'+
-            '<li><a href="#">2000</a></li>'+
-            '<li><a href="#">2001</a></li>'+
-            '<li><a href="#">2002</a></li>'+
-            '<li><a href="#">2003</a></li>'+
+            <?php foreach($history as $key=>$val):?>
+               <?php if(isset($_GET['id'])):?>
+                  '<li><a href="<?php echo site_url("w/history?id=").$val->id;?>" <?php if($val->id==trim($_GET['id'])) echo 'class="cur"';?>><?php echo $val->year;?></a></li>'+
+               <?php else:?>
+                  '<li><a href="<?php echo site_url("w/history?id=").$val->id;?>" <?php if($key==0) echo 'class="cur"';?>><?php echo $val->year;?></a></li>'+
+              <?php endif;?>
+              <?php endforeach;?>
         	'</ul>';
 			$("#content").html(content);
 			$("#content").css({height: $(window).innerHeight()/5});
 			$("#content").jscroll({
 				   W:"15px"
-				  ,BgUrl:"url(images/src01.png)"
+				  ,BgUrl:"url(<?php echo base_url() ?>public/website/images/src01.png)"
 				  ,Bg:"right -30px repeat-y"
 				  ,Bar:{Pos:"up"
 						,Bd:{Out:"-30px 0 repeat-y",Hover:"-30px 0 repeat-y"}
@@ -35,12 +38,17 @@
 			});
 			
 			$('#content ul li a').click(function(){
-				$.each($("#content ul li a"),function(index,liItem){
-					$(liItem).attr("class","");
-				});
-				$(this).attr("class","cur");
-				//改
-				setHistoryContent($(this).html()+'中文历史内容',$(this).html()+'英文历史内容');
+				
+//				$.each($("#content ul li a"),function(index,liItem){
+//					$(liItem).attr("class","");
+//				});
+//				$(this).attr("class","cur");
+//				//改
+//				 tmp=$(this).attr("_img");
+//				 for (var i=0;i<tmp.length;i++) {
+//                   slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath};
+//                 }
+//				setHistoryContent($("#"+$(this).attr("_val")).html());
 			});
 
 			//空白处
@@ -74,58 +82,50 @@
 			$('#history_eng').html(eng);
 		}
     </script>
-<div id="container">
- <?php $this->load->view("website/common/top"); ?>
-    
-    
-    
-    <div id="margin" style="width: 100%;height:80px;background-image:url('images/transparent.png'); position:absolute;bottom: 230px;">&nbsp;</div>
-    
-    <div class="time_main">
-        <div class="time_mainle">
-           <div id="mainBox" class="time_char">
-                <div id="content" class="time_charle" style="top:0px; position:relative;">
-                    
-                </div>
-                <div class="scroll_line" style="top:0px; right:0px; position:absolute; overflow:hidden;">
-    			</div>
-            </div>
-        </div>
-        
-        <div class="time_mainri">
-            <p id="history_cha" class="cha">
-                1998年文字测试
-            </p>
-            <p id="history_eng" class="eng"></p>
-        </div>
-    </div>
-    <!-- 收缩 start -->
-    <div class="time_mainone">
-        <div class="time_mainle">
-           <div class="time_char">
-                <div class="time_charle" style="top:0px; position:relative;">  
-                </div>
-                <div class="scroll_line" style="top:0px; right:0px; position:absolute; overflow:hidden;">
-    			</div>
-            </div>
-        </div>        
-        <div class="time_mainri">
-            <p class="cha">
-                1998年文字测试
-            </p>
-            <p class="eng"></p>
-        </div>
-    </div>
-    <!-- 收缩 end -->
-    
-    <div class="main_bot">
-        <ul>
-            <li><a href="aboutus_history.html" style="color: #EC934A">History</a></li>
-            <li><a href="aboutus_marking.html">Marking</a></li>
-        </ul>
-    </div>
-   <?php $this->load->view("website/common/footer"); ?>
+<div id="container"><?php $this->load->view("website/common/top"); ?> <?php foreach($history as $key=>$val):?>
+<div style="display: none" id="c<?php echo $val->year?>"><?php echo $val->content?></div>
+            <?php endforeach;?>
+
+<div id="margin" style="width: 100%;height:80px;background-image:url('<?php echo base_url() ?>public/website/images/transparent.png'); position:absolute;bottom: 230px;">&nbsp;</div>
+
+<div class="time_main">
+<div class="time_mainle">
+<div id="mainBox" class="time_char">
+<div id="content" class="time_charle"
+	style="top: 0px; position: relative;"></div>
+<div class="scroll_line"
+	style="top: 0px; right: 0px; position: absolute; overflow: hidden;"></div>
 </div>
+</div>
+
+<div class="time_mainri">
+<?php echo $showinfo->content;?>
+</div>
+</div>
+<!-- 收缩 start -->
+<div class="time_mainone">
+<div class="time_mainle">
+<div class="time_char">
+<div class="time_charle" style="top: 0px; position: relative;"></div>
+<div class="scroll_line"
+	style="top: 0px; right: 0px; position: absolute; overflow: hidden;"></div>
+</div>
+</div>
+<div class="time_mainri">
+<?php echo $showinfo->content;?>
+<p class="eng"></p>
+</div>
+</div>
+<!-- 收缩 end -->
+
+<div class="main_bot">
+<ul>
+	<li><a href="#" style="color: #EC934A">History</a></li>
+	<li><a href="<?php echo site_url("w/marking")?>">Marking</a></li>
+</ul>
+</div>
+            <?php $this->load->view("website/common/footer"); ?>
+ </div>
 
 </body>
 </html>

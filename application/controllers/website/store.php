@@ -25,7 +25,7 @@
  * @link
  */
 
-class history extends CI_Controller {
+class store extends CI_Controller {
 
 	/**
 	 * 传递到对应视图的变量
@@ -37,8 +37,9 @@ class history extends CI_Controller {
 	 */
 	function __construct() {
 		parent::__construct();
-		$this->load->model('history_model',"model");
-		$this->load->model('history_image_model','img_model');
+		$this->load->model('store_model',"model");
+		$this->load->model('store_image_model','img_model');
+		$this->load->model('store_type_model');
 		$this->_data['sys_title'] = '北京丰意德家具有限责任公司';
 	}
 	/**
@@ -48,26 +49,34 @@ class history extends CI_Controller {
 		//获取品牌logo列表,加入到_data中
 		$data = $this->website_lib->product_info();
 		$this->_data = array_merge($this->_data,$data);
+		
+		
+		if(isset($_GET['typeid'])){}
+		
+		
+		
+		
+		
 		//获取首页轮播图片列表。
-		$this->_data['history']=$this->model->getAllByWhere(array(),array(),array('year'=>'asc'));
+		$this->_data['storelist']=$this->model->getAllByWhere();
 		if(isset($_GET['id'])){
-			 $indeximg=$this->img_model->getAllByWhere(array("historyid"=>trim($_GET['id'])));
+			 $indeximg=$this->img_model->getAllByWhere(array("storesid"=>trim($_GET['id'])));
 			 $this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
 			 $this->_data['indeximg']=json_encode($indeximg);
 		}else{
 			//取出历史的图片
-			foreach($this->_data['history'] as $key=>$val){
-				$info=$this->img_model->getAllByWhere(array("historyid"=>$val->id));
-				if($info) $this->_data['imgs'][$val->year]=$info;
+			foreach($this->_data['storelist'] as $key=>$val){
+				$info=$this->img_model->getAllByWhere(array("storesid"=>$val->id));
+				if($info) $this->_data['imgs'][]=$info;
 			}
 			$indeximg=array_slice($this->_data['imgs'],0,1);
-			$this->_data['showinfo']=$this->_data['history'][0];
+			$this->_data['showinfo']=$this->_data['storelist'][0];
 			$this->_data['indeximg']=json_encode($indeximg[0]);
 		}
 
-		//        print_r();
-		//$this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
-		$this->load->view('website/history',$this->_data);
+		$this->_data['typeid']=0;
+		$this->_data['class']=$this->store_type_model->getAllByWhere();
+		$this->load->view('website/store',$this->_data);
 	}
 
 }
