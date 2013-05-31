@@ -53,7 +53,8 @@
 					$el.find(".news_black").css({"display":"none"});
 				}
 			});
-			
+			//footer: 
+			$('#press').css({"color":"#EC934A"});
 	    }); 
 
     </script>
