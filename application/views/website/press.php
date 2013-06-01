@@ -5,7 +5,7 @@
 <link href="<?php echo base_url('plugins/video/css/video-js.css') ?>" type="text/css" rel="stylesheet"/>
 
 <script type="text/javascript" src="<?php echo base_url('public/website/js/news.js') ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('public/website/theme/supersized.shutter.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('plugins/supersized/theme/supersized.shutter.js') ?>"></script>
 
 <script type="text/javascript" src="<?php echo base_url('plugins/video/js/video.js') ?>"></script>
     
