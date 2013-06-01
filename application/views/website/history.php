@@ -134,5 +134,9 @@
 
 </body>
 </html>
-
+<style>
+#about{
+    color: #EC934A;
+}
+</style>
 

@@ -76,4 +76,9 @@
 </div>
 </body>
 </html>
+<style>
+#store{
+    color: #EC934A;
+}
+</style>
 

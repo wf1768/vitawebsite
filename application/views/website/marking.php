@@ -99,5 +99,8 @@ ul#slide-list li {
 	top: 0;
 	width: 156px;
 }
--->
+
+#about{
+    color: #EC934A;
+}
 </style>
