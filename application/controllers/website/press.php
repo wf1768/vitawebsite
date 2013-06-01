@@ -132,6 +132,7 @@ class press extends CI_Controller {
     	//初始加载一条
     	$press_obj = $this->getOnePress($pressid);
     	$this->_data['pressObj'] = $press_obj;
+    	
 		//新闻大图片
     	$pressImgList = $this->getPressImg($press_obj->id);
     	$this->_data['press_ImgList'] = $pressImgList;
