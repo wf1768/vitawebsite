@@ -100,7 +100,7 @@
 	<div id="slidecaption" class="pic_con" style="display: none;"></div>
     <div class="cons">
     	<div class="con_box">
-         <div class="conle"><p id="news_title"><?php echo $pressObj->title ?></p></div>
+         <div class="conle"><?php echo $pressObj->title ?></div>
          <div class="conri">
          	<div id="news_cont" class="time_charle" style="top:0px; position:relative;">
                     <?php echo $pressObj->content ?>
