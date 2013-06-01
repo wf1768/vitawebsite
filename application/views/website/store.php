@@ -37,7 +37,7 @@
 <div id="container">
     <?php $this->load->view("website/common/top"); ?>
     <div class="leftmain">
-        <div style="bottom: 0px;position: absolute;">
+        <div style="bottom: 0px;position: absolute; width:285px;">
         	<div id="accordion">
         	 <?php foreach($storelist as $key=>$val):?>
         	  <?php if(isset($_GET['id'])):?>
