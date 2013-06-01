@@ -62,19 +62,21 @@
 <!--主内容start-->
 <div id="container">
     <?php $this->load->view("website/common/top"); ?>
-    <?php if ($press_ImgList) : ?>
+    <?php if ($type==1) : ?>
 	    <div class="bigpic">
 	    	<div id="foucs">
+	    		<?php if ($press_ImgList) : ?>
 	            	<?php foreach ($press_ImgList as $img) : ?>
 	                	<div class="element pict" ><img src="<?php echo base_url($img->imagepath) ?>" /></div>
 	                <?php endforeach ?>
+	            <?php endif ?>
 				<div class="element navi left">向左</div> 
 				<div class="element navi right">向右</div>
 			</div>
 	    </div>
     <?php endif ?>
     
-    <?php if($pressVideo) : ?>
+    <?php if($type==2) : ?>
 	    <div class="bigpic">
 	    	<!-- Begin VideoJS -->
 			  <div class="video-js-box">
@@ -100,7 +102,7 @@
 	<div id="slidecaption" class="pic_con" style="display: none;"></div>
     <div class="cons">
     	<div class="con_box">
-         <div class="conle"><?php echo $pressObj->title ?></div>
+         <div class="conle"><div class="conle_title"><?php echo $pressObj->title ?></div></div>
          <div class="conri">
          	<div id="news_cont" class="time_charle" style="top:0px; position:relative;">
                     <?php echo $pressObj->content ?>
