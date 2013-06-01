@@ -4,7 +4,7 @@
     <ul>
         <li><a href="<?php echo site_url("w/history")?>">About us</a></li>
         <li><a href="<?php echo site_url("w/store")?>">Stores</a></li>
-        <li><a href="#">Press</a></li>
+        <li><a id="press" href="<?php echo site_url("w/press/press_get")?>" >Press</a></li>
         <li><a href="#">Furniture Blog </a></li>
         <li><a href="#">Hoursewares Blog</a></li>
     </ul>

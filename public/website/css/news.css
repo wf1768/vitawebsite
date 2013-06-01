@@ -1,12 +1,12 @@
 .pic_main {height: 115px;}
 *{margin:0;padding:0;list-style-type:none;}
-#foucs img{border:0;width: 501px;}
+#foucs img{border:0;width: 515px;}
 /* foucs */
 #foucs{background:#000;height:328px;overflow:hidden;position:relative;}
 #foucs div.main{display:none;cursor:pointer;top: auto;width: auto;}
 #foucs .element{display:none;position:absolute;}
 #foucs .navi{display:block;width:380px;height:180px;line-height:99em;overflow:hidden;background:url(images/arrow-btn.png) no-repeat;}
-#foucs .left{left:0;background-position:0 0;cursor: pointer}
+#foucs .left{left:0;background-position:0 0;cursor: pointer;background:url(../../../public/website/images/black_mid.png) 0 0 repeat;}
 #foucs .left:hover{background-position:0 -80px;}
-#foucs .right{right:0;background-position:-80px 0;cursor: pointer}
+#foucs .right{right:0;background-position:-80px 0;cursor: pointer;background:url(../../../public/website/images/black_mid.png) 0 0 repeat;}
 #foucs .right:hover{background-position:-80px -80px;}
