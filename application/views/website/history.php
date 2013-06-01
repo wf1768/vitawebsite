@@ -106,7 +106,7 @@
 <div class="time_mainone">
 <div class="time_mainle">
 <div class="time_char">
-<div class="time_charle" style="top: 0px; position: relative;"></div>
+<div class="time_charle" style="top: 0px; position: relative;"><?php echo $showinfo->year;?></div>
 <div class="scroll_line"
 	style="top: 0px; right: 0px; position: absolute; overflow: hidden;"></div>
 </div>

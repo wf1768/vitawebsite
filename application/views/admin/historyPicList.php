@@ -152,8 +152,9 @@
 </div>
 <div class="row-fluid filter-block">
 <div class="pull-right"><a class="btn-flat new-product"
-	onclick="upload_multi('<?php echo base_url() ?>','a/about/upload_image?historyid=<?php echo trim($_GET['historyid'])?>'	)">+
-添加图片</a> <a class="btn-flat new-product" onclick="multi_remove()">- 删除图片</a>
+	onclick="upload_multi('<?php echo base_url() ?>','a/about/upload_image?historyid=<?php echo trim($_GET['historyid'])?>'	)">+添加图片</a> 
+	<a class="btn-flat new-product" onclick="multi_remove()">- 删除图片</a>
+	<a class="btn-flat new-product" href="<?php echo site_url("a/about")?>"><-返回</a>
 </div>
 </div>
 <div class="row-fluid">

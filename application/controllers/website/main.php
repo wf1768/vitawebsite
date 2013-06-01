@@ -41,7 +41,7 @@ class main extends CI_Controller {
         $this->_data['sys_title'] = '北京丰意德家具有限责任公司';
 	}
 	/**
-	 * 转到引导页
+	 * 转到首页
 	 */
 	public function index() {
 

@@ -52,7 +52,7 @@
                                     <label>内容:</label>
                                     <div class="span9" style="margin:0; padding:0"> 
                                     <textarea class="span9"  name="content" id="content">
-                                       <?php echo $info->title?>
+                                       <?php echo $info->content?>
                                     </textarea></div>
                                 </div>
                                 <div class="span11 field-box actions">

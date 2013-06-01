@@ -42,14 +42,14 @@
         	 <?php foreach($storelist as $key=>$val):?>
         	  <?php if(isset($_GET['id'])):?>
         	  	<div class="">
-		         	<h2><a href="<?php echo site_url('w/store?id=').$val->id;?>"><?php echo $val->title;?></a></h2>
+		         	<h2><a href="<?php echo site_url('w/store?id=').$val->id."&typeid=".$typeid;;?>"><?php echo $val->title;?></a></h2>
 		         	<dl class="item" style="display:<?php if($val->id==trim($_GET['id'])) echo 'block;' ; else echo  'none';?> ">
 		                <?php echo $val->content;?>
 					</dl>
 		       	</div>
         	  <?php else:?>
 		       	<div class="">
-		         	<h2><a href="<?php echo site_url('w/store?id=').$val->id;?>"><?php echo $val->title;?></a></h2>
+		         	<h2><a href="<?php echo site_url('w/store?id=').$val->id."&typeid=".$typeid;;?>"><?php echo $val->title;?></a></h2>
 		         	<dl class="item" style="display:<?php if($key==0) echo 'block;' ; else echo 'none';?> ">
 		                <?php echo $val->content;?>
 					</dl>
@@ -66,7 +66,7 @@
     <div class="main_bot">
         <ul>
             <?php foreach($class as $key=>$val):?>
-               <li><a <?php if($val->id==$typeid) echo 'class="cur"'?> href="<?php echo site_url('w/stroe?typeid=').$val->id;?>"><?php echo $val->storescode?></a></li>
+               <li><a <?php if($val->id==$typeid) echo 'class="cur"'?> href="<?php echo site_url('w/store?typeid=').$val->id?>"><?php echo $val->storescode?></a></li>
             <?php endforeach;?>
             
             
