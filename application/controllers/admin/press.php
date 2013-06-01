@@ -35,6 +35,7 @@ class press extends MY__Controller{
 		$this->_data['sys_title'] = '北京丰意德家具有限责任公司-关于我们';
 		$this->load->model('press_model');
 		$this->load->model('press_image_model','image_model');
+		$this->load->model('press_video_model');
 		$this->_data['page_offset'] = 10;
 		$this->_data['fun'] = 'press';
 	}
@@ -49,6 +50,9 @@ class press extends MY__Controller{
 	//历史列表
 	public function pressList(){
 		$this->dataList("admin/pressList",$this->press_model, array(), array(),array(), $this->_data);
+	}
+	public function getmv($id){
+	   return $this->press_video_model->getOneByWhere(array("pressid"=>trim($id)));
 	}
 	//添加关于我们 历史
 	public function addPress(){
@@ -95,16 +99,16 @@ class press extends MY__Controller{
 					@unlink($oldpath);
 				}
 			}
-			
-		//刪除新聞封面
-	      $index = $this->press_model->getOneByWhere(array("id"=>$val));
-          $oldpath = $index->image;
-          //检查文件是否存在
-          if (file_exists($oldpath)) {
-                //删除物理文件
-                @unlink($oldpath);
-          }
-	      $result = $this->dataDelete($this->press_model,array('id'=>$val),'id',false);
+
+			//刪除新聞封面
+			$index = $this->press_model->getOneByWhere(array("id"=>$val));
+			$oldpath = $index->image;
+			//检查文件是否存在
+			if (file_exists($oldpath)) {
+				//删除物理文件
+				@unlink($oldpath);
+			}
+			$result = $this->dataDelete($this->press_model,array('id'=>$val),'id',false);
 		}
 		$this->output->append_output($result);
 	}
@@ -128,13 +132,13 @@ class press extends MY__Controller{
 			}
 		}
 		//刪除新聞封面
-	       $index = $this->press_model->getOneByWhere(array("id"=>trim($_POST['id'])));
-          $oldpath = $index->image;
-            //检查文件是否存在
-            if (file_exists($oldpath)) {
-                //删除物理文件
-                @unlink($oldpath);
-            }
+		$index = $this->press_model->getOneByWhere(array("id"=>trim($_POST['id'])));
+		$oldpath = $index->image;
+		//检查文件是否存在
+		if (file_exists($oldpath)) {
+			//删除物理文件
+			@unlink($oldpath);
+		}
 		$result = $this->dataDelete($this->press_model,array('id'=>$id),'id',false);
 		$this->output->append_output($result);
 	}
@@ -150,26 +154,76 @@ class press extends MY__Controller{
 			$this->dataInsert($this->image_model,$info,false);
 		}
 	}
- public function upload_face_image() {
-        if(!trim($_GET['id'])){
-        	$this->error("错误调用");
-        }
-        $filepath = $this->upload_lib->upload_file('upload/press');
-        //将图片文件信息写入数据库
-        if ($filepath) {
-            //读取原图，更新后，删除原图
-            $index = $this->press_model->getOneByWhere(array("id"=>trim($_GET['id'])));
-            $index_image['image'] = $filepath;
-            $index_image['id']  =trim($_GET['id']);
-            $oldpath = $index->image;
-            $this->dataUpdate($this->press_model,$index_image,false);
-            //检查文件是否存在
-            if (file_exists($oldpath)) {
-                //删除物理文件
-                @unlink($oldpath);
-            }
-            $result = json_encode(array('newfilename'    => $filepath  ));
-            $this->output->append_output($result);
-        }
-    }
+	public function upload_face_image() {
+		if(!trim($_GET['id'])){
+			$this->error("错误调用");
+		}
+		$filepath = $this->upload_lib->upload_file('upload/press');
+		//将图片文件信息写入数据库
+		if ($filepath) {
+			//读取原图，更新后，删除原图
+			$index = $this->press_model->getOneByWhere(array("id"=>trim($_GET['id'])));
+			$index_image['image'] = $filepath;
+			$index_image['id']  =trim($_GET['id']);
+			$oldpath = $index->image;
+			$this->dataUpdate($this->press_model,$index_image,false);
+			//检查文件是否存在
+			if (file_exists($oldpath)) {
+				//删除物理文件
+				@unlink($oldpath);
+			}
+			$result = json_encode(array('newfilename'    => $filepath  ));
+			$this->output->append_output($result);
+		}
+	}
+	public function upload_film(){
+		if(!trim($_GET['id'])){
+			$this->error("错误调用");
+		}
+		$oldpath='';
+		$filepath = $this->upload_lib->upload_file('upload/press');
+
+
+		$chunk = isset($_REQUEST["chunk"]) ? intval($_REQUEST["chunk"]) : 0;
+		$chunks = isset($_REQUEST["chunks"]) ? intval($_REQUEST["chunks"]) : 0;
+		$fileName = isset($_REQUEST["name"]) ? $_REQUEST["name"] : '';
+		// Check if file has been uploaded
+		if (!$chunks || $chunk == $chunks - 1) {
+			//将图片文件信息写入数据库
+			if ($filepath) {
+				//读取原图，更新后，删除原图
+				$indexs = $this->press_video_model->getOneByWhere(array("pressid"=>trim($_GET['id'])));
+				$ext=strtolower($this->getExtend($filepath));
+				if($ext=="mp4"){ //MP4 格式
+					$index_file['mp4path'] = $filepath;
+					if($indexs) $oldpath = $indexs->mp4path;
+				}else{
+					$index_file['flvpath'] = $filepath;
+					if($indexs) $oldpath = $indexs->flvpath;
+				}
+				$index_file['pressid']=trim($_GET['id']);
+                if($indexs){
+                	$index_file['id']=$indexs->id;
+                	$this->dataUpdate($this->press_video_model,$index_file,false);
+                }else{
+                	$this->dataInsert($this->press_video_model,$index_file,false);
+                }
+				   
+				
+				
+				//检查文件是否存在
+				if (file_exists($oldpath)) {
+					//删除物理文件
+					@unlink($oldpath);
+				}
+				$result = json_encode(array('newfilename'    => $filepath  ));
+				$this->output->append_output($result);
+			}
+		}
+	}
+	public function getExtend($file_name){
+		$extend =explode("." , $file_name);
+		$va=count($extend)-1;
+		return $extend[$va];
+	}
 }

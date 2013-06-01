@@ -34,6 +34,15 @@
                         <div class="container">
                             <form class="new_user_form inline-input" method="post" action="<?php echo site_url("a/press/doAddpress")?>">
                                 <div class="span12 field-box">
+                                    <label>分类:</label>
+                                    <div class="span9" style="margin:0; padding:0"> 
+                                    <select name="type" class="span5">
+                                       <option value="1">图片新闻</option>
+                                       <option value="2">视频新闻</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="span12 field-box">
                                     <label>标题:</label>
                                     <div class="span9" style="margin:0; padding:0"> 
                                     <textarea class="span9"  name="title" id="title"></textarea></div>
