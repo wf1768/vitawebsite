@@ -80,16 +80,16 @@
 	    <div class="bigpic">
 	    	<!-- Begin VideoJS -->
 			  <div class="video-js-box">
-			    <video id="press_video" class="video-js"  autoplay="autoplay" loop="loop" controls="controls" preload="auto" poster="http://video-js.zencoder.com/oceans-clip.png">
+			    <video id="press_video" class="video-js"  autoplay="autoplay" loop="loop" controls="controls" preload="auto" poster="../../../public/website/images/video_index.png">
 			      <source src="<?php echo base_url($pressVideo->mp4path) ?>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
 			      <source src="<?php echo base_url($pressVideo->flvpath) ?>" type='video/ogg; codecs="theora, vorbis"' />
 			      <!-- 如果浏览器不兼容HTML5则使用flash播放 -->
 			      <object id="press_flash" class="vjs-flash-fallback" type="application/x-shockwave-flash" data="">
 			        <param name="movie" value="<?php echo base_url('plugins/video/css/flowplayer-3.2.1.swf') ?>" />
 			        <param name="allowfullscreen" value="true" />
-			        <param name="flashvars" value='config={"playlist":["http://video-js.zencoder.com/oceans-clip.png", {"url": "<?php echo base_url($pressVideo->mp4path) ?>","autoPlay":false,"autoBuffering":true}]}' />
+			        <param name="flashvars" value='config={"playlist":["../../../public/website/images/video_index.png", {"url": "<?php echo base_url($pressVideo->mp4path) ?>","autoPlay":false,"autoBuffering":true}]}' />
 			        <!-- 视频图片. -->
-			        <img src="http://video-js.zencoder.com/oceans-clip.png" width="640" height="264" alt="Poster Image"
+			        <img src="" width="640" height="264" alt="Poster Image"
 			          title="No video playback capabilities." />
 			      </object>
 			    </video>
