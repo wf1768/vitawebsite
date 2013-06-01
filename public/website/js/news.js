@@ -10,7 +10,11 @@ $(function(){
 	//初始新闻大图片的高度
 	var news_height = $(window).height();
 	var news_width = $(window).width();
-	news_height = news_height-(42+33+33+110+90+40);
+	var mid_topHeight = $('.mid_top').innerHeight();
+	if (mid_topHeight == null) {
+	     mid_topHeight = 0;
+	}
+	news_height = news_height-(42+mid_topHeight+33+110+90+40);
 	news_width = (news_width-515)/2+1;
 	$('.bigpic').css({"height":news_height});
 	$('#foucs').css({"height":news_height});
@@ -26,7 +30,7 @@ $(function(){
     $(window).resize(function(){
     	var news_height = $(window).height();
     	var news_width = $(window).width();
-    	news_height = news_height-(42+33+33+110+90+40);
+    	news_height = news_height-(42+mid_topHeight+33+110+90+40);
     	news_width = (news_width-515)/2+1;
     	$('.bigpic').css({"height":news_height});
     	$('#foucs').css({"height":news_height});
