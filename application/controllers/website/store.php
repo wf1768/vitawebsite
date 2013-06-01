@@ -53,8 +53,10 @@ class store extends CI_Controller {
 
 		if(isset($_GET['typeid'])){
 			$typeid=trim($_GET['typeid']);
+			$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid));
 		}else{
 		    $tmpinfo=$this->store_type_model->getOneByWhere();
+		    $this->_data['storelist']=$this->model->getAllByWhere();
 		    $typeid=trim($tmpinfo->storescode);
 		}
 
@@ -63,12 +65,10 @@ class store extends CI_Controller {
 		//获取首页轮播图片列表。
 		
 		if(isset($_GET['id'])){
-			$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid));
 			$indeximg=$this->img_model->getAllByWhere(array("storesid"=>trim($_GET['id'])));
 			$this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
 			$this->_data['indeximg']=json_encode($indeximg);
 		}else{
-			$this->_data['storelist']=$this->model->getAllByWhere();
 			//取出历史的图片
 			foreach($this->_data['storelist'] as $key=>$val){
 				$info=$this->img_model->getAllByWhere(array("storesid"=>$val->id));
