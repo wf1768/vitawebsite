@@ -711,6 +711,7 @@ VideoJS.player.extend({
       if (this.options.controlsBelow) {
         this.box.style.height = "";
         this.element.style.height = (this.box.offsetHeight - this.controls.offsetHeight) + "px";
+        
       }
     } else {
       this.box.style.width = this.width() + "px";

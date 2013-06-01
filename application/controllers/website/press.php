@@ -132,16 +132,19 @@ class press extends CI_Controller {
     	//初始加载一条
     	$press_obj = $this->getOnePress($pressid);
     	$this->_data['pressObj'] = $press_obj;
-    	
-		//新闻大图片
-    	$pressImgList = $this->getPressImg($press_obj->id);
-    	$this->_data['press_ImgList'] = $pressImgList;
-    	//新闻视频
-    	$press_video = $this->getPressVideo($press_obj->id);
-    	$this->_data['pressVideo'] = $press_video;
-    	
+    	$type = $press_obj->type;
+    	if($type==1){
+			//新闻大图片
+	    	$pressImgList = $this->getPressImg($press_obj->id);
+	    	$this->_data['press_ImgList'] = $pressImgList;
+    	}else{
+	    	//新闻视频
+	    	$press_video = $this->getPressVideo($press_obj->id);
+	    	$this->_data['pressVideo'] = $press_video;
+    	}
     	//默认加载的新闻ID
     	$this->_data['df_pressid'] = $press_obj->id;
+    	$this->_data['type'] = $type;
     	
         $this->load->view('website/press',$this->_data);
     }

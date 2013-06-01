@@ -43,6 +43,42 @@ $(function(){
     	$('#press_flash').css({"height":news_height});
     	$('#press_flash').css({"width":$(window).width()});
 	});
+    
+    VideoJS.player.newBehavior("fullscreenToggle", function(element){
+        _V_.addListener(element, "click", this.onFullscreenToggleClick.context(this));
+      },{
+        // When the user clicks on the fullscreen button, update fullscreen setting
+        onFullscreenToggleClick: function(event){
+          if (!this.videoIsFullScreen) {
+            this.enterFullScreen();
+          } else {
+        	  	
+        		$('.bigpic').css({"height":news_height});
+        		$('#foucs').css({"height":news_height});
+        		$('.navi').css({"height":news_height});//左右切换
+        		$('.navi').css({"width":news_width});//左右切换
+        		
+        		$('#press_video').css({"height":news_height});
+        		$('#press_video').css({"width":$(window).width()});
+        		$('#press_flash').css({"height":news_height});
+        		$('#press_flash').css({"width":$(window).width()});
+        		
+            this.exitFullScreen();
+          }
+        },
+
+        fullscreenOnWindowResize: function(event){ // Removeable
+          this.positionControlBars();
+        },
+        // Create listener for esc key while in full screen mode
+        fullscreenOnEscKey: function(event){ // Removeable
+          if (event.keyCode == 27) {
+            this.exitFullScreen();
+          }
+        }
+      }
+    );
+    
     //固定高度
     $("#news_cont").css({height: '90'});//$(window).innerHeight()/7
 	$("#news_cont").jscroll({

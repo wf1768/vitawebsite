@@ -116,8 +116,9 @@
 .bigpic ul li.mid{ width:39%; border-left:#fff solid 2px;}
 .cons{overflow:hidden; bottom:130px; height:110px; position:absolute; width:100%; background:#fff;}
 .con_box{ width:1100px; text-align:center; margin:0 auto;}
-.conle{width:34%; height:65px; float:left; font-family:"微软雅黑"; font-size:18px; text-align:right; padding-top:45px;}
-.conri{width:60%; height:90px; float:right; font-family:"微软雅黑"; margin:10px 30px 10px 0; border-left:#080504 solid 2px; padding-left:20px; overflow:hidden;text-align: left;}
+.conle{width:348px; height:110px; float:left; font-family:"微软雅黑"; font-size:18px; text-align:center;display: table;}
+.conle_title{vertical-align: middle;display: table-cell;font-family:"微软雅黑";padding: 0px 30px;height: 110px;}
+.conri{width:700px; height:90px; float:right; font-family:"微软雅黑"; margin:10px 30px 10px 0; border-left:#080504 solid 2px; padding-left:20px; overflow:hidden;text-align: left;}
 
 /*marking和pic页面下部轮换图*/
 .pic_main{overflow:hidden; position:absolute; width:100%; bottom:122px; height:115px;}
