@@ -41,13 +41,13 @@ class main extends CI_Controller {
         $this->_data['sys_title'] = '北京丰意德家具有限责任公司';
 	}
 	/**
-	 * 转到引导页
+	 * 转到首页
 	 */
 	public function index() {
 
         //获取配置，首页采用图片或者视频模式
         $config = $this->website_lib->config('main_video');
-        if ($config) { 
+        if ($config) {
             if ($config->value == '1') {
                 //获取品牌logo列表,加入到_data中
                 $data = $this->website_lib->product_info();
