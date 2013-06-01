@@ -45,6 +45,8 @@ class history extends CI_Controller {
 	 * 转到引导页
 	 */
 	public function index() {
+		 //获取配置，首页采用图片或者视频模式
+        $this->_data['open']= $this->website_lib->config('about_marking');
 		//获取品牌logo列表,加入到_data中
 		$data = $this->website_lib->product_info();
 		$this->_data = array_merge($this->_data,$data);
@@ -64,7 +66,7 @@ class history extends CI_Controller {
 			$this->_data['showinfo']=$this->_data['history'][0];
 			$this->_data['indeximg']=json_encode($indeximg[0]);
 		}
-
+        
 		//        print_r();
 		//$this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
 		$this->load->view('website/history',$this->_data);
