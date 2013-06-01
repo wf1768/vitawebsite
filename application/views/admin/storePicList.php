@@ -154,6 +154,7 @@
 <div class="pull-right"><a class="btn-flat new-product"
 	onclick="upload_multi('<?php echo base_url() ?>','a/store/upload_image?storesid=<?php echo trim($_GET['storesid'])?>'	)">+
 添加图片</a> <a class="btn-flat new-product" onclick="multi_remove()">- 删除图片</a>
+<a class="btn-flat new-product" href="<?php echo site_url("a/store")?>"><-返回</a>
 </div>
 </div>
 <div class="row-fluid">
