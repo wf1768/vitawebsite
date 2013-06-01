@@ -49,21 +49,19 @@ class store extends CI_Controller {
 		//获取品牌logo列表,加入到_data中
 		$data = $this->website_lib->product_info();
 		$this->_data = array_merge($this->_data,$data);
-
-
 		if(isset($_GET['typeid'])){
 			$typeid=trim($_GET['typeid']);
-			$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid));
 		}else{
 		    $tmpinfo=$this->store_type_model->getOneByWhere();
-		    $this->_data['storelist']=$this->model->getAllByWhere();
-		    $typeid=trim($tmpinfo->storescode);
+//		    echo $this->db->last_query();
+		    $typeid=trim($tmpinfo->id);
 		}
 
 
 
 		//获取首页轮播图片列表。
-		
+		$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid));
+//		print_r($this->_data['storelist']); 
 		if(isset($_GET['id'])){
 			$indeximg=$this->img_model->getAllByWhere(array("storesid"=>trim($_GET['id'])));
 			$this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
