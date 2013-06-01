@@ -106,7 +106,10 @@
 <div class="time_mainone">
 <div class="time_mainle">
 <div class="time_char">
-<div class="time_charle" style="top: 0px; position: relative;"><?php echo $showinfo->year;?></div>
+<div class="time_charle" style="top: 0px; position: relative;color:#EC934A;  font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px 0; margin-top:-4px"><?php echo $showinfo->year;?></div>
 <div class="scroll_line"
 	style="top: 0px; right: 0px; position: absolute; overflow: hidden;"></div>
 </div>
