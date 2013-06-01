@@ -49,20 +49,23 @@ class store extends CI_Controller {
 		//获取品牌logo列表,加入到_data中
 		$data = $this->website_lib->product_info();
 		$this->_data = array_merge($this->_data,$data);
-		
-		
-		if(isset($_GET['typeid'])){}
-		
-		
-		
-		
-		
+
+
+		if(isset($_GET['typeid'])){
+			$typeid=trim($_GET['typeid']);
+		}else{
+		    $tmpinfo=$this->store_type_model->getOneByWhere();
+		    $typeid=trim($tmpinfo->storescode);
+		}
+
+
+
 		//获取首页轮播图片列表。
-		$this->_data['storelist']=$this->model->getAllByWhere();
+		$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid));
 		if(isset($_GET['id'])){
-			 $indeximg=$this->img_model->getAllByWhere(array("storesid"=>trim($_GET['id'])));
-			 $this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
-			 $this->_data['indeximg']=json_encode($indeximg);
+			$indeximg=$this->img_model->getAllByWhere(array("storesid"=>trim($_GET['id'])));
+			$this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
+			$this->_data['indeximg']=json_encode($indeximg);
 		}else{
 			//取出历史的图片
 			foreach($this->_data['storelist'] as $key=>$val){
@@ -74,7 +77,7 @@ class store extends CI_Controller {
 			$this->_data['indeximg']=json_encode($indeximg[0]);
 		}
 
-		$this->_data['typeid']=0;
+		$this->_data['typeid']=$typeid;
 		$this->_data['class']=$this->store_type_model->getAllByWhere();
 		$this->load->view('website/store',$this->_data);
 	}

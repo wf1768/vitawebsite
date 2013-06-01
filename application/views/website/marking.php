@@ -1,4 +1,10 @@
 <?php $this->load->view("website/common/header"); ?>
+
+
+
+
+ <script src="<?php echo base_url('public/website/js/supersized.3.2.7.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url("plugins/supersized/theme/supersized.shutter.js")?>"></script>
     <script type="text/javascript">
         jQuery(function($){
         	 //菜单状态切换
@@ -31,6 +37,9 @@
     	ul#slide-list li {float: left;list-style: none outside none;margin: 0px;width: 12px;height: 40px;}
     	.pic_main {height: 98px;}
     </style>
+    </head>
+
+<body>
 <div id="container">
    <?php $this->load->view("website/common/top"); ?> 
     <div class="pic_main">
