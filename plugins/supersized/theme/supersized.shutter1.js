@@ -35,7 +35,7 @@
 			/* Thumbnail Tray
 			----------------------------*/
 			// Hide tray off screen
-			$(vars.thumb_tray).css({bottom : 0});//-$(vars.thumb_tray).height() 缩略图
+			$(vars.thumb_tray).css({bottom : -$(vars.thumb_tray).height()});
 			
 			// Thumbnail Tray Toggle
 			$(vars.tray_button).toggle(function(){
