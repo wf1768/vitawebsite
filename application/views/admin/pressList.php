@@ -90,10 +90,10 @@ function single_remove(id) {
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th class="span3"><input type="checkbox"></th>
-                                    <th class="span3" >新闻封面</th>
-                                    <th class="span1"><span class="line"></span>新闻标题</th>
-                                    <th class="span1"><span class="line"></span>新闻类型</th>
+                                    <th class="span3"><input type="checkbox">新闻封面</th>
+<!--                                    <th class="span3" >新闻封面</th>-->
+                                    <th class="span3"><span class="line"></span>新闻标题</th>
+                                    <th class="span3"><span class="line"></span>新闻类型</th>
                                     <th class="span1"><span class="line"></span>mp4文件</th>
                                     <th class="span1"><span class="line"></span>ogv文件</th>
                                     <th class="span3"><span class="line"></span></th>
@@ -106,16 +106,15 @@ function single_remove(id) {
                                     <tr>
                                         <td>
                                             <input type="checkbox" name="checkbox" value="<?php echo $row->id ?>"/>
-                                        </td>
-                                        <td >
-                                        
+<!--                                        </td>-->
+<!--                                        <td >-->
                                            <?php if($row->image !=""):?>
                                              <a href="javascript:;"data-html="true" data-trigger="hover" data-toggle="popover"data-content="<img src='<?php echo base_url($row->image) ?>' />">
                                                  <img src="<?php echo base_url($row->image) ?>"class="thumbnail smallImg" /> 
                                              </a>
                                            <?php endif;?>
                                        
-                                          <a style="margin: -23px 0 0;" onclick="upload_single('<?php echo base_url() ?>','a/press/upload_face_image?id=<?php echo $row->id?>')" class="btn-flat new-product">
+                                          <a style="margin: -15px 0 0;" onclick="upload_single('<?php echo base_url() ?>','a/press/upload_face_image?id=<?php echo $row->id?>')" class="btn-flat new-product">
                                           <i class="icon-plus"> </i>
                                           </a>
                                         </td>

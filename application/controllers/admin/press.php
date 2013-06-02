@@ -32,7 +32,7 @@ class press extends MY__Controller{
 	//构造函数
 	function __construct() {
 		parent::__construct();
-		$this->_data['sys_title'] = '北京丰意德家具有限责任公司-关于我们';
+		$this->_data['sys_title'] = '北京丰意德家具有限责任公司-新闻';
 		$this->load->model('press_model');
 		$this->load->model('press_image_model','image_model');
 		$this->load->model('press_video_model');
@@ -47,26 +47,26 @@ class press extends MY__Controller{
 	public function index(){
 		$this->pressList();
 	}
-	//历史列表
+	//新闻列表
 	public function pressList(){
 		$this->dataList("admin/pressList",$this->press_model, array(), array(),array(), $this->_data);
 	}
 	public function getmv($id){
 	   return $this->press_video_model->getOneByWhere(array("pressid"=>trim($id)));
 	}
-	//添加关于我们 历史
+	//添加关于我们 新闻
 	public function addPress(){
 		$this->load->view('admin/addpress',$this->_data);
 	}
-	//执行添加历史
+	//执行添加新闻
 	public function doAddpress(){
 		$this->dataInsert($this->press_model);
 	}
-	//历史图片列表
+	//新闻图片列表
 	public function pressPicList(){
 		$this->dataList('admin/pressPicList',$this->image_model,array("pressid"),array(),array('sort'=>'asc'),$this->_data);
 	}
-	//修改历史
+	//修改新闻
 	public  function updpress(){
 		if(!trim($_GET['id'])) $this->error("非法调用");
 		$info=$this->press_model->getOneBywhere(array("id"=>trim($_GET['id'])));
@@ -74,11 +74,11 @@ class press extends MY__Controller{
 		$this->_data['info']=$info;
 		$this->load->view("admin/updpress",$this->_data);
 	}
-	//执行修改历史信息
+	//执行修改新闻信息
 	public function doUpdpress(){
 		$this->dataUpdate($this->press_model);
 	}
-	//批量删除历史
+	//批量删除新闻
 	public function multDelpress(){
 		$result = false;
 		$idList = $this->input->post('id') ? $this->input->post('id') : '';
@@ -87,7 +87,7 @@ class press extends MY__Controller{
 			$this->output->append_output($result);
 			return;
 		}
-		//删除历史记录
+		//删除新闻记录
 		foreach($idList as $val){
 			$list=$this->image_model->getAllByWhere(array("pressid"=>$val));
 			foreach ($list as $row) {
@@ -112,7 +112,7 @@ class press extends MY__Controller{
 		}
 		$this->output->append_output($result);
 	}
-	//单个删除历史
+	//单个删除新闻
 	public function singleDelpress(){
 		$result = false;
 		$id = $this->input->post('id') ? $this->input->post('id') : 0;
@@ -120,27 +120,53 @@ class press extends MY__Controller{
 			$this->output->append_output($result);
 			return;
 		}
-		//读取原有数据，用来删除数据后，删除物理文件
-		$list=$this->image_model->getAllByWhere(array("pressid"=>$id));
-		foreach ($list as $row) {
-			$oldpath = $row->imagepath;
-			$result =$this->dataDelete($this->image_model,array('id'=>$row->id),'id',false);
-			//检查文件是否存在
-			if (file_exists($oldpath)) {
-				//删除物理文件
-				@unlink($oldpath);
-			}
-		}
-		//刪除新聞封面
-		$index = $this->press_model->getOneByWhere(array("id"=>trim($_POST['id'])));
-		$oldpath = $index->image;
-		//检查文件是否存在
-		if (file_exists($oldpath)) {
-			//删除物理文件
-			@unlink($oldpath);
-		}
-		$result = $this->dataDelete($this->press_model,array('id'=>$id),'id',false);
-		$this->output->append_output($result);
+        //获取新闻对象
+        $index = $this->press_model->getOneByWhere(array("id"=>trim($_POST['id'])));
+        if ($index->type == 1) {
+            //读取原有数据，用来删除数据后，删除物理文件
+            $list=$this->image_model->getAllByWhere(array("pressid"=>$id));
+            foreach ($list as $row) {
+                $oldpath = $row->imagepath;
+                $result =$this->dataDelete($this->image_model,array('id'=>$row->id),'id',false);
+                //检查文件是否存在
+                if (file_exists($oldpath)) {
+                    //删除物理文件
+                    @unlink($oldpath);
+                }
+            }
+        }
+        else if ($index->type == 2) {
+            //删除视频新闻
+            $press_video = $this->press_video_model->getOneByWhere(array("pressid"=>$id));
+            if ($press_video) {
+                $mp4_video = $press_video->mp4path;
+                $ogv_video = $press_video->flvpath;
+                //检查文件是否存在
+                if (file_exists($mp4_video)) {
+                    //删除物理文件
+                    @unlink($mp4_video);
+                }
+                if (file_exists($ogv_video)) {
+                    //删除物理文件
+                    @unlink($ogv_video);
+                }
+            }
+        }
+        else {
+            $this->output->append_output($result);
+            return;
+        }
+
+        //刪除新聞封面
+        $oldpath = $index->image;
+        //检查文件是否存在
+        if (file_exists($oldpath)) {
+            //删除物理文件
+            @unlink($oldpath);
+        }
+        $result = $this->dataDelete($this->press_model,array('id'=>$id),'id',false);
+        $this->output->append_output($result);
+
 	}
 	/**
 	 * 上传图片

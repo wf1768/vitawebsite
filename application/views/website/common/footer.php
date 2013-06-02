@@ -5,12 +5,12 @@
         <li><a id="about" href="<?php echo site_url("w/history")?>">About us</a></li>
         <li><a id="store" href="<?php echo site_url("w/store")?>">Stores</a></li>
         <li><a id="press" href="<?php echo site_url("w/press/press_get")?>" >Press</a></li>
-        <li><a href="#">Furniture Blog </a></li>
-        <li><a href="#">Hoursewares Blog</a></li>
+        <li><a href="http://www.baidu.com" target="_blank">Furniture Blog </a></li>
+        <li><a href="http://www.baidu.com" target="_blank">Hoursewares Blog</a></li>
     </ul>
     <ol>
-        <li><a href="#"><img src="<?php echo base_url('public/website/images/bot_ri1.png') ?>" width="29" height="28"/></a></li>
-        <li><a href="#"><img src="<?php echo base_url('public/website/images/bot_ri2.png') ?>" width="30" height="27"/></a></li>
-        <li><a href="#"><img src="<?php echo base_url('public/website/images/bot_ri3.png') ?>" width="30" height="28"/></a></li>
+        <li><a href="http://www.baidu.com" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri1.png') ?>" width="29" height="28"/></a></li>
+        <li><a href="http://www.baidu.com" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri2.png') ?>" width="30" height="27"/></a></li>
+        <li><a href="http://www.baidu.com" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri3.png') ?>" width="30" height="28"/></a></li>
     </ol>
 </div>

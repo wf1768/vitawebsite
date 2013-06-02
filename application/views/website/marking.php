@@ -3,7 +3,7 @@
 
 
 <script
-	src="<?php echo base_url('public/website/js/supersized.3.2.7.min.js') ?>"></script>
+<!--	src="--><?php //echo base_url('public/website/js/supersized.3.2.7.min.js') ?><!--"></script>-->
 <script
 	type="text/javascript"
 	src="<?php echo base_url("plugins/supersized/theme/supersized.shutter_marking.js")?>"></script>

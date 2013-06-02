@@ -42,6 +42,7 @@
                 BV.show('<?php echo base_url('upload/main/clip.mp4') ?>', {altSource:'<?php echo base_url('upload/main/clip.ogv') ?>'});
             } else {
                 BV.show('<?php echo base_url('upload/main/clip.mp4') ?>', {altSource:'<?php echo base_url('upload/main/clip.ogv') ?>',doLoop:true});
+<!--                BV.show('--><?php //echo base_url('upload/main/clip.mp4') ?><!--', {altSource:'/vita/upload/main/clip.ogv',doLoop:true});-->
             }
 <!--            BV.show('--><?php //echo base_url('upload/tmp/clip.mp4') ?><!--', {altSource:'--><?php //echo base_url('upload/tmp/clip.ogv') ?><!--'});-->
             //循环播放，多浏览器支持.
