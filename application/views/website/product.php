@@ -54,6 +54,21 @@
         //菜单状态切换
         initFurniture();
         initHousewares();
+
+        $("#catagroyContent").css({height: $(window).innerHeight()/5});
+        $("#catagroyContent").jscroll({
+            W:"15px"
+            ,BgUrl:"url(<?php echo base_url('public/website/images/src01.png') ?>"
+            ,Bg:"right -30px repeat-y"
+            ,Bar:{Pos:"up"
+                ,Bd:{Out:"-30px 0 repeat-y",Hover:"-30px 0 repeat-y"}
+                ,Bg:{Out:"-15px 0 repeat-y",Hover:"-15px 0 repeat-y",Focus:"-15px 0 repeat-y"}}
+            ,Btn:{btn:true
+                ,uBg:{Out:"0 0",Hover:"0 0",Focus:"0 0"}
+                ,dBg:{Out:"0 -15px",Hover:"0px -16px",Focus:"0 -15px"}}
+            ,Fn:function(){}
+        });
+
         catagroyContent();
 
         productsInfo();
