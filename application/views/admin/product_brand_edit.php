@@ -7,7 +7,16 @@
 
     <script>
         $(function () {
-
+//            CKEDITOR.replace( 'title', {
+//                fullPage: true,
+//                allowedContent: true,
+//                extraPlugins: 'wysiwygarea'
+//            });
+//            CKEDITOR.replace( 'editor1', {
+//                fullPage: true,
+//                allowedContent: true,
+//                extraPlugins: 'wysiwygarea'
+//            });
         })
     </script>
     <div class="content">
@@ -59,7 +68,7 @@
                             <label for="input01" class="control-label">描述</label>
 
                             <div class="controls">
-                                <textarea class="ckeditor" cols="80" id="content" name="content" rows="10"><?php echo $brand->content ?></textarea>
+                                <textarea class="ckeditor" cols="80" id="content" name="content" rows="50"><?php echo $brand->content ?></textarea>
                             </div>
                         </div>
                         <div class="control-group">
@@ -105,4 +114,6 @@
             </div>
         </div>
     </div>
-<?php $this->load->view('admin/common/footer.php');
+<?php $this->load->view('admin/common/footer.php'); ?>
+
+

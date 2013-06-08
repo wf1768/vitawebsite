@@ -101,6 +101,8 @@
         var type = '<?php echo $type ?>';
         if (type == 'brand') {
             $('.content').css({"display":"block"});
+            //设置标签a的css
+            $('#IDENTITY').removeClass('p2').css('color','#E69A42');
         }
         else if (type=='cate') {
             $("#identity").css({"color":"#000000"});
@@ -114,6 +116,12 @@
             //隐藏品牌说明。打开系列说明
 //            $('.content').css({"display":"none"});
             $('.content_default').css({"display":"block"});
+
+            //设置标签a的css
+            $('#IDENTITY').addClass('p2').hover(function(){
+                $(this).css({"color":"#E69A42"});
+            });
+
         }
         else {
 
@@ -129,7 +137,7 @@
         <div class="left_menu">
             <dl>
                 <dt><img id="currentBrand" src="<?php echo base_url($product_brand->imagepathshow) ?>" /></dt><!-- 当前品牌图片 -->
-                <dd id="identity" class="yellow">IDENTITY</dd>
+                <dd id="identity" class="yellow"><a id="IDENTITY" class="p2" href="<?php echo site_url('w/product/product_get?brandid='.$product_brand->id.'&type=brand') ?>">IDENTITY</a></dd>
                 <dd id="product">PRODUCTS</dd>
                 <dd>
                     <ul id="products">

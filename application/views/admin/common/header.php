@@ -57,6 +57,6 @@
     <script type="text/javascript" src="<?php echo base_url('plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js') ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('plugins/plupload/js/i18n/zh-cn.js') ?>"></script>
     <script src="<?php echo base_url('public/admin/js/bootstrap-datepicker.js') ?>"></script>
-     <script src="<?php echo base_url('public/admin/js/ckeditor.js') ?>"></script>
+     <script src="<?php echo base_url('plugins/ckeditor/ckeditor.js') ?>"></script>
 </head>
 <body>
