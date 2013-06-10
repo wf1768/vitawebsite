@@ -206,3 +206,58 @@
 		
 	}
 	
+	/**
+	 * footer
+	 * */
+	$(function(){
+		//初始状态
+		$.each($("#footer li"),function(index,liItem){
+			$(liItem).find(".f1").css("display","block");
+			$(liItem).find(".f3").css("display","none");
+			$(liItem).find(".f2").css("display","none");
+			$(liItem).find(".f4").css("display","none");
+		});
+		//移动到菜单条上
+		$("#footer li").hover(function() {
+			$el = $(this);
+			if ($el.find(".f1").css("display")=="none" && $el.find(".f2").css("display")=="none"){
+				$el.find(".f3").css({"display":"none"});
+				$el.find(".f4").css({"display":"block"});
+			}else{
+				$el.find(".f1").css({"display":"none"});
+				$el.find(".f2").css({"display":"block"});
+			}
+		}, function() {
+			$el = $(this);
+			if ($el.find(".f1").css("display")=="none" && $el.find(".f2").css("display")=="none"){
+				$el.find(".f3").css({"display":"block"});
+				$el.find(".f4").css({"display":"none"});
+			}else{
+				$el.find(".f1").css({"display":"block"});
+				$el.find(".f2").css({"display":"none"});
+			}
+		});
+	});
+	
+	/**
+	 * fid 当前选择ID
+	 * 在当前页初始调用此方法
+	 * */
+	function pitchOn(fid){
+		if (fid!="" && fid!=null){
+			var slidersArr = new Array();
+			//还原所有菜单项
+			$.each($("#footer li"),function(index,liItem){
+				$(liItem).find(".f1").css("display","block");
+				$(liItem).find(".f3").css("display","none");
+				$(liItem).find(".f2").css("display","none");
+				$(liItem).find(".f4").css("display","none");
+				if ($(liItem).attr('id')==fid){
+					$(liItem).find(".f1").css("display","none");
+					$(liItem).find(".f3").css("display","block");
+					$(liItem).find(".f2").css("display","none");
+					$(liItem).find(".f4").css("display","none");
+				}
+			});
+		}
+	}

@@ -15,6 +15,8 @@
             initFurniture();
             initHousewares();
             catagroyContent();
+            //footer			
+            pitchOn('press');
         });
 
     </script>
@@ -70,8 +72,8 @@
 	                	<div class="element pict" ><img src="<?php echo base_url($img->imagepath) ?>" /></div>
 	                <?php endforeach ?>
 	            <?php endif ?>
-				<div class="element navi left">向左</div> 
-				<div class="element navi right">向右</div>
+				<div class="element navi left"></div> 
+				<div class="element navi right"></div>
 			</div>
 	    </div>
     <?php endif ?>

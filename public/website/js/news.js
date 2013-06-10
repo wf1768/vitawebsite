@@ -8,42 +8,67 @@
  * */
 $(function(){
 	//初始新闻大图片的高度
-	var news_height = $(window).height();
-	var news_width = $(window).width();
-	var mid_topHeight = $('.mid_top').innerHeight();
-	if (mid_topHeight == null) {
-	     mid_topHeight = 0;
-	}
-	news_height = news_height-(42+mid_topHeight+33+110+90+40);
-	news_width = (news_width-515)/2+1;
-	$('.bigpic').css({"height":news_height});
-	$('#foucs').css({"height":news_height});
-	$('.navi').css({"height":news_height});//左右切换
-	$('.navi').css({"width":news_width});//左右切换
-	
-	$('#press_video').css({"height":news_height});
-	$('#press_video').css({"width":$(window).width()});
-	$('#press_flash').css({"height":news_height});
-	$('#press_flash').css({"width":$(window).width()});
-	
+//	显示比例值：1.431
+	var win_width = $(window).width()/2;//比例宽度
+	var ratio_w = win_width/2;	//减值
+    funcfoucs(win_width,ratio_w);
+    
+    $('#foucs img').css({"width":win_width});
+    resizePic(win_width);
+   
 	//动态-缩放
     $(window).resize(function(){
-    	var news_height = $(window).height();
+    	var win_width = $(window).width()/2;//比例宽度 696
+    	var ratio_w = win_width/2;	//减值348
+    	
+        funcfoucs(win_width,ratio_w);
+
+        $('#foucs img').css({"width":win_width});
+        resizePic(win_width);
+	});
+    
+    /**
+     * @param win_width 中间图片的宽度
+     * 
+     * */
+    function resizePic(win_width){
+     	var news_height = $(window).height();
     	var news_width = $(window).width();
-    	news_height = news_height-(42+mid_topHeight+33+110+90+40);
-    	news_width = (news_width-515)/2+1;
+    	
+    	var top = $('.top').innerHeight();
+    	var mid_topHeight = $('.mid_top').innerHeight();   //品牌
+    	if (mid_topHeight == null) {
+    	     mid_topHeight = 0;
+    	}
+    	var menu_top = $('.menu_top').innerHeight();	   //品牌
+    	if (menu_top == null) {
+    		menu_top = 0;
+    	}
+    	var cons = $('.cons').innerHeight();			   //内容高度
+    	var pic_mains = $('.pic_mains').innerHeight();	   //缩略图高度
+    	var main_footer = $('.main_footer').innerHeight(); //底部高度
+    	
+    	news_height = news_height-(top+mid_topHeight+menu_top+cons+pic_mains+main_footer);
+    	//win_width 中间亮图的宽度 
+    	news_width = (news_width-win_width)/2; 
+    	
     	$('.bigpic').css({"height":news_height});
     	$('#foucs').css({"height":news_height});
     	$('.navi').css({"height":news_height});//左右切换
     	$('.navi').css({"width":news_width});//左右切换
     	
-    	$('.video-js-box').css({"width":$(window).width()});//左右切换
+    	//视频
+    	$('.video-js-box').css({"width":$(window).width()});//播放条
     	$('#press_video').css({"height":news_height});
     	$('#press_video').css({"width":$(window).width()});
     	$('#press_flash').css({"height":news_height});
     	$('#press_flash').css({"width":$(window).width()});
-	});
+    	
+    }
     
+    /**
+     * 视频最大化后，退出还原 
+     * */
     VideoJS.player.newBehavior("fullscreenToggle", function(element){
         _V_.addListener(element, "click", this.onFullscreenToggleClick.context(this));
       },{
@@ -52,17 +77,8 @@ $(function(){
           if (!this.videoIsFullScreen) {
             this.enterFullScreen();
           } else {
-        	  	
-        		$('.bigpic').css({"height":news_height});
-        		$('#foucs').css({"height":news_height});
-        		$('.navi').css({"height":news_height});//左右切换
-        		$('.navi').css({"width":news_width});//左右切换
-        		
-        		$('#press_video').css({"height":news_height});
-        		$('#press_video').css({"width":$(window).width()});
-        		$('#press_flash').css({"height":news_height});
-        		$('#press_flash').css({"width":$(window).width()});
-        		
+        	//视频大小调整
+        	resizePic(0);
             this.exitFullScreen();
           }
         },
@@ -79,7 +95,7 @@ $(function(){
       }
     );
     
-    //固定高度
+    //新闻内容-固定高度90
     $("#news_cont").css({height: '90'});//$(window).innerHeight()/7
 	$("#news_cont").jscroll({
 		   W:"15px"
@@ -96,6 +112,32 @@ $(function(){
     
 });
 
+function AutoResizeImage(maxWidth,maxHeight,objImg){
+	var img = new Image();
+	img.src = objImg.src;
+	var hRatio;
+	var wRatio;
+	var Ratio = 1;
+	var w = img.width;
+	var h = img.height;
+	wRatio = maxWidth / w;
+	hRatio = maxHeight / h;
+	if (maxWidth ==0 && maxHeight==0){
+		Ratio = 1;
+	}else if (maxWidth==0){//
+		if (hRatio<1) Ratio = hRatio;
+	}else if (maxHeight==0){
+		if (wRatio<1) Ratio = wRatio;
+	}else if (wRatio<1 || hRatio<1){
+		Ratio = (wRatio<=hRatio?wRatio:hRatio);
+	}
+	if (Ratio<1){
+		w = w * Ratio;
+		h = h * Ratio;
+	}
+	objImg.height = h;
+	objImg.width = w;
+}
 
 /*
 	新闻缩略图
@@ -1033,7 +1075,7 @@ $(function(){
  * */
 $(document).ready(function(){
 	
-	funcfoucs();
+//	funcfoucs();
 	
 	$(".pict").hover(function(){
 		$(this).addClass("jhover");
@@ -1054,7 +1096,10 @@ jQuery.extend( jQuery.easing,{
 	}
 });
 
-function funcfoucs(){
+function funcfoucs(win_width,ratio_w){
+	//显示比例值：1.431
+//	var win_width;//比例宽度 696
+//	var ratio_w;	//减值348
 	
 	var _imgArray = new Array();
 	
@@ -1108,13 +1153,13 @@ function funcfoucs(){
 		_maxpage = $("#foucs").find(".pict").length;
 		
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(515*(i-_currentpage)+$(window).width()/2-258);
+			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()/2-ratio_w);
 			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
 			if(_pos > $(window).width()){
-				_pos -= _maxpage*515
-			}else if(_pos < -515){
-				_pos += _maxpage*515
+				_pos -= _maxpage*win_width
+			}else if(_pos < -win_width){
+				_pos += _maxpage*win_width
 			}
 			$("#foucs").find(".pict").eq(i).css({
 				left:_pos,
@@ -1133,11 +1178,11 @@ function funcfoucs(){
 		
 		window.onresize = function(){
 			for(var i = 0 ; i < _maxpage ; i++){
-				var _pos = Math.round(515*(i-_currentpage)+$(window).width()/2-258);
+				var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()/2-ratio_w);
 				var _opa = 1;
 				if(i == _currentpage)_opa = 1;
 				if(_pos > $(window).width()){
-					_pos -= _maxpage*515
+					_pos -= _maxpage*win_width
 				}
 				$("#foucs").stop().find(".pict").eq(i).css({
 					left:_pos,
@@ -1157,18 +1202,18 @@ function funcfoucs(){
 		$("#foucs").stop().find(".pict").eq(_currentpage).addClass("main").css({"position":"absolute"});;
 		_pict = $("#foucs").find(".pict");
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(515*(i-_currentpage)+$(window).width()/2-258);
+			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()/2-ratio_w);
 			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
 			if(_pos > $(window).width()){
-				_pos -= _maxpage*515
-			}else if(_pos < -515*2){
-				_pos += _maxpage*515
+				_pos -= _maxpage*win_width
+			}else if(_pos < -win_width*2){
+				_pos += _maxpage*win_width
 			}
 			_pict.eq(i)
 			.stop()
 			.css({
-				left:_pos+515
+				left:_pos+win_width
 			})
 			.animate({
 				left:_pos,
@@ -1186,18 +1231,18 @@ function funcfoucs(){
 		$("#foucs").stop().find(".main").removeClass("main");
 		$("#foucs").stop().find(".pict").eq(_currentpage).addClass("main").css({"position":"absolute"});;
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(515*(i-_currentpage)+$(window).width()/2-258);
+			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()/2-ratio_w);
 			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
-			if(_pos < -515){
-				_pos += _maxpage*515
-			}else if(_pos > $(window).width()+515){
-				_pos -= _maxpage*515
+			if(_pos < -win_width){
+				_pos += _maxpage*win_width
+			}else if(_pos > $(window).width()+win_width){
+				_pos -= _maxpage*win_width
 			}
 			$("#foucs").find(".pict").eq(i)
 			.stop()
 			.css({
-				left:_pos-515
+				left:_pos-win_width
 			})
 			.animate({
 				left:_pos,

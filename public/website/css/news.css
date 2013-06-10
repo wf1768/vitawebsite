@@ -1,6 +1,6 @@
 .pic_main {height: 115px;}
 *{margin:0;padding:0;list-style-type:none;}
-#foucs img{border:0;width: 515px;}
+#foucs img{border:0;}
 /* foucs */
 #foucs{background:#000;height:328px;overflow:hidden;position:relative;}
 #foucs div.main{display:none;cursor:pointer;top: auto;width: auto;}
