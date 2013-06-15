@@ -8,25 +8,18 @@
  * */
 $(function(){
 	//初始新闻大图片的高度
-//	显示比例值：   1.42  1280/900
-//	var win_width = $(window).width()/2;//比例宽度
-//	var ratio_w = win_width/2;	//减值
-//    funcfoucs(win_width,ratio_w);
-//    
-//    $('#foucs img').css({"width":win_width});
-//    resizePic(win_width);
+	//显示比例值：   1.42  1280/900
 	resizePic();
+	
+	var resizeTimer = null;
 	//动态-缩放
     $(window).resize(function(){
-    	resizePic()
-//    	var win_width = $(window).width()/2;//比例宽度 696
-//    	var ratio_w = win_width/2;	//减值348
-//    	
-//        funcfoucs(win_width,ratio_w);
-//
-//        $('#foucs img').css({"width":win_width});
-//        resizePic(win_width);
+    	if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout("resizePic()", 1000);
 	});
+    
+   
+
     
     /**
      * 视频最大化后，退出还原 
@@ -102,7 +95,7 @@ function resizePic(){
 	
 	var win_width = news_height*1.4222;//中间图片的宽度
 	news_width = (news_width-win_width)/2; 
-    funcfoucs(win_width,news_width);
+    funcfoucs(win_width,news_width);//
     
     
 	$('.bigpic').css({"height":news_height+4});
@@ -1226,7 +1219,7 @@ function funcfoucs(win_width,ratio_w){
 				left:_pos,
 				opacity:_opa
 			},{
-				duration:1700 ,
+				duration:1200 ,
 				easing:'easeOutQuint'
 			})
 		}
@@ -1255,7 +1248,7 @@ function funcfoucs(win_width,ratio_w){
 				left:_pos,
 				opacity:_opa
 			},{
-				duration:1700 ,
+				duration:1200 ,
 				easing:'easeOutQuint'
 			})
 		}
