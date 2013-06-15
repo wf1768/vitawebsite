@@ -49,9 +49,13 @@
 //            $('#big-video-vid_html5_api').bind("ended",function() {
 //                this.play();
 //            })
-            $('#big-video-control-play').hide();
-            $('#big-video-control-timer').hide();
-            $('#big-video-control-middle').hide();
+//            $('#big-video-control-play').hide();
+//            $('#big-video-control-timer').hide();
+//            $('#big-video-control-middle').hide();
+//            $('#big-video-control-container').hide();
+
+            $("#big-video-control-container").css({"display":"none"});
+
 
         });
 
