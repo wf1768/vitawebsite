@@ -57,7 +57,6 @@
 			//$("#margin").css({"height":margin_height});
 			
 			//历史鼠标事件-
-			/*
 			
 			$("#margin").hover(function(){
 				$('.time_main').animate({height: '0px'},function(){
@@ -67,47 +66,18 @@
 				});
 				
 			});
-			*/
-			$("#margin").hover(function(){
-				console.log('run');
-				$('.time_main').animate({height: '0px'},{complete:function(){
-					$('.time_main').css({"display":"none"});
-					$('.time_mainone').animate({height: '40px'});
-				    $('.time_mainone').css({"display":"block"});
-				    $('.time_main').css({"height":"40px"});
-				},
-				step: function(now, fx) {
-	                 if(now<40 && $("#temp").val()==1){
-	                	 $('.time_mainone').css({"height":"40px"}).show();
-	                	 $('.time_main').hide();
-			         }
-			         if(now<10){
-			        	 $("#temp").val('0');
-				     }
-				}
-			 });
-			});
+
+            
+            
+
 			
-			/*$(".time_mainone").hover(function(){
+			
+			$(".time_mainone").hover(function(){
 				$('.time_mainone').animate({height: '0px'},function(){
 					$('.time_mainone').css({"display":"none"});
 					$('.time_main').animate({height: '150px'});
 					$('.time_main').css({"display":"block"});
 				});
-			});
-			*/
-			$(".time_mainone").hover(function(){
-				$("#temp").val('0');
-				$('.time_main').css({"display":"block"});
-				$('.time_main').animate({height: '150px'},{complete:function(){
-			    },easing:"linear",
-			    step: function(now, fx) {
-			    	$('.time_mainone').css({"display":"none"});
-			    	 if(now>40){
-			        	 $("#temp").val('1');
-			        	 $('.time_main').css({"display":"block"});
-				     }
-				}});
 			});
 			
         });
@@ -117,26 +87,22 @@
 			$('#history_eng').html(eng);
 		}
     </script>
-   
 <div id="container"><?php $this->load->view("website/common/top"); ?> <?php foreach($history as $key=>$val):?>
 <div style="display: none" id="c<?php echo $val->year?>"><?php echo $val->content?></div>
             <?php endforeach;?>
 
 <div id="margin" style="width: 100%;height:80px;background-image:url('<?php echo base_url() ?>public/website/images/transparent.png'); position:absolute;bottom: 230px;">&nbsp;</div>
-
+<!-- 大的 -->
 <div class="time_main">
-<div class="time_mainle">
-<div id="mainBox" class="time_char">
-<div id="content" class="time_charle"
-	style="top: 0px; position: relative;"></div>
-<div class="scroll_line"
-	style="top: 0px; right: 0px; position: absolute; overflow: hidden;"></div>
-</div>
-</div>
-
-<div class="time_mainri">
-<?php echo $showinfo->content;?>
-</div>
+  <div class="time_mainle">
+     <div id="mainBox" class="time_char">
+        <div id="content" class="time_charle" style="top: 0px; position: relative;"></div>
+        <div class="scroll_line" style="top: 0px; right: 0px; position: absolute; overflow: hidden;"></div>
+    </div>
+  </div>
+  <div class="time_mainri">
+      <?php echo $showinfo->content;?>
+  </div>
 </div>
 <!-- 收缩 start -->
 <div class="time_mainone">
@@ -159,7 +125,7 @@
 
 <div class="main_bot">
 <ul>
-	<li><a href="#" style="color: #EC934A">History</a> <input id="temp" type="text" value="1"></li>
+	<li><a href="#" style="color: #EC934A">History</a></li>
 	<?php if($open->value==1):?>
 	<li><a href="<?php echo site_url("w/marking")?>">Marking</a></li>
     <?php endif;?>

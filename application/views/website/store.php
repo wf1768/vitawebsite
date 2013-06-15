@@ -42,8 +42,13 @@
         	 <?php foreach($storelist as $key=>$val):?>
         	  <?php if(isset($_GET['id'])):?>
         	  	<div class="">
+        	  	    <?php if($_GET['id'] != $val->id):?>
 		         	<h2><a href="<?php echo site_url('w/store?id=').$val->id."&typeid=".$typeid;;?>"><?php echo $val->title;?></a></h2>
+		         	<?php endif;?>
 		         	<dl class="item" style="display:<?php if($val->id==trim($_GET['id'])) echo 'block;' ; else echo  'none';?> ">
+		                <?php if($_GET['id'] == $val->id):?>
+		         	           <?php echo $val->title;?> 
+		         	    <?php endif;?>
 		                <?php echo $val->content;?>
 					</dl>
 		       	</div>

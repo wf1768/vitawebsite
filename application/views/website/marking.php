@@ -1,7 +1,10 @@
 <?php $this->load->view("website/common/header"); ?>
 
-
-
+<<style>
+<!--
+.dopage{cursor:pointer  }
+-->
+</style>
 <script
 <!--	src="--><?php //echo base_url('public/website/js/supersized.3.2.7.min.js') ?><!--"></script>-->
 <script
@@ -76,7 +79,7 @@ ul#slide-list li {
 <!--内容图片说明-->
 <div id="slidecaption" class="pic_con"></div>
 <div class="main_bot">
-<ul>
+<ul id="showpageinfo">
 	<li><a href="<?php echo site_url("w/history")?>">History</a></li>
 	<li><a href="#" style="color: #EC934A">Marking</a></li>
 </ul>

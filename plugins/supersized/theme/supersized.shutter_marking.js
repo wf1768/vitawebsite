@@ -11,6 +11,7 @@
 
  */
 var nowpage;
+//设置分页的样式
 function doChange(){
 	nowpage=Math.ceil($("#thumb-list").css("left").replace("px",'')*-1/$(window).width())+1;
 	$(".dopage").removeClass('current-slide');
@@ -239,7 +240,7 @@ function doChange(){
 					pageInfo += '<li _val="' + i+ '" class="slide-link-0 dopage "><a>' + i+ '</a></li>';
 				}
 			}
-			$("#slide-list").html(pageInfo).show();
+			$("#showpageinfo").html($("#showpageinfo").html()+pageInfo).show();
 			$(".dopage").click(function() {
 				var nowpage = $(this).attr("_val");
 				var newX = (nowpage-1) * wdwidth * -1;

@@ -48,7 +48,6 @@ upload_single = function(path,url) {
         '</div>';
 
     $('body').append(html);
-
     var uploader = new plupload.Uploader({
         runtimes : 'html5,flash',
         browse_button : 'selectpic', // 单击时间的id
