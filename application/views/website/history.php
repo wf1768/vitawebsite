@@ -159,7 +159,7 @@
 
 <div class="main_bot">
 <ul>
-	<li><a href="#" style="color: #EC934A">History</a> <input id="temp" type="text" value="1"></li>
+	<li><a href="#" style="color: #EC934A">History</a> <input id="temp" type="hidden" value="1"></li>
 	<?php if($open->value==1):?>
 	<li><a href="<?php echo site_url("w/marking")?>">Marking</a></li>
     <?php endif;?>

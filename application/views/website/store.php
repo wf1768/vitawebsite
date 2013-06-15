@@ -46,16 +46,17 @@
 		         	<h2><a href="<?php echo site_url('w/store?id=').$val->id."&typeid=".$typeid;;?>"><?php echo $val->title;?></a></h2>
 		         	<?php endif;?>
 		         	<dl class="item" style="display:<?php if($val->id==trim($_GET['id'])) echo 'block;' ; else echo  'none';?> ">
-		                <?php if($_GET['id'] == $val->id):?>
+		                <!--<?php if($_GET['id'] == $val->id):?>
 		         	           <?php echo $val->title;?> 
 		         	    <?php endif;?>
-		                <?php echo $val->content;?>
+		                --><?php echo $val->content;?>
 					</dl>
 		       	</div>
         	  <?php else:?>
 		       	<div class="">
-		         	<h2><a href="<?php echo site_url('w/store?id=').$val->id."&typeid=".$typeid;;?>"><?php echo $val->title;?></a></h2>
+		         	<?php if($key !=0):?><h2><a href="<?php echo site_url('w/store?id=').$val->id."&typeid=".$typeid;;?>"><?php echo $val->title;?></a></h2><?php endif;?>
 		         	<dl class="item" style="display:<?php if($key==0) echo 'block;' ; else echo 'none';?> ">
+<!--		               <?php if($key ==0)echo $val->title;?>-->
 		                <?php echo $val->content;?>
 					</dl>
 		       	</div>
