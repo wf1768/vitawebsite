@@ -29,7 +29,10 @@
 //					$(this).next().slideDown(1000);
 //				}
 //			});
-			
+            footerCss("mystore","m1","m2","m3","m4");
+			pitchOn("mystore","m2","m1","m2","m3","m4");
+			footerCss("mystore","h1","h2","h3","h4");
+			pitchOn("mystore","h2","h1","h2","h3","h4");
         });
 
     </script>
@@ -70,12 +73,36 @@
     </div>
     
     <div class="main_bot">
-        <ul>
+        <ul id="mystore"><!--
             <?php foreach($class as $key=>$val):?>
                <li><a <?php if($val->id==$typeid) echo 'class="cur"'?> href="<?php echo site_url('w/store?typeid=').$val->id?>"><?php echo $val->storescode?></a></li>
             <?php endforeach;?>
             
             
+        -->
+        
+        
+        <li <?php if($typeid=="asdfs") echo 'id="h2"'?>> 
+            <a class="h1" href="http://localhost/vitawebsite/index.php/w/store?typeid=asdfs">分类一</a>
+            <a class="h2 cur" href="http://localhost/vitawebsite/index.php/w/store?typeid=asdfs">分类一</a>
+            <a class="h3" href="http://localhost/vitawebsite/index.php/w/store?typeid=asdfs">cateone</a>
+            <a class="h4 cur" href="http://localhost/vitawebsite/index.php/w/store?typeid=asdfs">cateone</a>
+        </li>
+        <li  <?php if($typeid=="asdf") echo 'id="m2"'?>>
+                <a class="m1"  href="http://localhost/vitawebsite/index.php/w/store?typeid=asdf">分类二</a>
+                <a class="m2 cur"  href="http://localhost/vitawebsite/index.php/w/store?typeid=asdf">分类二</a>
+                <a class="m3" style="color:#FFFFFF"  href="http://localhost/vitawebsite/index.php/w/store?typeid=asdf">catetwo</a>
+                <a class="m4 cur"  href="http://localhost/vitawebsite/index.php/w/store?typeid=asdf">catetwo</a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
         </ul>
     </div>
     <?php $this->load->view("website/common/footer"); ?>
