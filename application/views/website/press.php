@@ -16,7 +16,7 @@
             initHousewares();
             catagroyContent();
             //footer			
-            pitchOn('press');
+            pitchOn('footer','press','f1','f3','f2','f4');
         });
 
     </script>

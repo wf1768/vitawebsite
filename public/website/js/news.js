@@ -8,63 +8,25 @@
  * */
 $(function(){
 	//初始新闻大图片的高度
-//	显示比例值：1.431
-	var win_width = $(window).width()/2;//比例宽度
-	var ratio_w = win_width/2;	//减值
-    funcfoucs(win_width,ratio_w);
-    
-    $('#foucs img').css({"width":win_width});
-    resizePic(win_width);
-   
+//	显示比例值：   1.42  1280/900
+//	var win_width = $(window).width()/2;//比例宽度
+//	var ratio_w = win_width/2;	//减值
+//    funcfoucs(win_width,ratio_w);
+//    
+//    $('#foucs img').css({"width":win_width});
+//    resizePic(win_width);
+	resizePic();
 	//动态-缩放
     $(window).resize(function(){
-    	var win_width = $(window).width()/2;//比例宽度 696
-    	var ratio_w = win_width/2;	//减值348
-    	
-        funcfoucs(win_width,ratio_w);
-
-        $('#foucs img').css({"width":win_width});
-        resizePic(win_width);
+    	resizePic()
+//    	var win_width = $(window).width()/2;//比例宽度 696
+//    	var ratio_w = win_width/2;	//减值348
+//    	
+//        funcfoucs(win_width,ratio_w);
+//
+//        $('#foucs img').css({"width":win_width});
+//        resizePic(win_width);
 	});
-    
-    /**
-     * @param win_width 中间图片的宽度
-     * 
-     * */
-    function resizePic(win_width){
-     	var news_height = $(window).height();
-    	var news_width = $(window).width();
-    	
-    	var top = $('.top').innerHeight();
-    	var mid_topHeight = $('.mid_top').innerHeight();   //品牌
-    	if (mid_topHeight == null) {
-    	     mid_topHeight = 0;
-    	}
-    	var menu_top = $('.menu_top').innerHeight();	   //品牌
-    	if (menu_top == null) {
-    		menu_top = 0;
-    	}
-    	var cons = $('.cons').innerHeight();			   //内容高度
-    	var pic_mains = $('.pic_mains').innerHeight();	   //缩略图高度
-    	var main_footer = $('.main_footer').innerHeight(); //底部高度
-    	
-    	news_height = news_height-(top+mid_topHeight+menu_top+cons+pic_mains+main_footer);
-    	//win_width 中间亮图的宽度 
-    	news_width = (news_width-win_width)/2; 
-    	
-    	$('.bigpic').css({"height":news_height});
-    	$('#foucs').css({"height":news_height});
-    	$('.navi').css({"height":news_height});//左右切换
-    	$('.navi').css({"width":news_width});//左右切换
-    	
-    	//视频
-    	$('.video-js-box').css({"width":$(window).width()});//播放条
-    	$('#press_video').css({"height":news_height});
-    	$('#press_video').css({"width":$(window).width()});
-    	$('#press_flash').css({"height":news_height});
-    	$('#press_flash').css({"width":$(window).width()});
-    	
-    }
     
     /**
      * 视频最大化后，退出还原 
@@ -78,7 +40,7 @@ $(function(){
             this.enterFullScreen();
           } else {
         	//视频大小调整
-        	resizePic(0);
+        	resizePic();
             this.exitFullScreen();
           }
         },
@@ -112,6 +74,52 @@ $(function(){
     
 });
 
+/**
+ * @param win_width 中间图片的宽度
+ * 
+ * */
+function resizePic(){
+ 	var news_height = $(window).height();
+	var news_width = $(window).width();
+	
+	var top = $('.top').innerHeight();
+	var mid_topHeight = $('.mid_top').innerHeight();   //品牌
+	if (mid_topHeight == null) {
+	     mid_topHeight = 0;
+	}
+	var menu_top = $('.menu_top').innerHeight();	   //品牌
+	if (menu_top == null) {
+		menu_top = 0;
+	}
+	var cons = $('.cons').innerHeight();			   //内容高度
+	var pic_mains = $('.pic_mains').innerHeight();	   //缩略图高度
+	var main_footer = $('.main_footer').innerHeight(); //底部高度
+	
+	news_height = news_height-(top+mid_topHeight+menu_top+cons+pic_mains+main_footer);
+	
+	//
+	$('#foucs img').css({"height":news_height});
+	
+	var win_width = news_height*1.4222;//中间图片的宽度
+	news_width = (news_width-win_width)/2; 
+    funcfoucs(win_width,news_width);
+    
+    
+	$('.bigpic').css({"height":news_height+4});
+	$('#foucs').css({"height":news_height+4});
+	$('.navi').css({"height":news_height});//左右切换
+	$('.navi').css({"width":news_width});//左右切换
+	
+	//视频
+	$('.video-js-box').css({"width":$(window).width()});//播放条
+	$('#press_video').css({"height":news_height});
+	$('#press_video').css({"width":$(window).width()});
+	$('#press_flash').css({"height":news_height});
+	$('#press_flash').css({"width":$(window).width()});
+	
+}
+
+//图片等比缩小-暂
 function AutoResizeImage(maxWidth,maxHeight,objImg){
 	var img = new Image();
 	img.src = objImg.src;
@@ -210,7 +218,6 @@ function AutoResizeImage(maxWidth,maxHeight,objImg){
 						base.options.slides[thisSlide-1].thumb ? thumbImage = base.options.slides[thisSlide-1].thumb : thumbImage = base.options.slides[thisSlide-1].image;
 						thumbMarkers = thumbMarkers+'<li class="thumb'+thisSlide+' current-thumb"><img src="'+thumbImage+'"/></li>';
 					};
-					alert('==的时候');
 				}else{
 					// Slide links
 					if (base.options.slide_links) markers = markers+'<li class="slide-link-'+thisSlide+'" ><a>'+markerContent+'</a></li>';
@@ -1153,7 +1160,7 @@ function funcfoucs(win_width,ratio_w){
 		_maxpage = $("#foucs").find(".pict").length;
 		
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()/2-ratio_w);
+			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()-ratio_w);
 			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
 			if(_pos > $(window).width()){
@@ -1178,7 +1185,7 @@ function funcfoucs(win_width,ratio_w){
 		
 		window.onresize = function(){
 			for(var i = 0 ; i < _maxpage ; i++){
-				var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()/2-ratio_w);
+				var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()-ratio_w);
 				var _opa = 1;
 				if(i == _currentpage)_opa = 1;
 				if(_pos > $(window).width()){
@@ -1202,7 +1209,7 @@ function funcfoucs(win_width,ratio_w){
 		$("#foucs").stop().find(".pict").eq(_currentpage).addClass("main").css({"position":"absolute"});;
 		_pict = $("#foucs").find(".pict");
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()/2-ratio_w);
+			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()-ratio_w);
 			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
 			if(_pos > $(window).width()){
@@ -1219,7 +1226,7 @@ function funcfoucs(win_width,ratio_w){
 				left:_pos,
 				opacity:_opa
 			},{
-				duration:700 ,
+				duration:1700 ,
 				easing:'easeOutQuint'
 			})
 		}
@@ -1231,7 +1238,7 @@ function funcfoucs(win_width,ratio_w){
 		$("#foucs").stop().find(".main").removeClass("main");
 		$("#foucs").stop().find(".pict").eq(_currentpage).addClass("main").css({"position":"absolute"});;
 		for(var i = 0 ; i < _maxpage ; i++){
-			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()/2-ratio_w);
+			var _pos = Math.round(win_width*(i-_currentpage)+$(window).width()-ratio_w);
 			var _opa = 1;
 			if(i == _currentpage)_opa = 1;
 			if(_pos < -win_width){
@@ -1248,7 +1255,7 @@ function funcfoucs(win_width,ratio_w){
 				left:_pos,
 				opacity:_opa
 			},{
-				duration:700 ,
+				duration:1700 ,
 				easing:'easeOutQuint'
 			})
 		}
