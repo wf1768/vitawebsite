@@ -212,12 +212,14 @@
 	 * @param c1,c3,c2,c4
 	 * */
 	function footerCss(ulId,c1,c3,c2,c4){
+		
 		//初始状态
 		$.each($("#"+ulId+" li"),function(index,liItem){
 			$(liItem).find("."+c1).css("display","block");
 			$(liItem).find("."+c3).css("display","none");
 			$(liItem).find("."+c2).css("display","none");
 			$(liItem).find("."+c4).css("display","none");
+			
 		});
 		//移动到菜单条上
 		$("#"+ulId+" li").hover(function() {
@@ -247,6 +249,7 @@
 	 * @param fid 当前选中ID
 	 * */
 	function pitchOn(ulId,fid,c1,c3,c2,c4){
+		
 		if (fid!="" && fid!=null){
 			var slidersArr = new Array();
 			//还原所有菜单项

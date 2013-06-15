@@ -5,7 +5,6 @@
 .index_bot{position:absolute; bottom:30px; left:50%; margin-left:-388px;}
 .index_bot span{width:785px; text-align:center; display:block;}
 .index_bot strong{width:785px; text-align:center; display:block; font-family:Arial, Helvetica, sans-serif;}
-
 .indexbanner{height:100%; width:100%;}
 .bg{background-position:50% 50%;  height:100%; left:0; overflow:hidden; position:absolute; text-align:center; top:0; vertical-align:middle; width:100%;}
 .index_calbg{width:1000px; position:relative; margin:0 auto; z-index:3;}
@@ -16,15 +15,15 @@
 .indexbanner ul.bannerul li{ float:left; height:100%; position:fixed; left:0px; opacity:1; top:0px; width:100%;}
 /*头部start*/  
 .menu_top{ position:absolute; top:42px; width:100%; height:33px; background:url(../images/black_mid.png) 0 0 repeat; border-top:#fff solid 1px;}
-.menu_top p{ position:relative; height:33px; left:20px; width:15%; float:left;}
-.menu_top ul{overflow:hidden; height:33px; white-space:nowrap; width:85%;}
-.menu_top ul li{padding-right:50px; display:inline-block; height:33px; +display:inline; +zoom:1;}
+.menu_top p{ position:relative; height:33px; left:20px; width:10%; float:left;}
+.menu_top ul{overflow:hidden; height:33px; white-space:nowrap; width:90%; text-align:center;}
+.menu_top ul li{padding-right:30px; display:inline-block; height:33px; +display:inline; +zoom:1;}
 .menu_top ul li a{display:block; height:33px; overflow:hidden;}
 .mid_top{position:absolute; top:75px; width:100%; height:33px; background:url(../images/white.png) 0 0 repeat; border-bottom:#000 dotted 1px;}
 .mid_top p{ position:relative; left:20px; width:10%; height:33px; float:left;}
-.mid_top ul{overflow:hidden; text-align:center; width:86%; height:33px;}
-.mid_top ul li{padding-right:20px; display:inline-block; height:33px; +display:inline; +zoom:1; width:70px;}
-.mid_top ul li a{display:inline-block; height:33px; +display:inline; +zoom:1; width:70px;}
+.mid_top ul{overflow:hidden; text-align:center; width:90%; height:33px;}
+.mid_top ul li{padding-right:30px; display:inline-block; height:33px; +display:inline; +zoom:1;}
+.mid_top ul li a{display:inline-block; height:33px; +display:inline; +zoom:1;}
 
 .main{overflow:hidden; position:absolute; top:109px; width:100%;}
 .left_menu{ background:url(../images/main_white.png) 0 0 repeat; width:10%; float:left; position:relative; left:0px; height:260px;}
@@ -62,7 +61,7 @@
 .con_none{overflow:hidden; cursor:pointer; margin:15px 85px 15px 50px;}
 .con_lefnone span{display:block; width:20px; height:14px; position:absolute; right:20px; top:30px; cursor:pointer;}
 .main_bot{background:url(../images/black_bot.png) 0 0 repeat; width:100%; height:40px; bottom:40px; position:absolute; }
-.main_bot ul{overflow:hidden; font-family:Arial, Helvetica, sans-serif; line-height:40px; font-size:14px; color:#FFF; text-align:center; left:40%; position:absolute;}
+.main_bot ul{overflow:hidden; font-family:Arial, Helvetica, sans-serif; line-height:40px; font-size:14px; color:#FFF; text-align:center; left:40%; position:absolute; height:42px;}
 .main_bot ul li{float:left; padding-right:20px;}
 .main_bot ul li a{color:#fff;}
 .main_bot ul li a:hover{color:#EC934A;}
@@ -152,7 +151,7 @@
 .current{color:Yellow;}
 .item{background:url(../images/main_white.png) 0 0 repeat;clear:both;margin: 0 0 1px;overflow: hidden;font-size: 14px;width:245px; color:#E69942; font-family:"微软雅黑"; padding:5px 0px 5px 40px;}
 .item img{border:none;float:left;margin:10px 5px 5px;}
-.item p{padding:0 10px 0 10px;} 
+.item p{} 
 
 
 

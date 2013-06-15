@@ -110,12 +110,17 @@
 				}});
 			});
 			
+			footerCss("mymaking","m1","m2","m3","m4");
+			pitchOn("mymaking","","m1","m2","m3","m4");
+			footerCss("mymaking","h1","h2","h3","h4");
+			pitchOn("mymaking","h2","h1","h2","h3","h4");
         });
 		//历史内容
 		function setHistoryContent(cha,eng){
 			$('#history_cha').html(cha);
 			$('#history_eng').html(eng);
 		}
+		 
     </script>
    
 <div id="container"><?php $this->load->view("website/common/top"); ?> <?php foreach($history as $key=>$val):?>
@@ -123,8 +128,7 @@
             <?php endforeach;?>
 
 <div id="margin" style="width: 100%;height:80px;background-image:url('<?php echo base_url() ?>public/website/images/transparent.png'); position:absolute;bottom: 230px;">&nbsp;</div>
-
-<div class="time_main">
+                   <div class="time_main">
 <div class="time_mainle">
 <div id="mainBox" class="time_char">
 <div id="content" class="time_charle"
@@ -158,10 +162,33 @@
 <!-- 收缩 end -->
 
 <div class="main_bot">
-<ul>
-	<li><a href="#" style="color: #EC934A">History</a> <input id="temp" type="hidden" value="1"></li>
+<input id="temp" type="hidden" value="1">
+<ul id="mymaking">
+	<li id="h2"> 
+	    <a class="h1" href="">
+            <img src="<?php echo base_url() ?>public/website/images/footer/lishi2.png">
+        </a>
+	    <a class="h2"  href="">
+	        <img src="<?php echo base_url() ?>public/website/images/footer/lishi3.png">
+	    </a>
+	    <a class="h3" href="">
+	         <img src="<?php echo base_url() ?>public/website/images/footer/lishi.png">
+	    </a>
+	    <a class="h4" href="">
+	      <img src="<?php echo base_url() ?>public/website/images/footer/lishi1.png">
+	    </a>
+	 </li>
 	<?php if($open->value==1):?>
-	<li><a href="<?php echo site_url("w/marking")?>">Marking</a></li>
+	<li>
+	    <a class="m1" href="<?php echo site_url("w/marking")?>">Marking</a>
+	    <a class="m2" style="color: #EC934A" href="<?php echo site_url("w/marking")?>">Marking</a>
+	    <a class="m4" href="<?php echo site_url("w/marking")?>">
+	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">
+	    </a>
+	    <a class="m3" href="<?php echo site_url("w/marking")?>">
+	      <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">
+	    </a>
+	 </li>
     <?php endif;?>
 </ul>
 </div>
