@@ -33,10 +33,10 @@
             initFurniture();
             initHousewares();
             catagroyContent();
-
+            
             var BV = new $.BigVideo({useFlashForFirefox:false});
             BV.init();
-
+           
             if (Modernizr.touch) {
                 BV.show('<?php echo base_url('upload/main/clip.png') ?>');
                 BV.show('<?php echo base_url('upload/main/clip.mp4') ?>', {altSource:'<?php echo base_url('upload/main/clip.ogv') ?>'});
@@ -53,10 +53,8 @@
 //            $('#big-video-control-timer').hide();
 //            $('#big-video-control-middle').hide();
 //            $('#big-video-control-container').hide();
-
-            $("#big-video-control-container").css({"display":"none"});
-
-
+			    
+			
         });
 
     </script>

@@ -196,7 +196,7 @@
 				player.volume(0);
 				doLoop = true;
 			} else {
-				$('#big-video-control-container').css('display','block');
+				$('#big-video-control-container').css('display','none');
 				player.volume(defaultVolume);
 				doLoop = false;
 			}
