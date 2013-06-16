@@ -17,10 +17,10 @@
         	<a class="f3" href="<?php echo site_url("w/press/press_get")?>" ><img src="<?php echo base_url("public/website/images/footer/xinwen2.png")?>" /></a>
         	<a class="f4" href="<?php echo site_url("w/press/press_get")?>" ><img src="<?php echo base_url("public/website/images/footer/xinwen.png")?>" /></a>
         </li>
-        <li><a class="f1" href="http://www.baidu.com" ><img src="<?php echo base_url("public/website/images/footer/boke3.png")?>" /></a>
-        	<a class="f2" href="http://www.baidu.com" ><img src="<?php echo base_url("public/website/images/footer/boke1.png")?>" /></a>
-        	<a class="f3" href="http://www.baidu.com" ><img src="<?php echo base_url("public/website/images/footer/boke2.png")?>" /></a>
-        	<a class="f4" href="http://www.baidu.com" ><img src="<?php echo base_url("public/website/images/footer/boke.png")?>" /></a>
+        <li><a class="f1" target="_blank" href="http://www.baidu.com" ><img src="<?php echo base_url("public/website/images/footer/boke3.png")?>" /></a>
+        	<a class="f2" target="_blank" href="http://www.baidu.com" ><img src="<?php echo base_url("public/website/images/footer/boke1.png")?>" /></a>
+        	<a class="f3" target="_blank" href="http://www.baidu.com" ><img src="<?php echo base_url("public/website/images/footer/boke2.png")?>" /></a>
+        	<a class="f4" target="_blank" href="http://www.baidu.com" ><img src="<?php echo base_url("public/website/images/footer/boke.png")?>" /></a>
         </li>
     </ul>
     <ol>
