@@ -114,6 +114,7 @@
 			pitchOn("mymaking","","m1","m2","m3","m4");
 			footerCss("mymaking","h1","h2","h3","h4");
 			pitchOn("mymaking","h2","h1","h2","h3","h4");
+			pitchOn('footer','about','f1','f3','f2','f4');
         });
 		//历史内容
 		function setHistoryContent(cha,eng){
@@ -180,13 +181,16 @@
 	 </li>
 	<?php if($open->value==1):?>
 	<li>
-	    <a class="m1" href="<?php echo site_url("w/marking")?>">Marking</a>
-	    <a class="m2" style="color: #EC934A" href="<?php echo site_url("w/marking")?>">Marking</a>
+	    <a class="m1" href="<?php echo site_url("w/marking")?>">
+        <img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png">
+     </a>
+	    <a class="m2" style="color: #EC934A" href="<?php echo site_url("w/marking")?>">
+<img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png"></a>
 	    <a class="m4" href="<?php echo site_url("w/marking")?>">
 	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">
 	    </a>
 	    <a class="m3" href="<?php echo site_url("w/marking")?>">
-	      <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">
+	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">
 	    </a>
 	 </li>
     <?php endif;?>

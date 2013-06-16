@@ -6,8 +6,6 @@
 -->
 </style>
 <script
-<!--	src="--><?php //echo base_url('public/website/js/supersized.3.2.7.min.js') ?><!--"></script>-->
-<script
 	type="text/javascript"
 	src="<?php echo base_url("plugins/supersized/theme/supersized.shutter_marking.js")?>"></script>
 <script type="text/javascript">
@@ -34,7 +32,15 @@
 											]
 				
 			});
+			
 	    });
+	    $(document).ready(function(){
+	    	footerCss("showpageinfo23","m1","m2","m3","m4");
+			pitchOn("showpageinfo23","h2","m1","m2","m3","m4");
+			footerCss("showpageinfo23","h1","h2","h3","h4");
+			pitchOn("showpageinfo23","","h1","h2","h3","h4");
+			pitchOn('footer','about','f1','f3','f2','f4');
+		 });
     </script>
 
 <style type="text/css">
@@ -79,10 +85,36 @@ ul#slide-list li {
 <!--内容图片说明-->
 <div id="slidecaption" class="pic_con"></div>
 <div class="main_bot">
-<ul id="showpageinfo">
-	<li><a href="<?php echo site_url("w/history")?>">History</a></li>
-	<li><a href="#" style="color: #EC934A">Marking</a></li>
+<ul id="showpageinfo23">
+	<li > 
+	    <a class="h1" href="<?php echo site_url("w/history")?>">
+            <img src="<?php echo base_url() ?>public/website/images/footer/lishi2.png">
+        </a>
+	    <a class="h2"  href="<?php echo site_url("w/history")?>">
+	        <img src="<?php echo base_url() ?>public/website/images/footer/lishi3.png">
+	    </a>
+	    <a class="h3" href="<?php echo site_url("w/history")?>">
+	         <img src="<?php echo base_url() ?>public/website/images/footer/lishi.png">
+	    </a>
+	    <a class="h4" href="<?php echo site_url("w/history")?>">
+	      <img src="<?php echo base_url() ?>public/website/images/footer/lishi1.png">
+	    </a>
+	 </li>
+	<li id="h2">
+	    <a class="m1" href="">
+        <img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png">
+     </a>
+	    <a class="m2" style="color: #EC934A" href="">
+<img src="<?php echo base_url() ?>public/website/images/footer/yingji3.png"></a>
+	    <a class="m4" href="">
+	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">
+	    </a>
+	    <a class="m3" href="">
+	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">
+	    </a>
+	 </li>
 </ul>
+
 <ul id="slide-list" style="display: none"></ul>
 </div>
 

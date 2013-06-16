@@ -67,7 +67,6 @@ class store extends CI_Controller {
 			$this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
 			$this->_data['indeximg']=json_encode($indeximg);
 		}else{
-			//取出历史的图片
 			foreach($this->_data['storelist'] as $key=>$val){
 				$info=$this->img_model->getAllByWhere(array("storesid"=>$val->id));
 				if($info) $this->_data['imgs'][]=$info;
