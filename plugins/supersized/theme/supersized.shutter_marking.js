@@ -240,7 +240,8 @@ function doChange(){
 					pageInfo += '<li _val="' + i+ '" class="slide-link-0 dopage "><a>' + i+ '</a></li>';
 				}
 			}
-			$("#showpageinfo").html($("#showpageinfo").html()+pageInfo).show();
+//			$("#showpageinfo23").html($("#showpageinfo23").html()+pageInfo).show();
+            $(pageInfo).appendTo("#showpageinfo23");
 			$(".dopage").click(function() {
 				var nowpage = $(this).attr("_val");
 				var newX = (nowpage-1) * wdwidth * -1;

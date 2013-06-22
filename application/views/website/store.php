@@ -74,36 +74,31 @@
     </div>
     
     <div class="main_bot">
-        <ul id="mystore">
-            <?php foreach($class as $key=>$val):?>
-               <li><a <?php if($val->id==$typeid) echo 'class="cur"'?> href="<?php echo site_url('w/store?typeid=').$val->id?>"><?php echo $val->storescode?></a></li>
-            <?php endforeach;?>
-            
-            
-        
-        
-        
-<!--        <li <?php if($typeid=="asdfs") echo 'id="h2"'?>> -->
-<!--            <a class="h1" href="http://localhost/vitawebsite/index.php/w/store?typeid=asdfs">分类一</a>-->
-<!--            <a class="h2 cur" href="http://localhost/vitawebsite/index.php/w/store?typeid=asdfs">分类一</a>-->
-<!--            <a class="h3" href="http://localhost/vitawebsite/index.php/w/store?typeid=asdfs">cateone</a>-->
-<!--            <a class="h4 cur" href="http://localhost/vitawebsite/index.php/w/store?typeid=asdfs">cateone</a>-->
-<!--        </li>-->
-<!--        <li  <?php if($typeid=="asdf") echo 'id="m2"'?>>-->
-<!--                <a class="m1"  href="http://localhost/vitawebsite/index.php/w/store?typeid=asdf">分类二</a>-->
-<!--                <a class="m2 cur"  href="http://localhost/vitawebsite/index.php/w/store?typeid=asdf">分类二</a>-->
-<!--                <a class="m3" style="color:#FFFFFF"  href="http://localhost/vitawebsite/index.php/w/store?typeid=asdf">catetwo</a>-->
-<!--                <a class="m4 cur"  href="http://localhost/vitawebsite/index.php/w/store?typeid=asdf">catetwo</a>-->
-<!--        </li>-->
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <ul id="mystore"><!--
+<!--            <?php foreach($class as $key=>$val):?>-->
+<!--               <li>-->
+<!--                 <a <?php if($val->id==$typeid) echo 'class="cur"'?> href="<?php echo site_url('w/store?typeid=').$val->id?>"><?php echo $val->storescode?> </a></li>-->
+<!--            <?php endforeach;?>-->
+
+             
+             
+             
+             
+             
+        <li <?php if($typeid==$class[0]->id) echo 'id="h2"'?>>
+            <a id="nohovers"  class="h3" href="<?php echo site_url('w/store?typeid=').$class[0]->id ?>">丰意德分店</a>
+            <a id="onhovers"  class="h4 " href="<?php echo site_url('w/store?typeid=').$class[0]->id ?>">丰意德分店</a>
+            <a  id="nohovers" class="h1" href="<?php echo site_url('w/store?typeid=').$class[0]->id ?>">Furniture Stores</a>
+            <a  id="onhovers" class="h2 " href="<?php echo site_url('w/store?typeid=').$class[0]->id ?>">Furniture Stores</a>
+        </li>
+        <?php if($open->value==1):?>
+        <li  <?php if($typeid==$class[1]->id) echo 'id="m2"'?>>
+                <a  id="nohovers" class="m3"  href="<?php echo site_url('w/store?typeid=').$class[1]->id ?>">饰品分店</a>
+                <a  id="onhovers" class="m4 cur"  href="<?php echo site_url('w/store?typeid=').$class[1]->id ?>">饰品分店</a>
+                <a  id="nohovers" class="m1" style="color:#FFFFFF"  href="<?php echo site_url('w/store?typeid=').$class[1]->id ?>">Housewares Stores</a>
+                <a  id="onhovers" class="m2 cur"  href="<?php echo site_url('w/store?typeid=').$class[1]->id ?>">Housewares Stores</a>
+        </li>
+        <?php endif;?>
         </ul>
     </div>
     <?php $this->load->view("website/common/footer"); ?>
@@ -114,5 +109,8 @@
 #store{
     color: #EC934A;
 }
+
+#onhovers{color: #EC934A;display:block;width:110px; font-family:"微软雅黑";}
+#nohovers{color: #FFFFFF;display:block;width:130px; font-family:"微软雅黑";}
 </style>
 

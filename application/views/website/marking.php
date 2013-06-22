@@ -87,30 +87,40 @@ ul#slide-list li {
 <div class="main_bot">
 <ul id="showpageinfo23">
 	<li > 
-	    <a class="h1" href="<?php echo site_url("w/history")?>">
-            <img src="<?php echo base_url() ?>public/website/images/footer/lishi2.png">
+	    <a class="h1" id="nohovers" href="<?php echo site_url("w/history")?>">
+	        History
+<!--            <img src="<?php echo base_url() ?>public/website/images/footer/lishi2.png">-->
         </a>
-	    <a class="h2"  href="<?php echo site_url("w/history")?>">
-	        <img src="<?php echo base_url() ?>public/website/images/footer/lishi3.png">
+	    <a class="h2 " id="onhovers" href="<?php echo site_url("w/history")?>">
+	            History
+<!--	        <img src="<?php echo base_url() ?>public/website/images/footer/lishi3.png">-->
 	    </a>
-	    <a class="h3" href="<?php echo site_url("w/history")?>">
-	         <img src="<?php echo base_url() ?>public/website/images/footer/lishi.png">
+	    <a class="h3" href="<?php echo site_url("w/history")?>" id="nohovers">
+	        历史
+<!--	         <img src="<?php echo base_url() ?>public/website/images/footer/lishi.png">-->
 	    </a>
-	    <a class="h4" href="<?php echo site_url("w/history")?>">
-	      <img src="<?php echo base_url() ?>public/website/images/footer/lishi1.png">
+	    <a class="h4 " id="onhovers" href="<?php echo site_url("w/history")?>">
+	      历史
+<!--	      <img src="<?php echo base_url() ?>public/website/images/footer/lishi1.png">-->
 	    </a>
 	 </li>
 	<li id="h2">
-	    <a class="m1" href="">
-        <img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png">
-     </a>
-	    <a class="m2" style="color: #EC934A" href="">
-<img src="<?php echo base_url() ?>public/website/images/footer/yingji3.png"></a>
-	    <a class="m4" href="">
-	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">
+	    <a class="m1" id="nohovers" href="">
+	    Marking
+<!--        <img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png">-->
+       </a>
+	    <a class="m2" id="onhovers"  style="color: #EC934A" href="">
+	    Marking
+<!--<img src="<?php echo base_url() ?>public/website/images/footer/yingji3.png">-->
+
+</a>
+	    <a class="m4" id="onhovers"  href="">
+	    影集
+<!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">-->
 	    </a>
-	    <a class="m3" href="">
-	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">
+	    <a class="m3"  id="nohovers" href="">
+	    影集
+<!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">-->
 	    </a>
 	 </li>
 </ul>
@@ -137,5 +147,19 @@ ul#slide-list li {
 
 #about{
     color: #EC934A;
+}
+.main_bot ul {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    height: 42px;
+    line-height: 40px;
+    margin: 0 auto 0 40%;
+    text-align: center;
+    width: 400px;
+}
+.current-slide {}
+.current-slide a {
+	color:#EC934A
 }
 </style>

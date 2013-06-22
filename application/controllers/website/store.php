@@ -56,9 +56,6 @@ class store extends CI_Controller {
 //		    echo $this->db->last_query();
 		    $typeid=trim($tmpinfo->id);
 		}
-
-
-
 		//获取首页轮播图片列表。
 		$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid));
 //		print_r($this->_data['storelist']); 
@@ -75,6 +72,7 @@ class store extends CI_Controller {
 			$this->_data['showinfo']=$this->_data['storelist'][0];
 			$this->_data['indeximg']=json_encode($indeximg[0]);
 		}
+		$this->_data['open']= $this->website_lib->config('store_house');
 		$this->_data['typeid']=$typeid;
 		$this->_data['class']=$this->store_type_model->getAllByWhere();
 		$this->load->view('website/store',$this->_data);

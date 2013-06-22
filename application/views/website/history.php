@@ -166,33 +166,56 @@
 <input id="temp" type="hidden" value="1">
 <ul id="mymaking">
 	<li id="h2"> 
-	    <a class="h1" href="">
-            <img src="<?php echo base_url() ?>public/website/images/footer/lishi2.png">
+	    <a class="h1" id="nohovers" href="">
+	        History
+<!--            <img src="<?php echo base_url() ?>public/website/images/footer/lishi2.png">-->
         </a>
-	    <a class="h2"  href="">
-	        <img src="<?php echo base_url() ?>public/website/images/footer/lishi3.png">
+	    <a class="h2 " id="onhovers" href="">
+	            History
+<!--	        <img src="<?php echo base_url() ?>public/website/images/footer/lishi3.png">-->
 	    </a>
-	    <a class="h3" href="">
-	         <img src="<?php echo base_url() ?>public/website/images/footer/lishi.png">
+	    <a class="h3" href="" id="nohovers">
+	        历史
+<!--	         <img src="<?php echo base_url() ?>public/website/images/footer/lishi.png">-->
 	    </a>
-	    <a class="h4" href="">
-	      <img src="<?php echo base_url() ?>public/website/images/footer/lishi1.png">
+	    <a class="h4 " id="onhovers" href="">
+	      历史
+<!--	      <img src="<?php echo base_url() ?>public/website/images/footer/lishi1.png">-->
 	    </a>
 	 </li>
 	<?php if($open->value==1):?>
-	<li>
-	    <a class="m1" href="<?php echo site_url("w/marking")?>">
-        <img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png">
-     </a>
-	    <a class="m2" style="color: #EC934A" href="<?php echo site_url("w/marking")?>">
-<img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png"></a>
-	    <a class="m4" href="<?php echo site_url("w/marking")?>">
-	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">
-	    </a>
-	    <a class="m3" href="<?php echo site_url("w/marking")?>">
-	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">
-	    </a>
-	 </li>
+        <li >
+            <a class="m1" id="nohovers" href="<?php echo site_url("w/marking")?>">
+                Marking
+                <!--        <img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png">-->
+            </a>
+            <a class="m2" id="onhovers"  style="color: #EC934A" href="<?php echo site_url("w/marking")?>">
+                Marking
+                <!--<img src="<?php echo base_url() ?>public/website/images/footer/yingji3.png">-->
+
+            </a>
+            <a class="m4" id="onhovers"  href="<?php echo site_url("w/marking")?>">
+                影集
+                <!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">-->
+            </a>
+            <a class="m3"  id="nohovers" href="<?php echo site_url("w/marking")?>">
+                影集
+                <!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">-->
+            </a>
+        </li>
+<!--	<li>-->
+<!--	    <a class="m1" href="--><?php //echo site_url("w/marking")?><!--">-->
+<!--        <img src="--><?php //echo base_url() ?><!--public/website/images/footer/yingji2.png">-->
+<!--     </a>-->
+<!--	    <a class="m2" style="color: #EC934A" href="--><?php //echo site_url("w/marking")?><!--">-->
+<!--<img src="--><?php //echo base_url() ?><!--public/website/images/footer/yingji2.png"></a>-->
+<!--	    <a class="m4" href="--><?php //echo site_url("w/marking")?><!--">-->
+<!--	         <img src="--><?php //echo base_url() ?><!--public/website/images/footer/yingji1.png">-->
+<!--	    </a>-->
+<!--	    <a class="m3" href="--><?php //echo site_url("w/marking")?><!--">-->
+<!--	         <img src="--><?php //echo base_url() ?><!--public/website/images/footer/yingji.png">-->
+<!--	    </a>-->
+<!--	 </li>-->
     <?php endif;?>
 </ul>
 </div>
@@ -205,5 +228,16 @@
 #about{
     color: #EC934A;
 }
+    .main_bot ul {
+        color: #FFFFFF;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 14px;
+        height: 42px;
+        line-height: 40px;
+        margin: 0 auto;
+        overflow: hidden;
+        text-align: center;
+        width: 144px;
+    }
 </style>
 
