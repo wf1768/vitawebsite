@@ -732,6 +732,8 @@
 	font-size: 18px;
 	text-align: center;
 	display: table;
+    *position:relative;
+    overflow:hidden;
 }
 
 .conle_title {
@@ -739,7 +741,10 @@
 	display: table-cell;
 	font-family: "微软雅黑";
 	padding: 0px 30px;
-	height: 110px;
+    *position:absolute; *top:50%; left:0px;
+}
+.conle_title p {
+    *position:relative; *top:-50%;
 }
 
 .conri {

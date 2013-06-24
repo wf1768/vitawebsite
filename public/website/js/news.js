@@ -221,7 +221,7 @@ function AutoResizeImage(maxWidth,maxHeight,objImg){
 						title = base.options.slides[thisSlide-1].title;
 						
 						base.options.slides[thisSlide-1].thumb ? thumbImage = base.options.slides[thisSlide-1].thumb : thumbImage = base.options.slides[thisSlide-1].image;
-						thumbMarkers = thumbMarkers+'<li class="thumb'+thisSlide+'"><img src="'+thumbImage+'"/><a href="'+thumb_url+'"><p id="'+pressid+'" class="news_opactity"></p><div class="news_black"><div class="news_black1"><div class="news_title">'+title+'</div></div></div></a></li>';
+						thumbMarkers = thumbMarkers+'<li class="thumb'+thisSlide+'"><img src="'+thumbImage+'"/><a href="'+thumb_url+'"><p id="'+pressid+'" class="news_opactity"></p><div class="news_black"><div class="news_black1"><div class="news_titletext"><div class="news_title">'+title+'</div></div></div></div></a></li>';
 					};
 				}
 				thisSlide++;
