@@ -60,12 +60,12 @@ class store extends CI_Controller {
 		$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid));
 //		print_r($this->_data['storelist']); 
 		if(isset($_GET['id'])){
-			$indeximg=$this->img_model->getAllByWhere(array("storesid"=>trim($_GET['id'])));
+			$indeximg=$this->img_model->getAllByWhere(array("storesid"=>trim($_GET['id'])),array(),array('sort'=>'asc'));
 			$this->_data['showinfo']=$this->model->getOneByWhere(array("id"=>trim($_GET['id'])));
 			$this->_data['indeximg']=json_encode($indeximg);
 		}else{
 			foreach($this->_data['storelist'] as $key=>$val){
-				$info=$this->img_model->getAllByWhere(array("storesid"=>$val->id));
+				$info=$this->img_model->getAllByWhere(array("storesid"=>$val->id),array(),array('sort'=>'asc'));
 				if($info) $this->_data['imgs'][]=$info;
 			}
 			$indeximg=array_slice($this->_data['imgs'],0,1);
