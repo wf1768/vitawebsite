@@ -1,6 +1,6 @@
 <?php $this->load->view("website/common/header"); ?>
 
-<<style>
+<style>
 <!--
 .dopage{cursor:pointer  }
 -->
@@ -14,8 +14,13 @@
             initFurniture();
             initHousewares();
             
+            var slidersArr = new Array();
+        	var tmp = <?php echo json_encode($list);?>;
+			for (var i=0;i<tmp.length;i++) {
+				slidersArr[i] = {image : '<?php echo base_url() ?>'+tmp[i].imagepath, title : tmp[i].content, thumb : '<?php echo base_url()?>'+tmp[i].imagepath, url : ''}
+	        }
+          	
 			$.supersized({
-			
 				// Functionality
 				autoplay				:	0,
 				slide_interval          :   3000,		// Length between transitions
@@ -24,13 +29,20 @@
 														   
 				// Components							
 				slide_links				:	'num',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
-				slides 					:  	[			// Slideshow Images  image:big_img thumb:small_img
+				slides 					:  	slidersArr			// Slideshow Images  image:big_img thumb:small_img
+			});
 
-                                                    <?php foreach($list as $key=>$val):?>
-                                                    {image : '<?php echo base_url().$val->imagepath;?>', title : '<?php echo $val->content;?>', thumb : '<?php echo base_url().$val->imagepath;?>', url : ''},  
-													<?php endforeach;?>
-											]
-				
+			//缩略图，鼠标放上遮罩消失
+			$('#thumb-list li').hover(function(){
+				$el = $(this);
+				if($el.find("p").hasClass("news_opactity2")){
+					$el.find("p").removeClass('news_opactity2');
+				}else{
+					$el.find("p").addClass('news_opactity2');
+				}
+				if($el.hasClass('current-thumb')){
+					$el.find("p").removeClass('news_opactity2');
+				}	
 			});
 			
 	    });
@@ -41,6 +53,7 @@
 			pitchOn("showpageinfo23","","h1","h2","h3","h4");
 			pitchOn('footer','about','f1','f3','f2','f4');
 		 });
+
     </script>
 
 <style type="text/css">
