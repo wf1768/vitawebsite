@@ -64,7 +64,7 @@ class product_cate extends MY__Controller {
         $this->_data['brandcode'] = $product_brand->brandcode;
         $this->_data['brandid'] = $product_brand->id;
 
-        $this->dataList('admin/product_cate',$this->product_cate_model,array('brandid'=>$brandid),array(),array('sort'=>'asc'),$this->_data);
+        $this->dataList('admin/product_cate',$this->product_cate_model,array('brandid'),array(),array('sort'=>'asc'),$this->_data);
 	}
 
     public function add() {

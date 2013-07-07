@@ -68,7 +68,7 @@ class product extends CI_Controller {
         }
         else {
             //获取全部信息
-            $product_cate = $this->product_cate_model->getAllByWhere(array('brandid'=>$product_brand_id),array(),array('sort'=>'asc'));
+            $product_cate = $this->product_cate_model->getAllByWhere(array('brandid'=>$product_brand_id,'status'=>1),array(),array('sort'=>'asc'));
             return $product_cate;
         }
     }
