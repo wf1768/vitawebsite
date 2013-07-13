@@ -57,7 +57,7 @@
 
         var text_height = $('.con_char').innerHeight();
         if(text_height>200){
-	        $("#catagroyContent").css({height: he});//$(window).innerHeight()/5
+	        $("#catagroyContent").css({height: text_height});//$(window).innerHeight()/5
 	        $("#catagroyContent").jscroll({
 	            W:"15px"
 	            ,BgUrl:"url(<?php echo base_url('public/website/images/src01.png') ?>"
@@ -185,6 +185,11 @@
 //                ?>
 <!--            </div>-->
         </div>
+        
+         <!--Arrow Navigation-->
+		<a id="prevslide" class="load-item" style="height:0px;"></a>
+		<a id="nextslide" class="load-item" style="height:0px;"></a>
+	
         <!--Page Control Bar-->
         <div id="controls-wrapper" class="load-item">
             <!--Navigation-->
@@ -193,6 +198,47 @@
     </div>
     <?php $this->load->view("website/common/footer"); ?>
 </div>
+<script>
+	 var ty=1;
+	 $(document).ready(function(){
+	    $(".main").click(function(e){
+	        if(ty==0){
+	            ty=1;
+	        }else{
+	           var positionX=e.originalEvent.x-$(this).offset().left||e.originalEvent.layerX-$(this).offset().left||0;//获取当前鼠标相对img的x坐标 
+	           var wid=$(window).width()-$(".left_menu").width();
+	           if(positionX<=$(this).width()/2){            
+	  		     
+	  		     $("#prevslide").trigger("click"); 
+	  		   }else{
+	  			  //$("#nextslide").trigger("click");   
+	  			//  alert('as');
+	  			$("#nextslide").trigger("click");
+	  			
+	  		   }
+	        }
+	    }).css("cursor","pointer");;
+	    $(".left_menu").click(function(){
+	        ty=0;
+	    }).css("cursor","default");;
+	    $(".content_default").click(function(){
+	    	ty=0;
+	    }).css("cursor","default");;
+	    $(".content").click(function(){
+	    	ty=0;
+	    }).css("cursor","default");;
+	    $("#controls-wrapper").live('click',function(){
+	        ty=0;
+	    }).css("cursor","default");;
+	    $("#nextslide").click(function(){
+	        ty=0;
+	    }).css("cursor","default").hide();;
+	    $("#prevslide").click(function(){
+	        ty=0;
+	    }).hide();
+	 });
+	</script>
+
 </body>
 </html>
 
