@@ -86,6 +86,7 @@ class product_image extends MY__Controller {
         $result = false;
         $id = $this->input->post('id') ? $this->input->post('id') : '';
         $sort = $this->input->post('sort') ? $this->input->post('sort') : '';
+        $content = $this->input->post('content') ? $this->input->post('content') : '';
 
 
         if (!$id) {
@@ -94,6 +95,7 @@ class product_image extends MY__Controller {
         }
         $update_image['id'] = $id;
         $update_image['sort'] = $sort;
+        $update_image['content'] = $content;
         $num = $this->dataUpdate($this->image_model,$update_image,false);
         if ($num > 0) {
             $result = true;

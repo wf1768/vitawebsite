@@ -41,7 +41,7 @@
         var tmp = <?php echo json_encode($product_image);?>;
 
         for (var i=0;i<tmp.length;i++) {
-            slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath};
+            slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath,title:tmp.content};
         }
 
         if (slidersArr.length > 0) {
@@ -55,20 +55,22 @@
         initFurniture();
         initHousewares();
 
-        $("#catagroyContent").css({height: $(window).innerHeight()/5});
-        $("#catagroyContent").jscroll({
-            W:"15px"
-            ,BgUrl:"url(<?php echo base_url('public/website/images/src01.png') ?>"
-            ,Bg:"right -30px repeat-y"
-            ,Bar:{Pos:"up"
-                ,Bd:{Out:"-30px 0 repeat-y",Hover:"-30px 0 repeat-y"}
-                ,Bg:{Out:"-15px 0 repeat-y",Hover:"-15px 0 repeat-y",Focus:"-15px 0 repeat-y"}}
-            ,Btn:{btn:true
-                ,uBg:{Out:"0 0",Hover:"0 0",Focus:"0 0"}
-                ,dBg:{Out:"0 -15px",Hover:"0px -16px",Focus:"0 -15px"}}
-            ,Fn:function(){}
-        });
-
+        var text_height = $('.con_char').innerHeight();
+        if(text_height>200){
+	        $("#catagroyContent").css({height: he});//$(window).innerHeight()/5
+	        $("#catagroyContent").jscroll({
+	            W:"15px"
+	            ,BgUrl:"url(<?php echo base_url('public/website/images/src01.png') ?>"
+	            ,Bg:"right -30px repeat-y"
+	            ,Bar:{Pos:"up"
+	                ,Bd:{Out:"-30px 0 repeat-y",Hover:"-30px 0 repeat-y"}
+	                ,Bg:{Out:"-15px 0 repeat-y",Hover:"-15px 0 repeat-y",Focus:"-15px 0 repeat-y"}}
+	            ,Btn:{btn:true
+	                ,uBg:{Out:"0 0",Hover:"0 0",Focus:"0 0"}
+	                ,dBg:{Out:"0 -15px",Hover:"0px -16px",Focus:"0 -15px"}}
+	            ,Fn:function(){}
+	        });
+        }
         catagroyContent();
 
         productsInfo();
@@ -175,12 +177,13 @@
             <div class="zooms1"><img src="<?php echo base_url('public/website/images/zk.png') ?>" width="20" height="14" /></div>
         </div>
         <div class="content_default">
-            <div class="con_default">
-                <?php if ($product_cate) {
-                    echo $product_cate->title;
-                }
-                ?>
-            </div>
+            <div class="con_default" id="slidecaption"></div>
+<!--            <div class="con_default">-->
+<!--                --><?php //if ($product_cate) {
+//                    echo $product_cate->title;
+//                }
+//                ?>
+<!--            </div>-->
         </div>
         <!--Page Control Bar-->
         <div id="controls-wrapper" class="load-item">
