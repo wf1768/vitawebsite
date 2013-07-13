@@ -57,7 +57,7 @@
 
         var text_height = $('.con_char').innerHeight();
         if(text_height>200){
-	        $("#catagroyContent").css({height: he});//$(window).innerHeight()/5
+	        $("#catagroyContent").css({height: text_height});//$(window).innerHeight()/5
 	        $("#catagroyContent").jscroll({
 	            W:"15px"
 	            ,BgUrl:"url(<?php echo base_url('public/website/images/src01.png') ?>"
