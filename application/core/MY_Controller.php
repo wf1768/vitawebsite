@@ -167,7 +167,7 @@ class MY__Controller extends CI_Controller{
 		$count=$docount->get()->num_rows();
 		unset($docount);
 		//		if($count>0){
-		$this->page->doconstruct($count,$other_data['page_offset'],'','',$this->uri->segment(2));
+		$this->page->doconstruct($count,$other_data['page_offset'],'','',$this->uri->segment(3));
 		//样式定制
 		//            $theme='%upPage% %downPage% %first%  %prePage%  %linkPage%  %nextPage% %end%';
 		$theme='%first% %upPage% %prePage%  %linkPage%  %downPage% %nextPage% %end%';
