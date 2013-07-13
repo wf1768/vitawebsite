@@ -9,6 +9,8 @@
     $(function() {
         $("a[data-toggle=popover]").popover();
         $("input[type='checkbox']").attr("checked",false);
+
+        CKEDITOR.replace("content");
     })
 
     function single_remove(id) {
@@ -77,6 +79,9 @@
         }
         $('#id').val(id);
         $('#sort').val(sort);
+//        var content = CKEDITOR.instances.content_tmp.getData();
+        var content = $('#content_tmp_'+id).val();
+        CKEDITOR.instances.content.setData(content);
         $('#edit-dialog').modal('show');
     }
 
@@ -89,9 +94,15 @@
         }
         var formData = $("#edit-form").serialize();
 
+//        alert(CKEDITOR.instances.content.getData());
+        var id = $('#id').val();
+        var content = CKEDITOR.instances.content.getData();
+
+        var par = 'id='+id+'&sort='+sort+'&content='+content;
+
         $.ajax({
             type:"post",
-            data: formData,
+            data: par,
             url:"<?php echo site_url('a/product_image/edit_image')?>",
             success: function(data){
                 if (data) {
@@ -109,6 +120,24 @@
     }
 </script>
 
+<style>
+
+    .modal {
+        background-clip: padding-box;
+        background-color: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 6px 6px 6px 6px;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+        left: 32%;
+        margin-left: -280px;
+        outline: medium none;
+        position: fixed;
+        top: 10%;
+        width: 995px;
+        z-index: 1050;
+    }
+</style>
+
     <div id="edit-dialog" class="modal hide fade" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -125,11 +154,19 @@
                     </div>
                     <!-- /controls -->
                 </div>
+                <div class="control-group">
+                    <label for="input01" class="control-label">描述</label>
+
+                    <div class="controls">
+<!--                        <input id="content" name="content" type="text" />-->
+                        <textarea  cols="80" id="content" name="content" rows="10"></textarea>
+                    </div>
+                </div>
             </form>
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-            <a href="javascript:;" id="uploadfiles" onclick="save()" class="btn btn-primary">保存</a>
+            <a href="javascript:;" onclick="save()" class="btn btn-primary">保存</a>
         </div>
     </div>
 	<!-- main container -->
@@ -166,6 +203,7 @@
                                     <th >图片所属</th>
                                     <th class="span3">图片地址</th>
                                     <th class="span1"><span class="line"></span>排序</th>
+                                    <th class="span1"><span class="line"></span>描述</th>
                                     <th class="span3"><span class="line"></span></th>
                                 </tr>
                             </thead>
@@ -180,9 +218,14 @@
                                         <td><?php echo $row->who ?></td>
                                         <td><?php echo $row->imagepath ?></td>
                                         <td><?php echo $row->sort ?></td>
+                                        <td><textarea  cols="80" id="content_tmp_<?php echo $row->id ?>" name="content_tmp" style="display:none" rows="10"><?php echo $row->content ?></textarea><?php if($row->content) {
+                                                echo '已设置';
+                                            } else {
+                                                echo '未设置';
+                                            } ?></td>
                                         <td>
                                             <ul class="actions">
-                                                <li><a href="javascript:;" title="修改排序" onclick="edit('<?php echo $row->id ?>',<?php echo $row->sort ?>)" ><i class="icon-edit"></i></a></li>
+                                                <li><a href="javascript:;" title="修改" onclick="edit('<?php echo $row->id ?>',<?php echo $row->sort ?>)" ><i class="icon-edit"></i></a></li>
                                                 <li class="last"><a href="javascript:;" title="删除" onclick="single_remove('<?php echo $row->id ?>')"><i class="icon-trash"></i></a></li>
                                             </ul>
                                         </td>

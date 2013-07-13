@@ -41,7 +41,7 @@
         var tmp = <?php echo json_encode($product_image);?>;
 
         for (var i=0;i<tmp.length;i++) {
-            slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath};
+            slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath,title:tmp.content};
         }
 
         if (slidersArr.length > 0) {
@@ -177,12 +177,13 @@
             <div class="zooms1"><img src="<?php echo base_url('public/website/images/zk.png') ?>" width="20" height="14" /></div>
         </div>
         <div class="content_default">
-            <div class="con_default">
-                <?php if ($product_cate) {
-                    echo $product_cate->title;
-                }
-                ?>
-            </div>
+            <div class="con_default" id="slidecaption"></div>
+<!--            <div class="con_default">-->
+<!--                --><?php //if ($product_cate) {
+//                    echo $product_cate->title;
+//                }
+//                ?>
+<!--            </div>-->
         </div>
         <!--Page Control Bar-->
         <div id="controls-wrapper" class="load-item">
