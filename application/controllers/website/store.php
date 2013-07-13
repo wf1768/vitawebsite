@@ -57,7 +57,8 @@ class store extends CI_Controller {
 		    $typeid=trim($tmpinfo->id);
 		}
 		//获取首页轮播图片列表。
-		$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid));
+		$this->_data['storelist']=$this->model->getAllByWhere(array("typeid"=>$typeid),array(),array("sort"=>"asc"));
+		//echo $this->db->last_query();
 //		print_r($this->_data['storelist']); 
 		if(isset($_GET['id'])){
 			$indeximg=$this->img_model->getAllByWhere(array("storesid"=>trim($_GET['id'])),array(),array('sort'=>'asc'));
