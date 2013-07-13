@@ -172,7 +172,8 @@ ul#slide-list li {
     width: 400px;
 }
 .current-slide {}
-.current-slide a {
-	color:#EC934A
+
+.main_bot ul li.current-slide a{
+	color:#EC934A;
 }
 </style>

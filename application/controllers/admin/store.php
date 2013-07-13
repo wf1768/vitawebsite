@@ -40,6 +40,24 @@ class store extends MY__Controller{
 		$this->_data['page_offset'] = 10;
 		$this->_data['fun'] = 'store';
 	}
+	public function edit_sort() {
+		$result = false;
+		$id = $this->input->post('id') ? $this->input->post('id') : '';
+		$sort = $this->input->post('sort') ? $this->input->post('sort') : '';
+
+
+		if (!$id) {
+			$this->output->append_output($result);
+			return;
+		}
+		$update_image['id'] = $id;
+		$update_image['sort'] = $sort;
+		$num = $this->dataUpdate($this->store_model,$update_image,false);
+		if ($num > 0) {
+			$result = true;
+		}
+		$this->output->append_output($result);
+	}
 	//设置图片上传路径
 	public function _getImgPath(){
 		return  $this->img_upd_path='upload/store';
@@ -50,7 +68,7 @@ class store extends MY__Controller{
 	}
 	//历史列表
 	public function storeList(){
-		$this->dataList("admin/storeList",$this->store_model, array(), array(),array(), $this->_data);
+		$this->dataList("admin/storeList",$this->store_model, array(), array(),array("sort"=>'asc'), $this->_data);
 	}
 	//添加关于我们 历史
 	public function addStore(){
@@ -59,8 +77,8 @@ class store extends MY__Controller{
 	}
 	//获得分类
 	public function getType($id){
-	   $info=$this->store_type_model->getOneByWhere(array("id"=>$id),array('id','storescode'));
-	   return $info->storescode;
+		$info=$this->store_type_model->getOneByWhere(array("id"=>$id),array('id','storescode'));
+		return $info->storescode;
 	}
 	//执行添加历史
 	public function doAddstore(){
@@ -130,7 +148,7 @@ class store extends MY__Controller{
 		$result = $this->dataDelete($this->store_model,array('id'=>$id),'id',false);
 		$this->output->append_output($result);
 	}
-    /**
+	/**
 	 * 上传图片
 	 */
 	public function upload_image() {

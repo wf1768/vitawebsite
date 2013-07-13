@@ -69,7 +69,7 @@
 			});
 			*/
 			$("#margin").hover(function(){
-				console.log('run');
+				//console.log('run');
 				$('.time_main').animate({height: '0px'},{complete:function(){
 					$('.time_main').css({"display":"none"});
 					$('.time_mainone').animate({height: '40px'});

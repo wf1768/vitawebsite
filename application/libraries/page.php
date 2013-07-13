@@ -100,6 +100,9 @@ class page {
             $url=$this->mth.'?'.self::urlf($parameter);
             
         }
+        
+        
+        
         //上下翻页字符串
         $upRow          =   $this->nowPage-1;
         $downRow        =   $this->nowPage+1;

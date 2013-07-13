@@ -37,6 +37,43 @@ function multi_remove() {
         }
     })
 }
+function edit(id,sort) {
+    if (id == '') {
+        return;
+    }
+    $('#id').val(id);
+    $('#sort').val(sort);
+    $('#edit-dialog').modal('show');
+}
+function save() {
+    var sort = $('#sort').val();
+    if (sort == '') {
+        openalert('请输入排序值。');
+        $('#sort').focus();
+        return;
+    }
+    var formData = $("#edit-form").serialize();
+
+    $.ajax({
+        type:"post",
+        data: formData,
+        url:"<?php echo site_url('a/store/edit_sort')?>",
+        success: function(data){
+            if (data) {
+              //  alert(data)
+                window.location.reload();
+            }
+            else {
+                openalert("没有数据被更新或修改图片出错，请重新尝试或与管理员联系。");
+            }
+        },
+        error: function() {
+            openalert("执行操作出错，请重新尝试或与管理员联系。");
+        }
+    });
+
+}
+
 function single_remove(id) {
     bootbox.confirm("确定要删除选择的分店？<br> <font color='red'>" +
         "注意：删除分店操作不可恢复，请谨慎操作。</font> ", function(result) {
@@ -62,6 +99,11 @@ function single_remove(id) {
 }
 
 </script>
+
+
+  
+
+
 <!--    <link type="text/css" href="--><?php //echo base_url('plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css') ?><!--" rel="stylesheet">-->
 <!---->
 <!--    <script type="text/javascript" src="--><?php //echo base_url('plugins/plupload/js/plupload.full.js') ?><!--"></script>-->
@@ -117,6 +159,7 @@ function single_remove(id) {
                                     <th class="span3"><input type="checkbox"></th>
                                     <th class="span3">分类</th>
                                     <th class="span3">标题</th>
+                                     <th class="span3">排序</th>
                                     <th class="span3">内容</th>
                                     <th class="span3"><span class="line"></span></th>
                                 </tr>
@@ -131,9 +174,11 @@ function single_remove(id) {
                                         </td>
                                         <td><?php echo store::getType($row->typeid) ?></td>
                                         <td ><?php echo strip_tags(mb_substr($row->title, 0,20,"utf-8"))	 ?></td>
+                                        <td><?php echo $row->sort;?></td>
                                         <td ><?php echo strip_tags(mb_substr($row->content, 0,20,"utf-8"))	 ?></td>
                                         <td>
                                             <ul class="actions">
+                                            <li><a href="javascript:;" title="修改排序" onclick="edit('<?php echo $row->id ?>',<?php echo $row->sort ?>)" ><i class="icon-edit"></i></a></li>
                                             <li> <a title="图片" href="<?php echo site_url("a/store/storePicList?storesid=".$row->id)?>"><i class="icon-picture"></i></a></li>
                                                 <li><a href="<?php echo site_url("a/store/updstore?id=".$row->id)?>" title="编辑" ><i class="icon-edit"></i></a></li>
                                                 <li class="last"><a href="javascript:;" title="删除" onclick="single_remove('<?php echo $row->id ?>')"><i class="icon-trash"></i></a></li>

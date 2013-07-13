@@ -13,7 +13,7 @@
 
 	/* Controls Bar
 	----------------------------*/
-	#controls-wrapper { margin:0 auto; height:42px; width:100%; bottom:42px; left:0; z-index:4; background:url(../img/nav-bg.png) repeat-x; position:fixed; }
+	#controls-wrapper { margin:0 auto; height:35px; line-height:35px; width:90%; bottom:40px; right:0px; z-index:4; background:url(../img/gray.png) 0 0 repeat; position:fixed;}
 		#controls { overflow:hidden; height:100%; position:relative; text-align:left; z-index:5; }
 			#slidecounter { float:left; color:#999; font:14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow:#000 0 -1px 0; margin:0px 10px 0 15px; line-height:42px; }
 		/*	#slidecaption { overflow:hidden; float:left; color:#FFF; font:400 14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow:#000 1px 1px 2px; margin:0 20px 0 0; line-height:42px; }*/
@@ -28,8 +28,8 @@
 						#prevslide:active, #nextslide:active{ margin-top:-19px; }
 						#prevslide:hover, #nextslide:hover{ cursor:pointer; }
 				
-				ul#slide-list{ padding:15px 0; float:left; position:absolute; right:2%; }
-					ul#slide-list li{ list-style:none; width:12px; height:12px; float:left; margin:0 5px 0 0; }
+				ul#slide-list{float:left; position:absolute; right:2%; height:35px; }
+					ul#slide-list li{ list-style:none; width:12px; height:35px; float:left; margin:0 5px 0 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; }
 						ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; color: #E79943;}
 						ul#slide-list li a{ display:block; width:12px; height:12px; color: #FFFFFF;}
 							ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; color: #E79943; }
@@ -58,7 +58,7 @@
 	----------------------------*/			
 	#thumb-tray{ position:relative; z-index:3; bottom:0; left:0; background:url(../img/bg-black.png); height:150px; width:100%; overflow:hidden; text-align:center; -moz-box-shadow: 0px 0px 4px #000; -webkit-box-shadow: 0px 0px 4px #000; }/*position:fixed; box-shadow: 0px 0px 4px #000;*/
 		
-		#thumb-back, #thumb-forward{ position:absolute; z-index:5; bottom:42px; height:108px; width:40px; }
+		#thumb-back, #thumb-forward{ position:absolute; z-index:5; bottom:42px; height:99px; width:40px;  top:0px;}
 			#thumb-back{ left:0; background: url('../../../public/website/images/left.png') no-repeat center center;}
 			#thumb-forward{ right:0; background:url('../../../public/website/images/right.png') no-repeat center center;}
 				#thumb-back:hover, #thumb-forward:hover{ cursor:pointer; background-color:rgba(256,256,256, 0.1); }
