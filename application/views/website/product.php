@@ -41,7 +41,16 @@
         var tmp = <?php echo json_encode($product_image);?>;
 
         for (var i=0;i<tmp.length;i++) {
-            slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath,title:tmp.content};
+//            alert(tmp[i].content);
+            if (tmp[i].content == "") {
+                slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath};
+//                alert('11:'+tmp.content);
+            }
+            else {
+                slidersArr[i] = {'image':'<?php echo base_url() ?>' + tmp[i].imagepath,title:tmp[i].content};
+//                alert(tmp.content);
+            }
+
         }
 
         if (slidersArr.length > 0) {

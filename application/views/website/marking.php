@@ -78,7 +78,7 @@ ul#slide-list li {
 }
 
 .pic_main {
-	height: 98px;
+	height: 92px;
 }
 </style>
 </head>
