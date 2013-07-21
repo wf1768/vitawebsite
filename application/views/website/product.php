@@ -212,7 +212,7 @@
 <script>
 	 var ty=1;
 	 $(document).ready(function(){
-	    $(".main").click(function(e){
+	    $("#supersized,.main").click(function(e){
 	        if(ty==0){
 	            ty=1;
 	        }else{
