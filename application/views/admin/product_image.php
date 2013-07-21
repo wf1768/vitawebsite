@@ -4,7 +4,6 @@
 <?php $this->load->view("admin/common/topmenu"); ?>
 
     <?php $this->load->view('admin/common/leftmenu'); ?>
-
 <script>
     $(function() {
         $("a[data-toggle=popover]").popover();

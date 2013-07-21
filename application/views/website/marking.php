@@ -78,7 +78,7 @@ ul#slide-list li {
 }
 
 .pic_main {
-	height: 98px;
+	height: 92px;
 }
 </style>
 </head>
@@ -136,6 +136,7 @@ ul#slide-list li {
 <!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">-->
 	    </a>
 	 </li>
+
 </ul>
 
 <ul id="slide-list" style="display: none"></ul>
@@ -161,19 +162,25 @@ ul#slide-list li {
 #about{
     color: #EC934A;
 }
-.main_bot ul {
-    color: #FFFFFF;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 14px;
-    height: 42px;
-    line-height: 40px;
-    margin: 0 auto 0 40%;
-    text-align: center;
-    width: 400px;
-}
+
 .current-slide {}
 
 .main_bot ul li.current-slide a{
 	color:#EC934A;
 }
+
+#about{
+    color: #EC934A;
+}
+    .main_bot ul {
+        color: #FFFFFF;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 14px;
+        height: 42px;
+        line-height: 40px;
+        margin: 0 auto 0 45%;
+        overflow: hidden;
+        text-align: center;
+        width: 444px;
+    }
 </style>

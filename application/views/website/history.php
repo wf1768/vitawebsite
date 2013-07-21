@@ -123,13 +123,13 @@
 		}
 		 
     </script>
-   
+
 <div id="container"><?php $this->load->view("website/common/top"); ?> <?php foreach($history as $key=>$val):?>
 <div style="display: none" id="c<?php echo $val->year?>"><?php echo $val->content?></div>
-            <?php endforeach;?>
+              <?php endforeach;?>
 
 <div id="margin" style="width: 100%;height:80px;background-image:url('<?php echo base_url() ?>public/website/images/transparent.png'); position:absolute;bottom: 230px;">&nbsp;</div>
-                   <div class="time_main">
+<div class="time_main">
 <div class="time_mainle">
 <div id="mainBox" class="time_char">
 <div id="content" class="time_charle"
@@ -139,105 +139,93 @@
 </div>
 </div>
 
-<div class="time_mainri">
-<?php echo $showinfo->content;?>
-</div>
+<div class="time_mainri"><?php echo $showinfo->content;?></div>
 </div>
 <!-- 收缩 start -->
 <div class="time_mainone">
 <div class="time_mainle">
 <div class="time_char">
-<div class="time_charle" style="top: 0px; position: relative;color:#EC934A;  font-family: Arial,Helvetica,sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 2px 0; margin-top:-4px"><?php echo $showinfo->year;?></div>
+<div class="time_charle"
+	style="top: 0px; position: relative; color: #EC934A; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; padding: 2px 0; margin-top: -4px"><?php echo $showinfo->year;?></div>
 <div class="scroll_line"
 	style="top: 0px; right: 0px; position: absolute; overflow: hidden;"></div>
 </div>
 </div>
-<div class="time_mainri">
-<?php echo $showinfo->content;?>
+<div class="time_mainri"><?php echo $showinfo->content;?>
 <p class="eng"></p>
 </div>
 </div>
 <!-- 收缩 end -->
 
-<div class="main_bot">
-<input id="temp" type="hidden" value="1">
+<div class="main_bot"><input id="temp" type="hidden" value="1">
 <ul id="mymaking">
-	<li id="h2"> 
-	    <a class="h1" id="nohovers" href="">
-	        History
-<!--            <img src="<?php echo base_url() ?>public/website/images/footer/lishi2.png">-->
-        </a>
-	    <a class="h2 " id="onhovers" href="">
-	            History
-<!--	        <img src="<?php echo base_url() ?>public/website/images/footer/lishi3.png">-->
-	    </a>
-	    <a class="h3" href="" id="nohovers">
-	        历史
-<!--	         <img src="<?php echo base_url() ?>public/website/images/footer/lishi.png">-->
-	    </a>
-	    <a class="h4 " id="onhovers" href="">
-	      历史
-<!--	      <img src="<?php echo base_url() ?>public/website/images/footer/lishi1.png">-->
-	    </a>
-	 </li>
+	<li id="h2"><a class="h1" id="nohovers" href=""> History <!--            <img src="<?php echo base_url() ?>public/website/images/footer/lishi2.png">-->
+	</a> <a class="h2 " id="onhovers" href=""> History <!--	        <img src="<?php echo base_url() ?>public/website/images/footer/lishi3.png">-->
+	</a> <a class="h3" href="" id="nohovers"> 历史 <!--	         <img src="<?php echo base_url() ?>public/website/images/footer/lishi.png">-->
+	</a> <a class="h4 " id="onhovers" href=""> 历史 <!--	      <img src="<?php echo base_url() ?>public/website/images/footer/lishi1.png">-->
+	</a></li>
 	<?php if($open->value==1):?>
-        <li >
-            <a class="m1" id="nohovers" href="<?php echo site_url("w/marking")?>">
-                Marking
-                <!--        <img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png">-->
-            </a>
-            <a class="m2" id="onhovers"  style="color: #EC934A" href="<?php echo site_url("w/marking")?>">
-                Marking
-                <!--<img src="<?php echo base_url() ?>public/website/images/footer/yingji3.png">-->
+	<li><a class="m1" id="nohovers"
+		href="<?php echo site_url("w/marking")?>"> Marking <!--        <img src="<?php echo base_url() ?>public/website/images/footer/yingji2.png">-->
+	</a> <a class="m2" id="onhovers" style="color: #EC934A"
+		href="<?php echo site_url("w/marking")?>"> Marking <!--<img src="<?php echo base_url() ?>public/website/images/footer/yingji3.png">-->
 
-            </a>
-            <a class="m4" id="onhovers"  href="<?php echo site_url("w/marking")?>">
-                影集
-                <!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">-->
-            </a>
-            <a class="m3"  id="nohovers" href="<?php echo site_url("w/marking")?>">
-                影集
-                <!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">-->
-            </a>
-        </li>
-<!--	<li>-->
-<!--	    <a class="m1" href="--><?php //echo site_url("w/marking")?><!--">-->
-<!--        <img src="--><?php //echo base_url() ?><!--public/website/images/footer/yingji2.png">-->
-<!--     </a>-->
-<!--	    <a class="m2" style="color: #EC934A" href="--><?php //echo site_url("w/marking")?><!--">-->
-<!--<img src="--><?php //echo base_url() ?><!--public/website/images/footer/yingji2.png"></a>-->
-<!--	    <a class="m4" href="--><?php //echo site_url("w/marking")?><!--">-->
-<!--	         <img src="--><?php //echo base_url() ?><!--public/website/images/footer/yingji1.png">-->
-<!--	    </a>-->
-<!--	    <a class="m3" href="--><?php //echo site_url("w/marking")?><!--">-->
-<!--	         <img src="--><?php //echo base_url() ?><!--public/website/images/footer/yingji.png">-->
-<!--	    </a>-->
-<!--	 </li>-->
-    <?php endif;?>
+	</a> <a class="m4" id="onhovers"
+		href="<?php echo site_url("w/marking")?>"> 影集 <!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji1.png">-->
+	</a> <a class="m3" id="nohovers"
+		href="<?php echo site_url("w/marking")?>"> 影集 <!--	         <img src="<?php echo base_url() ?>public/website/images/footer/yingji.png">-->
+	</a></li>
+	<!--	<li>-->
+	<!--	    <a class="m1" href="-->
+	<?php //echo site_url("w/marking")?>
+	<!--">-->
+	<!--        <img src="-->
+	<?php //echo base_url() ?>
+	<!--public/website/images/footer/yingji2.png">-->
+	<!--     </a>-->
+	<!--	    <a class="m2" style="color: #EC934A" href="-->
+	<?php //echo site_url("w/marking")?>
+	<!--">-->
+	<!--<img src="-->
+	<?php //echo base_url() ?>
+	<!--public/website/images/footer/yingji2.png"></a>-->
+	<!--	    <a class="m4" href="-->
+	<?php //echo site_url("w/marking")?>
+	<!--">-->
+	<!--	         <img src="-->
+	<?php //echo base_url() ?>
+	<!--public/website/images/footer/yingji1.png">-->
+	<!--	    </a>-->
+	<!--	    <a class="m3" href="-->
+	<?php //echo site_url("w/marking")?>
+	<!--">-->
+	<!--	         <img src="-->
+	<?php //echo base_url() ?>
+	<!--public/website/images/footer/yingji.png">-->
+	<!--	    </a>-->
+	<!--	 </li>-->
+	<?php endif;?>
 </ul>
 </div>
-            <?php $this->load->view("website/common/footer"); ?>
- </div>
+	<?php $this->load->view("website/common/footer"); ?></div>
 
 </body>
 </html>
 <style>
-#about{
-    color: #EC934A;
+#about {
+	color: #EC934A;
 }
-    .main_bot ul {
-        color: #FFFFFF;
-        font-family: Arial,Helvetica,sans-serif;
-        font-size: 14px;
-        height: 42px;
-        line-height: 40px;
-        margin: 0 auto;
-        overflow: hidden;
-        text-align: center;
-        width: 144px;
-    }
+
+.main_bot ul {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	height: 42px;
+	line-height: 40px;
+	margin: 0 auto 0 45%;
+	overflow: hidden;
+	text-align: center;
+	width: 144px;
+}
 </style>
 
