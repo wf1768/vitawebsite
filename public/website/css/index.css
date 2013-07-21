@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+a{ outline:none;}/*去除超链接虚线框*/
+a:active{star:expression(this.onFocus=this.blur());}/*去除ie下超链接虚线框*/
+:focus{ outline:0;}/*去除火狐下超链接的虚线框*/ 
 * {
 	margin: 0;
 	padding: 0;
@@ -119,14 +121,15 @@
 	white-space: nowrap;
 	width: 90%;
 	text-align: center;
+	float: left;
 }
 
 .menu_top ul li {
-	padding-right: 30px;
+	padding: 0 15px;
 	display: inline-block;
-	height: 33px; +
-	display: inline; +
-	zoom: 1;
+	height: 33px; 
+	+display: inline; 
+	+zoom: 1;
 }
 
 .menu_top ul li a {
@@ -159,18 +162,18 @@
 }
 
 .mid_top ul li {
-	padding-right: 30px;
+	padding: 0 15px;
 	display: inline-block;
-	height: 33px; +
-	display: inline; +
-	zoom: 1;
+	height: 33px; 
+	+display: inline; 
+	+zoom: 1;
 }
 
 .mid_top ul li a {
 	display: inline-block;
-	height: 33px; +
-	display: inline; +
-	zoom: 1;
+	height: 33px; 
+	+display: inline; 
+	+zoom: 1;
 }
 
 .main {
@@ -666,8 +669,9 @@
 .time_mainri {
 	overflow: hidden;
 	color: #000;
-	width: 60%;
+	width: 85%;
 	padding: 10px 0px 0px 30px;
+	line-height: 22px;
 }
 
 .time_mainri p.cha {

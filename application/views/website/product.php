@@ -71,7 +71,7 @@
 	        $("#catagroyContent").css({height: text_height});//$(window).innerHeight()/5
 	        $("#catagroyContent").jscroll({
 	            W:"15px"
-	            ,BgUrl:"url(<?php echo base_url('public/website/images/src01.png') ?>"
+	            ,BgUrl:"url(<?php echo base_url('public/website/images/src01.png') ?>)"
 	            ,Bg:"right -30px repeat-y"
 	            ,Bar:{Pos:"up"
 	                ,Bd:{Out:"-30px 0 repeat-y",Hover:"-30px 0 repeat-y"}

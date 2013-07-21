@@ -23,7 +23,7 @@
               <?php endforeach;?>
         	'</ul>';
 			$("#content").html(content);
-			$("#content").css({height: $(window).innerHeight()/5});
+			$("#content").css({height: 130});//$(window).innerHeight()/5
 			$("#content").jscroll({
 				   W:"15px"
 				  ,BgUrl:"url(<?php echo base_url() ?>public/website/images/src01.png)"
@@ -72,13 +72,13 @@
 				//console.log('run');
 				$('.time_main').animate({height: '0px'},{complete:function(){
 					$('.time_main').css({"display":"none"});
-					$('.time_mainone').animate({height: '40px'});
+					$('.time_mainone').animate({height: '35px'});
 				    $('.time_mainone').css({"display":"block"});
-				    $('.time_main').css({"height":"40px"});
+				    $('.time_main').css({"height":"35px"});
 				},
 				step: function(now, fx) {
 	                 if(now<40 && $("#temp").val()==1){
-	                	 $('.time_mainone').css({"height":"40px"}).show();
+	                	 $('.time_mainone').css({"height":"35px"}).show();
 	                	 $('.time_main').hide();
 			         }
 			         if(now<10){
