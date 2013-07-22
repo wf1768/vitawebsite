@@ -17,9 +17,7 @@ $(function(){
     	if (resizeTimer) clearTimeout(resizeTimer);
         resizeTimer = setTimeout("resizePic()", 1000);
 	});
-    
-   
-
+    //SBd
     
     /**
      * 视频最大化后，退出还原 
@@ -95,7 +93,7 @@ function resizePic(){
 	
 	var win_width = news_height*1.4222;//中间图片的宽度
 	news_width = (news_width-win_width)/2; 
-    funcfoucs(win_width,news_width);//
+    funcfoucs(win_width,news_width+win_width);//news_width+win_width 排序加载第一张图片 中间
     
     
 	$('.bigpic').css({"height":news_height+4});

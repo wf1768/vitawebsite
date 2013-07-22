@@ -101,7 +101,7 @@ class press extends CI_Controller {
     public function getPressImg($pressid){
     	$pressImgList = false;
     	if($pressid){
-    		$pressImgList = $this->press_image_model->getAllByWhere(array('pressid'=>$pressid),array(),array('sort'=>'desc'));
+    		$pressImgList = $this->press_image_model->getAllByWhere(array('pressid'=>$pressid),array(),array('sort'=>'asc'));
     	}
     	return $pressImgList;
     }
