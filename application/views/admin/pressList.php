@@ -118,7 +118,7 @@ function single_remove(id) {
                                           <i class="icon-plus"> </i>
                                           </a>
                                         </td>
-                                        <td title="<?php echo $row->content?>"><?php echo mb_substr($row->title, 0,20,"utf-8")	 ?></td>
+                                        <td title="<?php echo strip_tags($row->content)?>"><?php echo mb_substr(strip_tags($row->title), 0,20,"utf-8")	 ?></td>
                                         <td><?php $array=array("1"=>'图片新闻',"2"=>"视频新闻"); echo $array[$row->type];?></td>
                                         <td><?php echo isset($mvinfo->mp4path)?basename($mvinfo->mp4path):"<font style='color:red'>未上传</font>"?></td>
                                         <td><?php echo isset($mvinfo->flvpath)?basename($mvinfo->flvpath):"<font style='color:red'>未上传</font>";?></td>
