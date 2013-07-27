@@ -38,6 +38,25 @@ class press extends MY__Controller{
 		$this->load->model('press_video_model');
 		$this->_data['page_offset'] = 10;
 		$this->_data['fun'] = 'press';
+	} 
+	//修改排序
+    public function edit_sort() {
+		$result = false;
+		$id = $this->input->post('id') ? $this->input->post('id') : '';
+		$sort = $this->input->post('sort') ? $this->input->post('sort') : '';
+
+
+		if (!$id) {
+			$this->output->append_output($result);
+			return;
+		}
+		$update_image['id'] = $id;
+		$update_image['sort'] = $sort;
+		$num = $this->dataUpdate($this->press_model,$update_image,false);
+		if ($num > 0) {
+			$result = true;
+		}
+		$this->output->append_output($result);
 	}
 	//设置图片上传路径
 	public function _getImgPath(){
@@ -49,7 +68,7 @@ class press extends MY__Controller{
 	}
 	//新闻列表
 	public function pressList(){
-		$this->dataList("admin/pressList",$this->press_model, array(), array(),array(), $this->_data);
+		$this->dataList("admin/pressList",$this->press_model, array(), array(),array("sort"=>'asc'), $this->_data);
 	}
 	public function getmv($id){
 	   return $this->press_video_model->getOneByWhere(array("pressid"=>trim($id)));
@@ -108,6 +127,24 @@ class press extends MY__Controller{
 				//删除物理文件
 				@unlink($oldpath);
 			}
+			//删除视频
+		    $list=$this->press_video_model->getAllByWhere(array("pressid"=>$val));
+			foreach ($list as $row) {
+			    $mp4_video = $row->mp4path;
+                $ogv_video = $row->flvpath;
+                //检查文件是否存在
+                if (file_exists($mp4_video)) {
+                    //删除物理文件
+                    @unlink($mp4_video);
+                }
+                if (file_exists($ogv_video)) {
+                    //删除物理文件
+                    @unlink($ogv_video);
+                }
+				
+			}
+			//删除视频
+		    $this->dataDelete($this->press_video_model,array('pressid'=>$val),'pressid',false);
 			$result = $this->dataDelete($this->press_model,array('id'=>$val),'id',false);
 		}
 		$this->output->append_output($result);
@@ -151,6 +188,7 @@ class press extends MY__Controller{
                     @unlink($ogv_video);
                 }
             }
+            $this->dataDelete($this->press_video_model,array('pressid'=>$id),'pressid',false);
         }
         else {
             $this->output->append_output($result);

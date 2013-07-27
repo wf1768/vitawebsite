@@ -29,7 +29,7 @@ function multi_remove() {
                 url:"<?php echo site_url('a/press/multDelpress')?>",
                 success: function(data){
                     if (data) {
-                        window.location.reload();
+                      //  window.location.reload();
                     }
                     else {
                         openalert("删除新闻出错，请重新尝试或与管理员联系。");
@@ -65,9 +65,67 @@ function single_remove(id) {
         }
     })
 }
+function edit(id,sort) {
+    if (id == '') {
+        return;
+    }
+    $('#id').val(id);
+    $('#sort').val(sort);
+    $('#edit-dialog').modal('show');
+}
+function save() {
+    var sort = $('#sort').val();
+    if (sort == '') {
+        openalert('请输入排序值。');
+        $('#sort').focus();
+        return;
+    }
+    var formData = $("#edit-form").serialize();
 
+    $.ajax({
+        type:"post",
+        data: formData,
+        url:"<?php echo site_url('a/press/edit_sort')?>",
+        success: function(data){
+            if (data) {
+              //  alert(data)
+                window.location.reload();
+            }
+            else {
+                openalert("没有数据被更新或修改图片出错，请重新尝试或与管理员联系。");
+            }
+        },
+        error: function() {
+            openalert("执行操作出错，请重新尝试或与管理员联系。");
+        }
+    });
+
+}
 </script>
     <?php $this->load->view('admin/common/leftmenu'); ?>
+        <div id="edit-dialog" class="modal hide fade" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            排序修改
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" id="edit-form">
+                <!-- /control-group -->
+                <div class="control-group">
+                    <label class="control-label" for="factory">新闻排序</label>
+                    <div class="controls">
+                        <input type="hidden" id="id" name="id" value="">
+                        <input type="text" id="sort" name="sort" onkeypress="return isnumber(event)" value="">
+                    </div>
+                    <!-- /controls -->
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <a href="javascript:;" id="uploadfiles4" onclick="save()" class="btn btn-primary">保存</a>
+        </div>
+    </div>
 	<!-- main container -->
     <div class="content">
         <div class="container-fluid">
@@ -94,6 +152,7 @@ function single_remove(id) {
 <!--                                    <th class="span3" >新闻封面</th>-->
                                     <th class="span3"><span class="line"></span>新闻标题</th>
                                     <th class="span3"><span class="line"></span>新闻类型</th>
+                                     <th class="span3"><span class="line"></span>排序</th>
                                     <th class="span1"><span class="line"></span>mp4文件</th>
                                     <th class="span1"><span class="line"></span>ogv文件</th>
                                     <th class="span3"><span class="line"></span></th>
@@ -118,12 +177,14 @@ function single_remove(id) {
                                           <i class="icon-plus"> </i>
                                           </a>
                                         </td>
-                                        <td title="<?php echo $row->content?>"><?php echo mb_substr($row->title, 0,20,"utf-8")	 ?></td>
+                                        <td title="<?php echo strip_tags($row->content)?>"><?php echo mb_substr(strip_tags($row->title), 0,20,"utf-8")	 ?></td>
                                         <td><?php $array=array("1"=>'图片新闻',"2"=>"视频新闻"); echo $array[$row->type];?></td>
+                                         <td title="新闻排序"><?php echo  $row->sort ?></td>
                                         <td><?php echo isset($mvinfo->mp4path)?basename($mvinfo->mp4path):"<font style='color:red'>未上传</font>"?></td>
                                         <td><?php echo isset($mvinfo->flvpath)?basename($mvinfo->flvpath):"<font style='color:red'>未上传</font>";?></td>
                                         <td>
                                             <ul class="actions">
+                                             <li><a href="javascript:;" title="修改排序" onclick="edit('<?php echo $row->id ?>',<?php echo $row->sort ?>)" ><i class="icon-align-justify"></i></a></li>
                                             <?php if($row->type==1):?>
                                                <li> <a title="新闻图册" href="<?php echo site_url("a/press/pressPicList?pressid=".$row->id)?>"><i class="icon-picture"></i></a></li>
                                             <?php else:?>
@@ -231,6 +292,7 @@ upload_single2 = function(path,url) {
     });
 
     $('#uploadfiles').click(function(e) {
+        alert('sssssssssssssssss');
         uploader.start();
         e.preventDefault();
     });

@@ -73,7 +73,7 @@ class press extends CI_Controller {
      */
     public function press_list() {
     	//获取全部新闻
-        $press_list = $this->press_model->getAllByWhere();
+        $press_list = $this->press_model->getAllByWhere(array(),array(),array("sort"=>"asc"));
         return $press_list;
     }
     
