@@ -89,7 +89,7 @@ class MY__Controller extends CI_Controller{
 		$this->_where($model,$where,$otherwhere);
 		$this->_order($model,$order);
 		$data=$this->_list($model,$other_data);
-		//echo $this->db->last_query(); exit;
+//		echo $this->db->last_query(); exit;
 		//合并外部传入的data
 		$data = array_merge($other_data,$data);
 		$this->load->view($template,$data);
