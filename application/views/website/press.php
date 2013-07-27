@@ -87,9 +87,10 @@
 			      <source src="<?php echo base_url($pressVideo->flvpath) ?>" type='video/ogg; codecs="theora, vorbis"' />
 			      <!-- 如果浏览器不兼容HTML5则使用flash播放 -->
 			      <object id="press_flash" class="vjs-flash-fallback" type="application/x-shockwave-flash" data="">
-			        <param name="movie" value="<?php echo base_url('plugins/video/css/flowplayer-3.2.1.swf') ?>" />
+			        <param name="movie" value="<?php echo base_url('plugins/video/css/flowplayer.commercial.swf') ?>" />
 			        <param name="allowfullscreen" value="true" />
-			        <param name="flashvars" value='config={"playlist":["../../../public/website/images/video_index.png", {"url": "<?php echo base_url($pressVideo->mp4path) ?>","autoPlay":false,"autoBuffering":true}]}' />
+			        <param name="bgColor" value="#030303" />
+			        <param name="flashvars" value='config={"playlist":["../../../public/website/images/video_index.png", {"url": "<?php echo base_url($pressVideo->mp4path) ?>","autoPlay":false,"autoBuffering":true,"scaling":"orig"}]}' />
 			        <!-- 视频图片. -->
 			        <img src="" width="640" height="264" alt="Poster Image"
 			          title="No video playback capabilities." />
