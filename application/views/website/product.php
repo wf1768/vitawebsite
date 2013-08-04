@@ -7,6 +7,7 @@
     .p2{color: #050505;}
     .p3{color: #E69A42;}
     .p4{color: #E69A42;}
+    .pro_p p{margin-left:6px;}
 </style>
 
 <script type="text/javascript">
@@ -35,7 +36,13 @@
     });
 
     $(function(){
-
+    	var product_id = '<?php
+    	        echo $brandid;
+    	    ?>';
+    	if(product_id == "10000"){
+    		$('#products').addClass('pro_p');
+    	}
+    	        
         var slidersArr = new Array();
         <!-- 注意，这种将php数组转为javascript数组，可能有中文问题。-->
         var tmp = <?php echo json_encode($product_image);?>;
@@ -86,7 +93,7 @@
 
         productsInfo();
         set_brand();
-
+		
     });
     //将当前品牌logo改变样式
     function set_brand() {
@@ -120,12 +127,26 @@
         else if (type=='cate') {
             $("#identity").css({"color":"#000000"});
             $("#product").css({"color":"#F08D39"});
+            
+            var sort = '<?php
+                if ($product_cate) {
+                    echo $product_cate->sort;
+                }
+                ?>';
+            //Indoor	Outdoor
+			if(sort < 100){
+				$("#indoor").css({"color":"#F08D39"});
+			}else{
+				$("#outdoor").css({"color":"#F08D39"});
+			}
+			
             var cateid = '<?php
                 if ($product_cate) {
                     echo $product_cate->id;
                 }
                 ?>';
             selProduct(cateid);
+            
             //隐藏品牌说明。打开系列说明
 //            $('.content').css({"display":"none"});
             $('.content_default').css({"display":"block"});
@@ -154,16 +175,47 @@
                 <dd id="product">PRODUCTS</dd>
                 <dd>
                     <ul id="products">
-                        <?php if ($product_cates) : ?>
-                            <?php foreach ($product_cates as $cate) : ?>
-                                <li id="<?php echo $cate->id ?>">
-                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p1">-<?php echo $cate->catecode ?></p></a>
-                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p2">-<?php echo $cate->catecodecn ?></p></a>
-                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p3">-<?php echo $cate->catecode ?></p></a>
-                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p4">-<?php echo $cate->catecodecn ?></p></a>
-                                </li>
-                            <?php endforeach ?>
-                        <?php endif ?>
+                    	<?php if ($product_brand->id == "10000") : ?>
+                    		<li id="indoor">-Indoor</li>
+                    		<?php if ($product_cates) : ?>
+	                            <?php foreach ($product_cates as $cate) : ?>
+	                            	<?php if($cate->sort < 100):?>
+	                            		<li id="<?php echo $cate->id ?>">
+		                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p1">-<?php echo $cate->catecode ?></p></a>
+		                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p2">-<?php echo $cate->catecodecn ?></p></a>
+		                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p3">-<?php echo $cate->catecode ?></p></a>
+		                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p4">-<?php echo $cate->catecodecn ?></p></a>
+		                                </li>
+	                            	<?php endif;?>
+	                            <?php endforeach ?>
+	                        <?php endif ?>
+	                        
+	                        <li id="outdoor">-Outdoor</li>
+                    		<?php if ($product_cates) : ?>
+	                            <?php foreach ($product_cates as $cate) : ?>
+	                            	<?php if($cate->sort > 100):?>
+	                            		<li id="<?php echo $cate->id ?>">
+		                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p1">-<?php echo $cate->catecode ?></p></a>
+		                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p2">-<?php echo $cate->catecodecn ?></p></a>
+		                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p3">-<?php echo $cate->catecode ?></p></a>
+		                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p4">-<?php echo $cate->catecodecn ?></p></a>
+		                                </li>
+	                            	<?php endif;?>
+	                            <?php endforeach ?>
+	                        <?php endif ?>
+	                        
+                    	<?php else :?>
+	                        <?php if ($product_cates) : ?>
+	                            <?php foreach ($product_cates as $cate) : ?>
+	                                <li id="<?php echo $cate->id ?>">
+	                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p1">-<?php echo $cate->catecode ?></p></a>
+	                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p2">-<?php echo $cate->catecodecn ?></p></a>
+	                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p3">-<?php echo $cate->catecode ?></p></a>
+	                                    <a href="<?php echo site_url('w/product/product_get').'?brandid='.$product_brand->id.'&type=cate&cateid='.$cate->id ?>"><p class="p4">-<?php echo $cate->catecodecn ?></p></a>
+	                                </li>
+	                            <?php endforeach ?>
+	                        <?php endif ?>
+	                    <?php endif;?>
                     </ul>
                 </dd>
             </dl>

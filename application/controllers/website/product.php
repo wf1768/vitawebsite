@@ -106,6 +106,7 @@ class product extends CI_Controller {
         $data = $this->website_lib->product_info();
         $this->_data = array_merge($this->_data,$data);
         $this->_data['type'] = $type;
+        $this->_data['brandid'] = $brandid;
 
         $product_cate = false;
         if ($type == 'brand') {
