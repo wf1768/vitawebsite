@@ -29,7 +29,7 @@
 						#prevslide:hover, #nextslide:hover{ cursor:pointer; }
 				
 				ul#slide-list{float:left; position:absolute; right:2%; height:35px; }
-					ul#slide-list li{ list-style:none; width:12px; height:35px; float:left; margin:0 5px 0 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; }
+					ul#slide-list li{ list-style:none; width:12px; height:35px; float:left; margin:0 12px 0 0; font-family:Arial, Helvetica, sans-serif; font-size:14px; }
 						ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; color: #E79943;}
 						ul#slide-list li a{ display:block; width:12px; height:12px; color: #FFFFFF;}
 							ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; color: #E79943; }
