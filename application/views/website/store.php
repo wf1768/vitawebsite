@@ -100,6 +100,13 @@
         </li>
         <?php endif;?>
         </ul>
+        
+         
+    </div>
+    <!--Page Control Bar-->
+    <div id="controls-wrapper" class="load-item">
+    	<!--Navigation-->
+        <ul id="slide-list"></ul>
     </div>
     <?php $this->load->view("website/common/footer"); ?>
 </div>
@@ -109,7 +116,7 @@
 #store{
     color: #EC934A;
 }
-
+#controls-wrapper {width: 37%;background: none;}
 #onhovers{color: #EC934A;display:block;width:110px; font-family:"微软雅黑";}
 #nohovers{color: #FFFFFF;display:block;width:130px; font-family:"微软雅黑";}
 </style>
