@@ -74,9 +74,9 @@
 				ul#thumb-list li:hover{ cursor:pointer; }
 				
 				
-ul#thumb-list li p.news_opactity{width:156px; height:90px; background:url(../../../public/website/images/black_mid.png) 0 0 repeat; position:absolute; left:0px; top:0px;}
+ul#thumb-list li p.news_opactity{width:156px; height:909px; background:url(../../../public/website/images/black_mid.png) 0 0 repeat; position:absolute; left:0px; top:0px;}
 .news_black{display: none;}
-.news_black1{width:156px; height:90px; background:url(../../../public/website/images/black_mid.png) 0 0 repeat; position:absolute; left:0px; top:0px;color: #FFFFFF;background-color: #000000;display: table;}
+.news_black1{width:156px; height:99px; background:url(../../../public/website/images/black_mid.png) 0 0 repeat; position:absolute; left:0px; top:0px;color: #FFFFFF;background-color: #000000;display: table;}
 .news_titletext{display:table; height:90px; *position:relative;}
 .news_title{vertical-align: middle;display:table-cell;*position:absolute; *top:50%; left:0px;}
 .news_title p{*position:relative; *top:-50%;  margin:0px 8px; width:140px; }

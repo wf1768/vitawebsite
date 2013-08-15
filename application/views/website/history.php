@@ -16,9 +16,9 @@
             var content = '<ul>'+
             <?php foreach($history as $key=>$val):?>
                <?php if(isset($_GET['id'])):?>
-                  '<li><a href="<?php echo site_url("w/history?id=").$val->id;?>" <?php if($val->id==trim($_GET['id'])) echo 'class="cur"';?>><?php echo $val->year;?></a></li>'+
+                  '<li><a id="<?php echo $val->id; ?>" href="<?php echo site_url("w/history?id=").$val->id;?>" <?php if($val->id==trim($_GET['id'])) echo 'class="cur"';?>><?php echo $val->year;?></a></li>'+
                <?php else:?>
-                  '<li><a href="<?php echo site_url("w/history?id=").$val->id;?>" <?php if($key==0) echo 'class="cur"';?>><?php echo $val->year;?></a></li>'+
+                  '<li><a id="<?php echo $val->id; ?>" href="<?php echo site_url("w/history?id=").$val->id;?>" <?php if($key==0) echo 'class="cur"';?>><?php echo $val->year;?></a></li>'+
               <?php endif;?>
               <?php endforeach;?>
         	'</ul>';
@@ -38,6 +38,10 @@
 			});
 			
 			$('#content ul li a').click(function(){
+				var top_c = $('.jscroll-c').css('top');
+				var top_h = $('.jscroll-h').css('top');
+				setCookie('jscrollTop_c',top_c);	
+				setCookie('jscrollTop_h',top_h);	
 				
 //				$.each($("#content ul li a"),function(index,liItem){
 //					$(liItem).attr("class","");
@@ -115,13 +119,47 @@
 			footerCss("mymaking","h1","h2","h3","h4");
 			pitchOn("mymaking","h2","h1","h2","h3","h4");
 			pitchOn('footer','about','f1','f3','f2','f4');
+
+			//设置当前的年份位置
+			$('.jscroll-c').css({"top":getCookie('jscrollTop_c')});
+			$('.jscroll-h').css({"top":getCookie('jscrollTop_h')});
+			delCookie('jscrollTop_c');//删除cookie
+			delCookie('jscrollTop_h');
         });
 		//历史内容
 		function setHistoryContent(cha,eng){
 			$('#history_cha').html(cha);
 			$('#history_eng').html(eng);
 		}
-		 
+		//设置cookie
+		function setCookie(name,value){
+		    var Days = 30;
+		    var exp = new Date();
+		    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+		    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+		    
+//		    var strsec = getsec(time);
+//		    var exp = new Date();
+//		    exp.setTime(exp.getTime() + strsec*1);
+//		    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+		}
+
+		//读取cookies
+		function getCookie(name){
+		    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+		    if(arr=document.cookie.match(reg))
+		        return (arr[2]);
+		    else
+		        return null;
+		}
+		//删除cookies
+		function delCookie(name){
+		    var exp = new Date();
+		    exp.setTime(exp.getTime() - 1);
+		    var cval=getCookie(name);
+		    if(cval!=null)
+		        document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+		}
     </script>
 
 <div id="container"><?php $this->load->view("website/common/top"); ?> <?php foreach($history as $key=>$val):?>
