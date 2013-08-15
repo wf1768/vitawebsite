@@ -28,7 +28,7 @@
 
         //调整.main的top
         $('.main').css({
-            'top':topHeight + menu_topHeight + mid_topHeight
+            'top':topHeight + menu_topHeight + mid_topHeight+1
         })
     }
     $(window).resize(function(){

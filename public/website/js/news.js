@@ -99,7 +99,7 @@ function resizePic(){
 	$('.bigpic').css({"height":news_height+4});
 	$('#foucs').css({"height":news_height+4});
 	$('.navi').css({"height":news_height});//左右切换
-	$('.navi').css({"width":news_width-0.001});//左右切换
+	$('.navi').css({"width":news_width+2});//左右切换
 	
 	//视频
 	$('.video-js-box').css({"width":$(window).width()});//播放条
