@@ -74,19 +74,19 @@
         	</a>
         </li>
         <li id="test">
-            <a class="f1" id="nohovers"   href="http://www.baidu.com" >
+            <a class="f1" id="nohovers" target="_blank"  href="http://www.baidu.com" >
             Vita Blog
 <!--                <img src="<?php echo base_url("public/website/images/footer/boke3.png")?>" />-->
             </a>
-        	<a class="f2" id="nohovers"  href="http://www.baidu.com" >
+        	<a class="f2" id="nohovers" target="_blank" href="http://www.baidu.com" >
         	我们的博客
 <!--        	    <img src="<?php echo base_url("public/website/images/footer/boke1.png")?>" />-->
         	</a>
-        	<a class="f3" id="onhovers"   href="http://www.baidu.com" >
+        	<a class="f3" id="onhovers"  target="_blank" href="http://www.baidu.com" >
         	 Vita Blog
 <!--        	    <img src="<?php echo base_url("public/website/images/footer/boke2.png")?>" />-->
         	</a>
-        	<a class="f4" id="onhovers"  href="http://www.baidu.com" >
+        	<a class="f4" id="onhovers" target="_blank" href="http://www.baidu.com" >
         	我们的博客
 <!--        	    <img src="<?php echo base_url("public/website/images/footer/boke.png")?>" />-->
         	</a>
@@ -97,9 +97,9 @@
      </div>
     <div style="width:20%;float:right" >
          <ol>
-        <li><a href="http://www.baidu.com" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri1.png') ?>" width="29" height="28"/></a></li>
-        <li><a href="http://www.baidu.com" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri2.png') ?>" width="30" height="27"/></a></li>
-        <li><a href="http://www.baidu.com" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri3.png') ?>" width="30" height="28"/></a></li>
+        <li><a href="http://www.hestia.cn/main.html" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri1.png') ?>" width="29" height="28"/></a></li>
+        <li><a href="http://www.fengshun.cc" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri2.png') ?>" width="30" height="27"/></a></li>
+        <li><a href="http://www.dcdesign.com.cn" target="_blank"><img src="<?php echo base_url('public/website/images/bot_ri3.png') ?>" width="30" height="28"/></a></li>
     </ol>
     
     </div>
