@@ -402,14 +402,16 @@ a:active{star:expression(this.onFocus=this.blur());}/*去除ie下超链接虚线
 	line-height: 40px;
 	font-size: 14px;
 	color: #FFF;
-	text-align: center;
 	height: 42px;
 	margin: 0 auto;
+	/*text-align: center;
 	width: 323px;
+	*/
 }
 
 .main_bot ul li {
-	float: left;
+	/*float: left;*/
+	display: inline-block;
 	padding-right: 27px;
 }
 

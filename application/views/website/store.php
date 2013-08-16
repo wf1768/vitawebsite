@@ -74,6 +74,7 @@
     </div>
     
     <div class="main_bot">
+    	<div align="center">
         <ul id="mystore"><!--
 <!--            <?php foreach($class as $key=>$val):?>-->
 <!--               <li>-->
@@ -100,7 +101,7 @@
         </li>
         <?php endif;?>
         </ul>
-        
+        </div>
          
     </div>
     <!--Page Control Bar-->
