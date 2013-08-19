@@ -180,7 +180,6 @@ ul#slide-list li {
         line-height: 40px;
         margin: 0 auto 0 45%;
         overflow: hidden;
-        text-align: center;
         width: 444px;
     }
 </style>
