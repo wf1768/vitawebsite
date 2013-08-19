@@ -182,4 +182,8 @@ ul#slide-list li {
         overflow: hidden;
         width: 444px;
     }
+.main_bot ul li {
+    float:left;
+    padding-right: 27px;
+}
 </style>

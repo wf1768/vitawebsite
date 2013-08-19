@@ -265,5 +265,9 @@
 	text-align: center;
 	width: 144px;
 }
+.main_bot ul li {
+    float:left;
+    padding-right: 27px;
+}
 </style>
 
