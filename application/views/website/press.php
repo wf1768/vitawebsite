@@ -84,7 +84,8 @@
 			  <div class="video-js-box">
 			    <video id="press_video" class="video-js"  autoplay="autoplay" loop="loop" controls="controls" preload="auto" poster="../../../public/website/images/video_index.png">
 			      <source src="<?php echo base_url($pressVideo->mp4path) ?>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-			      <source src="<?php echo base_url($pressVideo->flvpath) ?>" type='video/ogg; codecs="theora, vorbis"' />
+<!--			      <source src="--><?php //echo base_url($pressVideo->flvpath) ?><!--" type='video/ogg; codecs="theora, vorbis"' />-->
+                  <source src="<?php echo base_url($pressVideo->flvpath) ?>" type='video/webm; codecs="vp8, vorbis"' />
 			      <!-- 如果浏览器不兼容HTML5则使用flash播放 -->
 			      <object id="press_flash" class="vjs-flash-fallback" type="application/x-shockwave-flash" data="">
 			        <param name="movie" value="<?php echo base_url('plugins/video/css/flowplayer.commercial.swf') ?>" />
