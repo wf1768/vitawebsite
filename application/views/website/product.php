@@ -71,8 +71,8 @@
 
         if (slidersArr.length > 0) {
             params.slides = slidersArr;
-            params.slide_interval = 3000;
-            params.transition_speed = 1000;
+//            params.slide_interval = 3000;
+//            params.transition_speed = 1000;
             $.supersized(params);
         }
 
