@@ -34,9 +34,10 @@
         //.left_menu 左边的宽度
         var left_width = 128;
         $('.left_menu').css({"width":left_width});
+
         var p_width = $(window).width();
-		$('.content').css({"width":p_width-left_width-1,"float":"right"});
-		$('.content_none').css({"width":p_width-left_width-1,"float":"right"});
+//        $('.content').css({"width":p_width-left_width-1,"float":"right"});
+//		$('.content_none').css({"width":p_width-left_width-1,"float":"right"});
 //		$('.content_default').css({"width":p_width-left_width-1,"float":"right"});
 		$('#controls-wrapper').css({"width":p_width-left_width});
 			        
