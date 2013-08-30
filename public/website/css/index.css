@@ -367,7 +367,7 @@ a:active{star:expression(this.onFocus=this.blur());}/*去除ie下超链接虚线
 	height: 26px;
 	
 }
-.con_default p{float: left;}
+.con_default p{float: left;line-height: 1;}
 .content_none {
 	/*float: left;*/
 	background: url(../images/main_white.png) 0 0 repeat;
