@@ -177,6 +177,7 @@
 		function setUpAutoPlay() {
 			player.play();
 			$('body').off('click',setUpAutoPlay);
+
         }
 
 		function nextMedia() {

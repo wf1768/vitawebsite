@@ -24,27 +24,45 @@
     <script src="<?php echo base_url('plugins/bigvideo/js/video.js') ?>"></script>
     <!-- BigVideo -->
     <script src="<?php echo base_url('plugins/bigvideo/js/bigvideo.js') ?>"></script>
+
+    <style>
+        video {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
 </head>
 <body>
 
     <script type="text/javascript">
         $(function(){
+            var BV = new $.BigVideo({useFlashForFirefox:false,forceAutoplay:true});
+
             //菜单状态切换
             initFurniture();
             initHousewares();
             catagroyContent();
-            
-            var BV = new $.BigVideo({useFlashForFirefox:false});
+
             BV.init();
-           
+
             if (Modernizr.touch) {
                 BV.show('<?php echo base_url('upload/main/clip.png') ?>');
-                BV.show('<?php echo base_url('upload/main/clip.mp4') ?>', {altSource:'<?php echo base_url('upload/main/clip.ogv') ?>'});
+<!--                BV.show('--><?php //echo base_url('upload/main/clip.mp4') ?><!--', {altSource:'--><?php //echo base_url('upload/main/clip.webm') ?><!--',doLoop:true});-->
+                BV.show('<?php echo base_url('upload/main/clip.mp4') ?>');
             } else {
-                BV.show('<?php echo base_url('upload/main/clip.mp4') ?>', {altSource:'<?php echo base_url('upload/main/clip.ogv') ?>',doLoop:true});
-<!--                BV.show('--><?php //echo base_url('upload/main/clip.mp4') ?><!--', {altSource:'/vita/upload/main/clip.ogv',doLoop:true});-->
+                BV.show('<?php echo base_url('upload/main/clip.mp4') ?>', {altSource:'<?php echo base_url('upload/main/clip.webm') ?>',doLoop:true});
+<!--                BV.show('--><?php //echo base_url('upload/main/clip.mp4') ?><!--');-->
             }
-<!--            BV.show('--><?php //echo base_url('upload/tmp/clip.mp4') ?><!--', {altSource:'--><?php //echo base_url('upload/tmp/clip.ogv') ?><!--'});-->
+
+
+            $('#big-video-wrap').on('touchstart',function(e){
+//                alert('adf');
+//                $('#big-video-image').css({'display':'none'});
+//                $('#big-video-vid').css({'display':'block'});
+                e.preventDefault();
+                BV.getPlayer().play();
+            });
+
             //循环播放，多浏览器支持.
 //            $('#big-video-vid_html5_api').bind("ended",function() {
 //                this.play();
@@ -53,9 +71,10 @@
 //            $('#big-video-control-timer').hide();
 //            $('#big-video-control-middle').hide();
 //            $('#big-video-control-container').hide();
-			    
-			
+//            $('#big-video-control-container').css({'display':'none'});
         });
+
+
 
     </script>
 
