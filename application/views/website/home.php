@@ -11,6 +11,17 @@
     <link href="<?php echo base_url('public/website/css/base.css') ?>" type="text/css" rel="stylesheet"/>
 <!--    <script type="text/javascript" src="--><?php //echo base_url('public/js/jquery-1.7.2.min.js') ?><!--"></script>-->
 
+    <link rel="stylesheet" href="<?php echo base_url('plugins/supersized/css/supersized.css') ?>" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo base_url('plugins/supersized/theme/supersized.shutter.css') ?>" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="<?php echo base_url('public/js/jquery-1.7.2.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('plugins/supersized/js/jquery.easing.min.js') ?>"></script>
+
+    <script type="text/javascript" src="<?php echo base_url('plugins/supersized/js/supersized.3.2.7.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('plugins/supersized/theme/supersized.shutter.js') ?>"></script>
+
+    <script type="text/javascript" src="<?php echo base_url('public/website/js/common.js') ?>"></script>
+
     <style>
         body {
             background-color: #D0D0C5;
@@ -18,6 +29,7 @@
             min-height: 630px;
             min-width: 1020px;
             overflow: hidden;
+<!--            background-image: url("--><?php //echo $index->infopath ?><!--");-->
         }
         * {
             margin: 0;
@@ -25,15 +37,29 @@
         }
     </style>
 
-<!--    <script type="text/javascript">-->
-<!--        $(function(){-->
+    <script type="text/javascript">
+        $(function(){
+            var slidersArr = new Array();
+            <!-- 注意，这种将php数组转为javascript数组，可能有中文问题。-->
+<!--            var tmp = --><?php //echo json_encode($main);?><!--;-->
 <!---->
-<!--        });-->
-<!---->
-<!--    </script>-->
+<!--            for (var i=0;i<tmp.length;i++) {-->
+<!--                slidersArr[i] = {'image':'--><?php //echo base_url() ?><!--' + tmp[i].imagepath};-->
+<!--            }-->
+            slidersArr[0] = {'image':'<?php echo base_url().$index->infopath ?>'};
+
+            if (slidersArr.length > 0) {
+                params.slides = slidersArr;
+                params.autoplay = 0;
+                $.supersized(params);
+            }
+        });
+
+    </script>
 
 </head>
-<body style="background:#fff;">
+<body ><!--style="background:#fff;"-->
+<img src="<?php echo $index->infopath ?>" width="100%" height="100%" style="z-index:-1" />
 <div class="index_main">
     <a href="<?php echo site_url('w/main') ?>"><img src="<?php echo $index->logopath ?>" width="1200" height="400" /></a>
 
